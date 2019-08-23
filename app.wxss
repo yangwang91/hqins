@@ -1,0 +1,11 @@
+/**app.wxss**/
+.container {
+  padding-bottom: 65px;
+} 
+
+.container::after {
+  content: '';
+  width: 100%;
+  display: block;
+  padding-bottom: env(safe-area-inset-bottom);
+}
