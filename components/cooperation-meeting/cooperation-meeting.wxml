@@ -1,0 +1,7 @@
+<!--components/cooperation-meeting/cooperation-meeting.wxml-->
+<view class="cooperation-meeting" bindtap="toPage">
+  <view class="cooperation-meeting_img">
+    <image src="../../assets/icons/cooperation-meeting_icon.svg" mode="aspectFit"></image>
+  </view>
+  <view class="cooperation-meeting_text">合作洽谈</view>
+</view>

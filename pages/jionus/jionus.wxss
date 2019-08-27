@@ -1,0 +1,4 @@
+/* pages/jionus/jionus.wxss */
+.jion-us-img {
+  width: 100%;
+}

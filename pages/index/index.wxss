@@ -183,7 +183,7 @@
 .recruitment-wrap {
   position: relative;
   margin: 0 30rpx;
-  padding: 30rpx 20rpx;
+  /* padding: 30rpx 20rpx; */
   border: 1rpx solid rgba(247, 247, 247, 1);
   box-shadow: 0rpx 6rpx 14rpx 0rpx rgba(48, 48, 48, 0.04);
   overflow: hidden;
@@ -200,6 +200,8 @@
 .recruitment-title {
   font-size: 36rpx;
   font-weight: 500;
+  padding-top: 38rpx;
+  margin-bottom: 40rpx;
   text-align: center;
   color: #000;
 }
@@ -227,8 +229,8 @@
   color: #D3A468;
 }
 .recruitment-item image {
-  max-width: 35rpx;
-  max-height: 35rpx;
+  max-width: 38rpx;
+  max-height: 38rpx;
   margin-right: 16rpx;
 }
 
@@ -241,8 +243,9 @@
 }
 
 .recruitment-example-list {
-  padding: 0 10rpx;
+  padding: 30rpx;
   margin-top: 46rpx;
+  background: #FAFAFA;
 }
 .recruitment-example-list_text {
   font-size: 28rpx;
@@ -253,7 +256,7 @@
 .recruitment-example-item {
   font-size: 30rpx;
   color: #333;
-  margin: 14rpx 0;
+  margin: 20rpx 0;
 }
 
 .recruitment-example-item text {

@@ -1,0 +1,51 @@
+<!--pages/advisory/advisory.wxml-->
+<view class="container">
+  <view class="advisory-wrap">
+    <view class="advisory-title">申请进度</view>
+    <view class="advisory-step-wrap">
+      <view class="advisory-step">
+        <view class="advisory-step-item advisory-step-item_first is-done">
+          <view class="advisory-step-item_num_cont">
+            <view class="advisory-step-item_num_line"></view>
+            <view class="advisory-step-item_num">1</view>
+          </view>
+          <view class="advisory-step-item_text">合作洽谈</view>
+        </view>
+        <view class="advisory-step-item is-done">
+          <view class="advisory-step-item_num_cont">
+            <view class="advisory-step-item_num_line"></view>
+            <view class="advisory-step-item_num">2</view>
+            <view class="advisory-step-item_text">商业设计</view>
+          </view>
+        </view>
+        <view class="advisory-step-item is-active">
+          <view class="advisory-step-item_num_cont">
+            <view class="advisory-step-item_num_line"></view>
+            <view class="advisory-step-item_num">3</view>
+            <view class="advisory-step-item_text">商业设计</view>
+          </view>
+        </view>
+        <view class="advisory-step-item ">
+          <view class="advisory-step-item_num_cont">
+            <view class="advisory-step-item_num_line"></view>
+            <view class="advisory-step-item_num">4</view>
+            <view class="advisory-step-item_num_last_line"></view>
+            <view class="advisory-step-item_text">商业设计</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="advisory-question-wrap">
+      <view class="advisory-question-title">
+        <view class="advisory-question-text">常见问题</view>
+        <view class="advisory-question-change">
+          <text>换一批</text>
+          <image src="../../assets/icons/refresh_icon.svg" mode="aspectFit"></image>
+        </view>
+      </view>
+      <view class="advisory-question-item" bindtap="toPage">如何成为合伙人？</view>
+      <view class="advisory-question-item">进度一直不变化是为什么？</view>
+    </view>
+  </view>
+</view>

@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "产品",
-  "usingComponents": {}
+  "usingComponents": {
+    "pro-item": "./components/pro-item/pro-item"
+  }
 }

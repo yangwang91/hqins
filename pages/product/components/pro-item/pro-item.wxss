@@ -1,0 +1,87 @@
+/* pages/product/components/pro-item/pro-item.wxss */
+
+.insurance-products-item_hd {
+display: flex;
+padding: 32rpx 0;
+margin: 0 30rpx;
+border-bottom: 1rpx solid #eee;
+}
+
+.insurance-products-item_hd_img {
+  width: 150rpx;
+  height: 150rpx;
+  border: 2rpx solid #f5f5f5;
+}
+.insurance-products-item_hd_img image {
+  width: 100%;
+  height: 100%;
+}
+
+.insurance-products-item_hd_info {
+  flex: 1;
+  margin-left: 30rpx;
+  overflow: hidden;
+}
+
+.insurance-products-item_hd_title {
+  font-size: 32rpx;
+  color: #000;
+  font-weight: 500;
+}
+.insurance-products-item_hd_tags {
+  margin-top: 20rpx;
+}
+.insurance-products-item_hd_tag {
+  display: inline-block;
+  padding: 0 10rpx;
+  margin-right: 14rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #D3A468;
+  background-color: rgba(246,168,70,0.14);
+}
+
+.insurance-products-item_hd_slide {
+  text-align: right;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  color: #555;
+}
+
+.insurance-products-item_hd_slide_text {
+  color: #D3A468;
+}
+
+.insurance-products-item_hd_slide_icon {
+  width: 24rpx;
+  height: 24rpx;
+  vertical-align: middle;
+  margin-left: 6rpx;
+  transform: rotate(90deg);
+}
+.insurance-products-item_hd_slide_icon.is-active {
+  transform: rotate(-90deg);
+
+}
+
+.insurance-products-item_bd {
+  padding: 40rpx 30rpx 0;
+  background: #f9f9f9;
+}
+
+.insurance-products-item_bd_title {
+  padding-left: 12rpx;
+  font-size: 30rpx;
+  line-height: 1;
+  color: #000;
+  border-left: 5rpx solid #D3A468;
+}
+
+.insurance-products-item_bd_desc {
+  font-size: 28rpx;
+  line-height: 36rpx;
+  padding: 26rpx 0 30rpx;
+  color: #333;
+}

@@ -1,0 +1,30 @@
+<!--pages/product/components/pro-item/pro-item.wxml-->
+<view class="insurance-products-item">
+        <view class="insurance-products-item_hd">
+          <view class="insurance-products-item_hd_img">
+            <image src="../../../../assets/images/index_banner.png" mode="aspectFit"></image>
+          </view>
+          <view class="insurance-products-item_hd_info">
+            <view class="insurance-products-item_hd_title">横琴一路无忧交通意外伤害保险</view>
+            <view class="insurance-products-item_hd_tags">
+              <view class="insurance-products-item_hd_tag">个人代理</view>
+              <view class="insurance-products-item_hd_tag">中介</view>
+            </view>
+            <view class="insurance-products-item_hd_slide" bindtap="slideChange">
+              <text class="insurance-products-item_hd_slide_text">产品亮点</text>
+              <text>与</text>
+              <text class="insurance-products-item_hd_slide_text">保险责任</text>
+              <image class="insurance-products-item_hd_slide_icon {{slideHidden ? '' : 'is-active'}}" src="../../../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
+            </view>
+          </view>
+        </view>
+        <view hidden="{{slideHidden}}" class="insurance-products-item_bd">
+          <view class="insurance-products-item_bd_title">产品亮点</view>
+          <view class="insurance-products-item_bd_desc">新特药价格高昂且大多数不在社保报销范围内，患者很难负担得起新特药物的费用。这款产品可解决患者购药贵、购药难、持续用药难等问题，同时提供肿瘤专家远程问诊服务。可做家庭单、员福计划。</view>
+          <view class="insurance-products-item_bd_title">保险责任</view>
+          <view class="insurance-products-item_bd_desc">
+            <view>1.意外身故保险金=保险金额-意外伤残保险金</view>
+            <view>2.意外伤残保险金=伤残比例*保险金额</view>
+          </view>
+        </view>
+      </view>

@@ -2,7 +2,12 @@
   "pages": [
     "pages/index/index",
     "pages/product/product",
-    "pages/index2/index2"
+    "pages/index2/index2",
+    "pages/cooperation/cooperation",
+    "pages/advisory/advisory",
+    "pages/questionInfo/questionInfo",
+    "pages/jionus/jionus",
+    "pages/platform/platform"
   ],
   "tabBar": {
     "custom": true,
@@ -13,21 +18,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "iconPath": "assets/tabImg/home.png",
-        "selectedIconPath": "assets/tabImg/home.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/index2/index2",
-        "iconPath": "assets/tabImg/home.png",
-        "selectedIconPath": "assets/tabImg/home.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/product/product",
-        "iconPath": "assets/tabImg/product.png",
-        "selectedIconPath": "assets/tabImg/home.png",
         "text": "产品"
+      },
+      {
+        "pagePath": "pages/advisory/advisory",
+        "text": "咨询"
       }
     ]
   },
@@ -37,6 +40,8 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "usingComponents": {},
+  "usingComponents": {
+    "login-model": "./components/login-model/login-model"
+  },
   "sitemapLocation": "sitemap.json"
 }

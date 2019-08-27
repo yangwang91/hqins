@@ -1,0 +1,27 @@
+/* pages/questionInfo/questionInfo.wxss */
+
+.question-wrap {
+  padding: 0 30rpx;
+}
+
+.question-title {
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  font-weight: 500;
+  padding: 26rpx 0;
+  color: #000;
+  border-bottom: 1rpx solid #eee;
+}
+.question-title image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.question-desc {
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  color: #535353;
+}

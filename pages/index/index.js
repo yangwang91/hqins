@@ -45,5 +45,11 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  toJionUs: function() {
+    wx.navigateTo({
+      url: '../jionus/jionus'
+    })
   }
 })

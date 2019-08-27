@@ -1,14 +1,11 @@
 //app.js
 App({
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
 
     // 登录
     wx.login({
       success: res => {
+        console.log('login', res)
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
@@ -26,14 +23,24 @@ App({
               // 所以此处加入 callback 以防止这种情况
               if (this.userInfoReadyCallback) {
                 this.userInfoReadyCallback(res)
+                console.log('userInfo', res)
               }
             }
           })
         }
       }
     })
+
+    wx.getSystemInfo({
+      success: (res) => {
+        this.globalData.sysInfo = res
+      },
+      fail: (res) => {},
+      complete: (res) => {},
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    sysInfo: {}
   }
 })

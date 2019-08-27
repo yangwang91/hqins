@@ -1,4 +1,7 @@
 /**app.wxss**/
+page {
+  /* display: none; */
+}
 .container {
   padding-bottom: 65px;
 } 

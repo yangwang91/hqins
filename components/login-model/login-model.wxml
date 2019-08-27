@@ -1,0 +1,12 @@
+<!--components/login-model/login-model.wxml-->
+<view class="login-model" hidden="{{hidden}}" catchtouchstart="">
+  <view class="login-model-mask"></view>
+  <view class="login-model-cont">
+    <view class="login-model-title">授权</view>
+    <view class="login-model-content">请允许获取你的微信个人信息</view>
+    <view class="login-model-btns">
+      <navigator open-type="exit" target="miniProgram" class="login-model-btns_cancel">拒绝</navigator>
+      <button open-type="getUserInfo" class="login-model-btns_comfirm" bindgetuserinfo="getuserinfo">允许</button>
+    </view>
+  </view>
+</view>

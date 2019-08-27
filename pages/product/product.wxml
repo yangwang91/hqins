@@ -1,2 +1,40 @@
 <!--pages/product/product.wxml-->
-<text>pages/product/product.wxml</text>
+<view class="container">
+
+  <view class="product-banner-wrap">
+    <swiper class="product-banner" autoplay="{{true}}" bindchange="bannerChange">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.src}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="product-banner-dots">
+      <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+        <view class="product-banner-dot {{bannerIndex === index ? 'active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+
+  <view class="tech-platform-wrap">
+    <view class="text">科技平台</view>
+    <image src="../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
+  </view>
+
+  <view class="insurance-products-wrap">
+    <view class="insurance-products-tabs-wrap">
+      <view class="insurance-products-title">保险产品</view>
+      <scroll-view scroll-x="{{true}}" class="insurance-products-tabs">
+      <block wx:for="{{6}}">
+        <text class="insurance-products-tab {{curTab === index ? 'active' : ''}}" data-id="{{index}}" bindtap="tabChange">明星产品</text>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="insurance-products-list">
+      <block wx:for="{{6}}">
+        <pro-item></pro-item>
+      </block>
+    </view>
+  </view>
+
+</view>

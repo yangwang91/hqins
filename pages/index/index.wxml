@@ -17,13 +17,12 @@
         <text>未来合伙人荣耀册</text>
       </view>
     </view>
-    <view class="jion-us-show">去看看</view>
+    <view class="jion-us-show" bindtap="toJionUs">去看看</view>
   </view>
 
   <!-- video -->
   <view class="index-video-wrap">
-    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-      poster="../../assets/images/index_banner.png"></video>
+    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video>
   </view>
 
 
@@ -32,42 +31,42 @@
     <view class="support-list">
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../assets/images/support_icon_1.png" mode="aspectFit"></image>
+          <image src="../../assets/icons/support_icon_1.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">多元业务</view>
         <view class="support-item_desc">支持各类场景的展业工具</view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../assets/images/support_icon_1.png" mode="aspectFit"></image>
+          <image src="../../assets/icons/support_icon_2.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">平台赋能</view>
         <view class="support-item_desc">自由定价及订阅式的培训赋能支持</view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../assets/images/support_icon_1.png" mode="aspectFit"></image>
+          <image src="../../assets/icons/support_icon_3.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">产品供应</view>
         <view class="support-item_desc">全渠道产品供应与专属开发特权</view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../assets/images/support_icon_1.png" mode="aspectFit"></image>
+          <image src="../../assets/icons/support_icon_4.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">资本支持</view>
         <view class="support-item_desc">股权合伙专属经营</view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../assets/images/support_icon_1.png" mode="aspectFit"></image>
+          <image src="../../assets/icons/support_icon_5.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">品牌打造</view>
         <view class="support-item_desc">品牌授权与媒体支持</view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../assets/images/support_icon_1.png" mode="aspectFit"></image>
+          <image src="../../assets/icons/support_icon_6.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">总部服务</view>
         <view class="support-item_desc">直接签约总部快速响应</view>
@@ -139,40 +138,40 @@
 
   <!-- Recruitment -->
   <view class="recruitment-wrap">
-    <image class="recruitment-back-img" src="../../assets/images/recruitment_back_img.png" mode="aspectFit"></image>
+    <!-- <image class="recruitment-back-img" src="../../assets/images/recruitment_back_img.png" mode="aspectFit"></image> -->
     <view class="recruitment-title">如果您：</view>
-    <view class="recruitment-desc">理解寿险事业，认可持续经营的合伙愿景，满足以下其一</view>
     <view class="recruitment-list">
       <view class="recruitment-item">
-        <image src="../../assets/images/recruitment_list_img_1.png" mode="aspectFit"></image>
+        <image src="../../assets/icons/recruitment_list_img_1.svg" mode="aspectFit"></image>
         <view>有能力</view>
       </view>
       <view class="recruitment-item">
-        <image src="../../assets/images/recruitment_list_img_1.png" mode="aspectFit"></image>
+        <image src="../../assets/icons/recruitment_list_img_2.svg" mode="aspectFit"></image>
         <view>有资源</view>
       </view>
       <view class="recruitment-item">
-        <image src="../../assets/images/recruitment_list_img_1.png" mode="aspectFit"></image>
+        <image src="../../assets/icons/recruitment_list_img_3.svg" mode="aspectFit"></image>
         <view>有团队</view>
       </view>
     </view>
     <view class="recruitment-line"></view>
     <view class="recruitment-list">
       <view class="recruitment-item">
-        <image src="../../assets/images/recruitment_list_img_1.png" mode="aspectFit"></image>
+        <image src="../../assets/icons/recruitment_list_img_4.svg" mode="aspectFit"></image>
         <view>懂用户</view>
       </view>
       <view class="recruitment-item">
-        <image src="../../assets/images/recruitment_list_img_1.png" mode="aspectFit"></image>
+        <image src="../../assets/icons/recruitment_list_img_5.svg" mode="aspectFit"></image>
         <view>会经营</view>
       </view>
       <view class="recruitment-item">
-        <image src="../../assets/images/recruitment_list_img_1.png" mode="aspectFit"></image>
+        <image src="../../assets/icons/recruitment_list_img_6.svg" mode="aspectFit"></image>
         <view>想跨界</view>
       </view>
     </view>
     <view class="recruitment-example-list">
-      <view class="recruitment-example-list_text">例如：</view>
+      <view class="recruitment-example-list_text">理解寿险事业，认可持续经营的合伙愿景，满足以下其一：</view>
+
       <view class="recruitment-example-item">
         <text>Ⅰ</text>在保险市场有一定的个人品牌影响力
       </view>
@@ -184,9 +183,6 @@
       </view>
       <view class="recruitment-example-item">
         <text>Ⅳ</text>保险产品企划经验者及优秀培训讲师
-      </view>
-      <view class="recruitment-example-item">
-        <text>Ⅴ</text>......
       </view>
     </view>
   </view>
@@ -220,4 +216,10 @@
     </view>
   </view>
 
+
+  <cooperation-meeting></cooperation-meeting>
+
 </view>
+
+<!--  -->
+<!-- <login-model></login-model> -->

@@ -1,0 +1,79 @@
+/* pages/cooperation/cooperation.wxss */
+
+.cooperation-info {
+  padding: 30rpx;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  color: #333;
+  border-bottom: 1rpx solid #eee;
+}
+
+.cooperation-form {
+  padding: 30rpx;
+}
+
+.cooperation-form_title {
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #000;
+}
+
+.cooperation-form_item {
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  padding: 40rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.cooperation-form_item_name {
+  position: relative;
+  padding-left: 10rpx;
+  color: #666;
+}
+.is-required::before {
+  content: "*";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 22rpx;
+  color: #FB2B2B;
+}
+.cooperation-form_item_input {
+  flex: 1;
+  text-align: right;
+  color: #666;
+}
+
+.placeholderStyle {
+  color: #999;
+}
+
+.get-code-btn {
+  font-size: 32rpx;
+  padding-left: 20rpx;
+  color: #D3A468;
+}
+
+.get-code-cutdown {
+  font-size: 32rpx;
+  padding: 0 60rpx;
+  margin-left: 20rpx;
+  border-left: 2rpx solid #eee;
+  color: #999;
+}
+
+.comfirm-btn {
+  margin: 40rpx 30rpx;
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6rpx;
+  color: #333;
+  background: #FACE97;
+}
+.comfirm-btn.is-disabled {
+  color: #fff;
+  background: #E0E0E0;
+}
