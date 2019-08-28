@@ -5,7 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imgUrls: [{
+        src: '../../assets/images/index2_banner1.png',
+        link: ''
+      },
+      {
+        src: '../../assets/images/index2_banner2.png',
+        link: ''
+      },
+      {
+        src: '../../assets/images/index2_banner3.png',
+        link: ''
+      }
+    ]
   },
 
   /**
