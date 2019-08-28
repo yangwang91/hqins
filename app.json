@@ -7,7 +7,8 @@
     "pages/advisory/advisory",
     "pages/questionInfo/questionInfo",
     "pages/jionus/jionus",
-    "pages/platform/platform"
+    "pages/platform/platform",
+    "pages/partnershipplatform/partnershipplatform"
   ],
   "tabBar": {
     "custom": true,
