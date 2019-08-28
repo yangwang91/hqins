@@ -2,6 +2,23 @@
   <view class="partership_top">
     <image src="../../assets/images/partnership_img1.png"></image>
   </view>
+  <!-- 注释掉的部分是另外一个案例详情的模板，实际运用时，判断显示即可 -->
+  <!-- <view class="case_tit">
+    案例代表
+  </view>
+  <view class="company case_2">
+    <view class="left"><image src="../../assets/images/partnership_img5.png"></image></view>
+    <view class="right">
+      <view class="company_tit">宁方华</view>
+      <text class="text">80后经代经营精英\n事业合伙人</text>
+    </view>
+  </view>
+  <view class="case_tit">
+    案例详情
+  </view>
+  <view class="case2_detail">
+有别于原机构层级化递减的费用形式，事业合伙人直接由总部服务管理。宁方华发挥其丰富的渠道销售经营经验，助以公司对永达理、大童保险渠道的专属产品支持，其5个人的小团队从过去为老板干转变为自己干的事业心态，聚焦经营重点渠道，通过对费用采取“合理分配，重点投入，创费结余团队自分配”方式，激发团队活力，历经2个月，标准保费平台规模翻翻，团队人均收入大幅度提升。
+  </view> -->
   <view class="case_tit">
     案例展示
   </view>
