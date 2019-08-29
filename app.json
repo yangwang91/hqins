@@ -8,7 +8,8 @@
     "pages/questionInfo/questionInfo",
     "pages/jionus/jionus",
     "pages/platform/platform",
-    "pages/partnershipplatform/partnershipplatform"
+    "pages/partnershipplatform/partnershipplatform",
+    "pages/businessplan/businessplan"
   ],
   "tabBar": {
     "custom": true,

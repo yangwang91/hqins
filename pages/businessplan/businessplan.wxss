@@ -1,0 +1,65 @@
+page{
+  border-top: 1px solid #eee;
+}
+.plan-con{
+  padding:30rpx;
+}
+.plan-top{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.plan-top image{
+  width:690rpx;
+  height: 310rpx;
+}
+.plan_detail{
+  padding:30rpx 0;
+  font-size:30rpx;
+  line-height: 1.6;
+}
+.plan_detail_tit{
+  color:#333;
+  font-weight: bold;
+}
+.plan_detail_des{
+  color:#555;
+  font-weight: 400;
+}
+.plan_show_but{
+  color:#D5A970;
+  font-size:30rpx;
+  text-decoration: underline;
+  padding-left: 8rpx;
+}
+.plan_confirm{
+  color:#999;
+  font-size:28rpx;
+  padding: 200rpx 0;
+  display: flex;
+  align-items: center;
+  padding-left: 8rpx;
+}
+.plan_confirm .text{
+  padding-left: 10rpx;
+}
+checkbox .wx-checkbox-input {
+  border-radius: 2rpx;
+  width: 34rpx;
+  height: 34rpx;
+  border:1px solid rgba(51,51,51,1);
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  color:#333;
+}
+.plan_bottom_but{
+  margin:30rpx auto;
+  width:100%;
+  height: 82rpx;
+  background:rgba(252,230,203,1);
+  border-radius:6rpx;
+  color:#999;
+  text-align: center;
+  line-height: 82rpx;
+  font-size:30rpx;
+}
