@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/auth/auth",
     "pages/index/index",
     "pages/product/product",
     "pages/index2/index2",
@@ -8,34 +9,40 @@
     "pages/questionInfo/questionInfo",
     "pages/jionus/jionus",
     "pages/platform/platform",
+    "pages/team/team",
+    "pages/submitComplaint/submitComplaint",
+    "pages/complaintInfo/complaintInfo",
+    "pages/complaintList/complaintList",
+    "pages/teamMember/teamMember",
     "pages/partnershipplatform/partnershipplatform",
-    "pages/businessplan/businessplan"
+    "pages/businessPlanWeb/businessPlanWeb"
   ],
   "tabBar": {
-    "custom": true,
     "color": "#7A7E83",
     "selectedColor": "#D3A468",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/index2/index2",
-        "text": "首页"
+        "pagePath": "pages/index2/index2"
       },
       {
-        "pagePath": "pages/product/product",
-        "text": "产品"
+        "pagePath": "pages/product/product"
       },
       {
-        "pagePath": "pages/advisory/advisory",
-        "text": "咨询"
+        "pagePath": "pages/advisory/advisory"
+      },
+      {
+        "pagePath": "pages/team/team"
       }
     ]
   },
+  "navigateToMiniProgramAppIdList": [
+    "wx4f0c08a031479e5b"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
