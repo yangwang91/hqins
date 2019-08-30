@@ -1,0 +1,213 @@
+<view class="special-containter">
+  <scroll-view scroll-y style="height: 100%;">
+    <view class="special-top">
+      <image src="../../assets/images/special_img.png"></image>
+    </view>
+    <view class="special-big-con">
+      <view class="special-con-tit">
+        <text class="{{customerHidden?'':'now'}}" data-tab="customerHidden" catchtap="changeTab">客户增值</text>
+        <text class="{{underwritingHidden?'':'now'}}" data-tab="underwritingHidden" catchtap="changeTab">核保政策</text>
+        <text class="{{claimHidden?'':'now'}}" data-tab="claimHidden" catchtap="changeTab">理赔特色</text>
+        <text class="{{advisoryHidden?'':'now'}}"  data-tab="advisoryHidden" catchtap="changeTab">咨询特色</text>
+      </view>
+      <view class="special-detail" hidden="{{customerHidden}}">
+        <view class="special-det-tit"><text>客户增值服务</text></view>
+        <view class="special-item-tit">
+          <text class="special-item-icon">//</text>
+          <text>一</text>
+          <text class="special-item-icon">//</text>
+        </view>
+        <view class="special-item-desc special-item-desc-b">
+        构建开放服务平台，围绕健康、出行、生活和亲子提供丰富贴心的服务，为客户带来亲和温暖的体验       </view>
+        <view class="special-real-tit">健康服务</view>
+        <view class="special-real-desc-con">
+          <view class="special-real-desc">
+            <text>（1）</text>
+            <text>健康管理：健康测评、在线医生、电话医生、健康体检等</text>
+          </view>
+          <view class="special-real-desc">
+            <text>（2）</text>
+            <text>医疗服务：挂号预约、门诊/住院/手术协调、二次诊疗、重疾心理抚慰等</text>
+          </view>
+        </view>
+        <view class="special-real-tit">出行服务</view>
+        <view class="special-real-desc-con special-real-desc-pad">
+          <view class="special-real-desc">
+            <text>（1）</text>
+            <text>旅行服务：门票酒店特惠、机场泊车、机场高铁贵宾休息室等</text>
+          </view>
+          <view class="special-real-desc">
+            <text>（2）</text>
+            <text>急难救援：提供全球7*24小时国旅行与医疗救援服务，空中救援飞机及1,400多位专业医护人员随时候命</text>
+          </view>
+        </view>
+        <view class="special-service-con">
+          <view class="special-service-tit" catchtap="travelRescueShow">
+            <text>国际旅行救援</text>
+            <text class="icon {{!travelRescueHidden?'icon-up':''}}"></text>
+          </view>
+          <view class="special-service-desc" hidden="{{travelRescueHidden}}">
+            <view><text>A.</text><text>旅行信息咨询服务</text></view>	
+            <view><text>B.</text><text>大使馆、领事馆信息</text></view>
+            <view><text>C.</text><text>行李延误、遗失援助</text></view>
+            <view><text>D.</text><text>护照遗失援助</text></view>
+            <view><text>E.</text><text>重新安排旅行计划</text></view>
+            <view><text>F.</text><text>紧急电话翻译服务介绍当地翻译服务</text></view>
+            <view><text>G.</text><text>紧急法律援助</text></view>
+            <view><text>H.</text><text>紧急口讯传递和文件递送</text></view>
+          </view>
+          <view class="special-service-tit" catchtap="medicalRescueShow">
+            <text>国内外医疗救援</text>
+            <text class="icon {{!medicalRescueHidden?'icon-up':''}}"></text>
+          </view>
+          <view class="special-service-desc" hidden="{{medicalRescueHidden}}">
+            <view><text>A.</text><text>电话医疗咨询</text></view>	
+            <view><text>B.</text><text>医疗机构介绍和建议</text></view>
+            <view><text>C.</text><text>协助、安排就医住院</text></view>
+            <view><text>D.</text><text>住院期间医疗费用的担保和或垫付，及住院期间医疗情况的跟踪、观察和监控</text></view>
+            <view><text>E.</text><text>递送必需药物和医疗用品</text></view>
+            <view><text>F.</text><text>紧急医疗翻译服务</text></view>
+            <view><text>G.</text><text>安排并支付紧急医疗转送</text></view>
+            <view><text>H.</text><text>安排并支付医疗转运回国或回居住地</text></view>
+            <view><text>I.</text><text>安排并支付遗体骨灰运送回国或回居住地</text></view>
+            <view><text>J.</text><text>安排并支付直系亲属探病及住宿</text></view>
+            <view><text>K.</text><text>安排并支付未成年子女回国或回居住地</text></view>
+            <view><text>L.</text><text>紧急口讯传递</text></view>
+            <view class="special-service-exp">说明：以上D-F项为海外专属服务项目</view>
+          </view>
+        </view>
+        <view class="special-real-tit">品质生活</view>
+        <view class="special-service-life">
+          <view class="special-life1">【礼遇服务】</view>
+          <view class="special-life2">定制服务、果岭挥杆、美食美酒、文化沙龙等</view>
+          <view class="special-life1">【优享生活】</view>
+          <view class="special-life2">违章代缴、一键加油、道路救援、心理咨询等</view>
+        </view>
+        <view class="special-real-tit">亲子服务</view>
+        <view class="special-service-life">
+          <view class="special-life1">【家有儿童】</view>
+          <view class="special-life2">儿童保健顾问、儿童教育顾问、儿童成长基因检测等</view>
+          <view class="special-life1">【精英教育】</view>
+          <view class="special-life2">海外留学礼遇、精英在线教育等</view>
+        </view>
+        <view class="special-item-tit">
+          <text class="special-item-icon">//</text>
+          <text>二</text>
+          <text class="special-item-icon">//</text>
+        </view>
+        <view class="special-item-desc special-item-desc-b">
+          根据客户价值差异，搭建VIP服务分级体系为VIP客户提供专属服务，实现服务的差异化
+        </view>
+        <view class="special-but-con">
+          <view catchtap="familyServiceShow">家庭专属服务</view>
+          <view catchtap="personServiceShow">个人专属服务</view>
+        </view>
+        <view class="special-item-tit">
+          <text class="special-item-icon">//</text>
+          <text>三</text>
+          <text class="special-item-icon">//</text>
+        </view>
+        <view class="special-item-desc">
+        面向全渠道各合作伙伴，开展“保险产品+健康服务”的推广模式，前端业务可结合产品定位、客户需求和市场推广，灵活规划专属的健康服务项目，实现特定客群的服务定制化。</view>
+        <view class="special-item-tit">
+          <text class="special-item-icon">//</text>
+          <text>四</text>
+          <text class="special-item-icon">//</text>
+        </view>
+        <view class="special-item-desc">
+        每月19日 ，围绕客户服务持续举办横琴分享日活动，通过开展线上线下活动增进客户对公司产品与服务的了解，从而维护与加强客户关系，提升客户体验。</view>
+        <view class="special-item-tit">
+          <text class="special-item-icon">//</text>
+          <text>五</text>
+          <text class="special-item-icon">//</text>
+        </view>
+        <view class="special-item-desc">
+        搭建智能服务平台，客户在横琴人寿官微办理相关保单服务同时，也享受公司提供的各类琴豆奖励，如官微注册、每日签到、推荐与分享、自助保全、自助理赔与自助缴费等，琴豆可用于商品兑换、活动抽奖。
+        </view>
+      </view>
+      <view class="special-detail" hidden="{{underwritingHidden}}">
+        <view class="special-det-tit"><text>家庭账户核保政策</text></view>
+        <view class="special-family-desc">
+        为推动“家庭账户”战略有效落地，进一步发挥公司家庭账户特色优势，为客户家庭提供更加全面、优质保障，贯彻“保险性保”的经营理念，制定了如下的《家庭账户特别核保政策》
+        </view>
+        <view class="special-other-con">
+          <view class="special-other-tit">
+            <text>(一)</text>
+          </view>
+          <view class="special-other-desc">对于家庭两个人同时投保，对于有健康问题的家庭成员，如果超出健康加费起点部份的EM值之和小于等于25时，家庭两个人按标准费率正常承保。</view>
+          <view class="special-other-tit">
+            <text>(二)</text>
+          </view>
+          <view class="special-other-desc">对于家庭有三个人或以上同时投保，对于有健康问题的成员，如果超出健康加费起点部份的EM值之和小于等于50时，同时投保的家庭成员按标准费率正常承保。     </view>
+        </view>
+      </view>
+      <view class="special-detail" hidden="{{claimHidden}}">
+        <view class="special-det-tit"><text>理赔特色服务</text></view>
+        <view class="special-other-con special-other-desc-top">
+          <view class="special-other-tit">
+            <text>(一)</text>
+            <text class="special-other-wz">微信理赔，简单快捷</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">索赔金额3000元及以下的微信理赔案件，无需递交理赔资料原件即可完成理赔申请。</view>
+          <view class="special-other-tit">
+            <text>(二)</text>
+            <text class="special-other-wz">重疾先赔服务</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">客户罹患重疾，一经确诊无需出院，即可申请赔付重大疾病保险金。</view>
+          <view class="special-other-tit">
+            <text>(三)</text>
+            <text class="special-other-wz">住院押金垫付，出院费用直接结算</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">购买《横琴尊享人生医疗保险》的我司VIP客户，住院期间我司提供住院押金垫付、病程跟踪服务，出院时我司提供费用直接结算服务，无需事后申请理赔。</view>
+          <view class="special-other-tit">
+            <text>(四)</text>
+            <text class="special-other-wz">家庭账户专属理赔服务</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">在ihome进行保单体检的家庭客户，可以免费获得保单保障咨询、理赔代办、理赔法律援助服务。</view>
+        </view>
+      </view>
+      <view class="special-detail" hidden="{{advisoryHidden}}">
+        <view class="special-det-tit"><text>咨询特色服务</text></view>
+        <view class="special-other-con special-other-desc-top">
+          <view class="special-other-tit">
+            <text>(一)</text>
+            <text class="special-other-wz">行业首创</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">第三方专家在线服务：客户致电400客服热线，疑难问题可通过三方通话形式，获得总部产品、精算等后台专家的一站式解答；</view>
+          <view class="special-other-tit">
+            <text>(二)</text>
+            <text class="special-other-wz">智能机器人服务</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">在线渠道（横琴人寿官网、官微、i保天下、哆徕咪等平台）提供7*24小时智能机器人自动应答及智能投保咨询服务；</view>
+          <view class="special-other-tit">
+            <text>(三)</text>
+            <text class="special-other-wz">“空中柜面”服务</text>
+          </view>
+          <view class="special-other-desc special-other-desc-bot">支持“横琴人寿在线”公众微信号视频接入方式受理大额自助退保及保单贷款业务。</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="special-dailog {{dailogFamilyHidden?'special-bg-dis':''}}">
+    <view class="special-bg" catchtap="familyServiceShow"></view>
+    <view class="special-table-con">
+      <view class="special-table-tit">家庭专属服务</view>
+      <scroll-view scroll-y style="height:600rpx;">
+        <view class="special-table-img">
+          <image src="../../assets/images/special-service-tab.png"></image> 
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="special-dailog {{dailogServiceHidden?'special-bg-dis':''}}">
+    <view class="special-bg" catchtap="personServiceShow"></view>
+    <view class="special-table-con">
+      <view class="special-table-tit">个人专属服务</view>
+      <scroll-view scroll-y style="height:600rpx;">
+        <view class="special-table-img">
+          <image src="../../assets/images/special-service-tab.png"></image> 
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

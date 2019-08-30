@@ -15,7 +15,8 @@
     "pages/complaintList/complaintList",
     "pages/teamMember/teamMember",
     "pages/partnershipplatform/partnershipplatform",
-    "pages/businessPlanWeb/businessPlanWeb"
+    "pages/businessPlanWeb/businessPlanWeb",
+    "pages/specialservice/specialservice"
   ],
   "tabBar": {
     "color": "#7A7E83",
