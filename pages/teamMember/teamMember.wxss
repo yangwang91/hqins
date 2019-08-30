@@ -1,0 +1,33 @@
+/* pages/teamMember/teamMember.wxss */
+
+.team-member-item {
+  display: flex;
+  align-items: center;
+  margin: 0 30rpx;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #eee;
+}
+
+.team-member-item_name {
+  flex: 1;
+}
+
+.team-member-item_name_main {
+  font-size: 32rpx;
+  color: #000;
+}
+
+.team-member-item_name_sub {
+  font-size: 26rpx;
+  color: #999;
+  margin-top: 6rpx;
+}
+.team-member-item_phone {
+  font-size: 30rpx;
+  color: #000;
+}
+.team-member-item_phone image {
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}

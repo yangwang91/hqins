@@ -16,7 +16,7 @@
     </view>
   </view>
 
-  <view class="tech-platform-wrap">
+  <view wx:if="{{present == 2}}" class="tech-platform-wrap">
     <view class="text">科技平台</view>
     <image src="../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
   </view>
@@ -25,16 +25,20 @@
     <view class="insurance-products-tabs-wrap">
       <view class="insurance-products-title">保险产品</view>
       <scroll-view scroll-x="{{true}}" class="insurance-products-tabs">
-      <block wx:for="{{6}}">
-        <text class="insurance-products-tab {{curTab === index ? 'active' : ''}}" data-id="{{index}}" bindtap="tabChange">明星产品</text>
+      <block wx:for="{{categoryList}}" wx:key="{{index}}">
+        <text class="insurance-products-tab {{curTab === index ? 'active' : ''}}" data-index="{{index}}" data-id="{{item.fdSceneId}}" data-name="{{item.fdSceneName}}" bindtap="tabChange">{{item.fdSceneName}}</text>
         </block>
       </scroll-view>
     </view>
     <view class="insurance-products-list">
-      <block wx:for="{{6}}">
-        <pro-item></pro-item>
+      <block wx:for="{{productList}}" wx:key="{{index}}">
+        <pro-item tabName="{{tabName}}" data="{{item}}"></pro-item>
       </block>
     </view>
   </view>
+
+
+ <tabbar tabbar="{{tabbar}}"></tabbar>
+
 
 </view>

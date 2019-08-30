@@ -1,11 +1,17 @@
 // pages/product/product.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    tabbar: {},
     bannerIndex: 0,
+    present: wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2',
+    categoryList: [],
+    fdSceneId: '',
+    productList: [],
     imgUrls: [{
         src: '../../assets/images/index_banner.png',
         link: ''
@@ -15,14 +21,17 @@ Page({
         link: ''
       }
     ],
-    curTab: 0
+    curTab: 0,
+    tabName: '明星产品'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    app.editTabbar()
 
+    this.getCategorylist()
   },
 
   /**
@@ -67,11 +76,51 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
+  arrSort: function(arr) {
+    arr.sort((a, b) => {
+      return a.fdOrder - b.fdOrder
+    })
+    return arr
+  },
 
+  getCategorylist: function() {
+    app.API.getCategorylist().then(res => {
+      console.log(res)
+      const _categoryList = res.result || []
+      _categoryList.sort((a, b) => {
+        return a.fdOrder - b.fdOrder
+      })
+      const fdSceneId = _categoryList.length ? _categoryList[0].fdSceneId : ''
+      if (res.code == 200) {
+        this.setData({
+          categoryList: _categoryList || [],
+          fdSceneId: fdSceneId
+        })
+
+        this.getProductlist(fdSceneId)
+
+      } else {
+        console.log(res)
+      }
+    })
+  },
+
+  getProductlist: function(fdSceneId) {
+    wx.showLoading({
+      title: '正在加载...'
+    })
+    app.API.getProductlist({
+      fdSceneId: fdSceneId,
+      fdPlatform: wx.getStorageSync('userInfo').info.present || 2
+    }).then(res => {
+      wx.hideLoading()
+      console.log(res)
+      if(res.code == 200) {
+        this.setData({
+          productList: res.result || []
+        })
+      }
+    })
   },
 
   // 
@@ -82,11 +131,17 @@ Page({
     })
   },
 
-  tabChange: function (e) {
+  tabChange: function(e) {
+    const index = e.currentTarget.dataset.index
     const id = e.currentTarget.dataset.id
-    // console.log(id)
+    const name = e.currentTarget.dataset.name
+    // console.log(index)
     this.setData({
-      curTab: id
+      curTab: index,
+      tabName: name,
+      fdSceneId: id
     })
+
+    this.getProductlist(id)
   }
 })

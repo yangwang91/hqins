@@ -81,7 +81,7 @@ border-bottom: 1rpx solid #eee;
 
 .insurance-products-item_bd_desc {
   font-size: 28rpx;
-  line-height: 36rpx;
+  line-height: 42rpx;
   padding: 26rpx 0 30rpx;
   color: #333;
 }

@@ -4,48 +4,68 @@
     <view class="advisory-title">申请进度</view>
     <view class="advisory-step-wrap">
       <view class="advisory-step">
-        <view class="advisory-step-item advisory-step-item_first is-done">
+        <view class="advisory-step-item advisory-step-item_first {{step === 1 ? 'is-active' : ''}} {{step > 1 ? 'is-done' : ''}}">
           <view class="advisory-step-item_num_cont">
             <view class="advisory-step-item_num_line"></view>
             <view class="advisory-step-item_num">1</view>
           </view>
           <view class="advisory-step-item_text">合作洽谈</view>
         </view>
-        <view class="advisory-step-item is-done">
+        <view class="advisory-step-item {{step === 2 ? 'is-active' : ''}} {{step > 2 ? 'is-done' : ''}}">
           <view class="advisory-step-item_num_cont">
             <view class="advisory-step-item_num_line"></view>
             <view class="advisory-step-item_num">2</view>
             <view class="advisory-step-item_text">商业设计</view>
           </view>
         </view>
-        <view class="advisory-step-item is-active">
+        <view class="advisory-step-item {{step === 3 ? 'is-active' : ''}} {{step > 3 ? 'is-done' : ''}}">
           <view class="advisory-step-item_num_cont">
             <view class="advisory-step-item_num_line"></view>
             <view class="advisory-step-item_num">3</view>
-            <view class="advisory-step-item_text">商业设计</view>
+            <view class="advisory-step-item_text">高层交流</view>
           </view>
         </view>
-        <view class="advisory-step-item ">
+        <view class="advisory-step-item {{step === 4 ? 'is-active' : ''}} {{step > 4 ? 'is-done' : ''}}">
           <view class="advisory-step-item_num_cont">
             <view class="advisory-step-item_num_line"></view>
             <view class="advisory-step-item_num">4</view>
             <view class="advisory-step-item_num_last_line"></view>
-            <view class="advisory-step-item_text">商业设计</view>
+            <view class="advisory-step-item_text">合伙签约</view>
           </view>
         </view>
+      </view>
+    </view>
+
+    <view wx:if="{{false}}" class="advisory-business-plan-wrap">
+      <image src="../../assets/images/index_banner.png" mode="widthFix"></image>
+      <view class="advisory-business-plan-cont">
+        <view class="advisory-business-plan-title">尊敬的「呃呃呃」</view>
+        <view class="advisory-business-plan-desc">请查阅您的商业计划书,如对商业计划书有异议,可联系您的中台专员【中台专员姓名】进行确认。</view>
+        <view class="advisory-business-plan-book" bindtap="toBook">查看商业计划书</view>
+        <view class="advisory-business-plan-check">
+          <checkbox-group bindchange="checkChane">
+            <checkbox value="bookCheck" color="#333"></checkbox>
+          </checkbox-group>
+          <text>勾选，表示确认该商业计划书无误。</text>
+        </view>
+        <view wx:if="{{isChecked}}" class="advisory-business-plan-btn">完成</view>
+        <view wx:else class="advisory-business-plan-btn is-disabled">完成</view>
       </view>
     </view>
 
     <view class="advisory-question-wrap">
       <view class="advisory-question-title">
         <view class="advisory-question-text">常见问题</view>
-        <view class="advisory-question-change">
+        <view class="advisory-question-change" bindtap="getProblem">
           <text>换一批</text>
           <image src="../../assets/icons/refresh_icon.svg" mode="aspectFit"></image>
         </view>
       </view>
-      <view class="advisory-question-item" bindtap="toPage">如何成为合伙人？</view>
-      <view class="advisory-question-item">进度一直不变化是为什么？</view>
+      <view wx:for="{{questions}}" wx:key="{{index}}" class="advisory-question-item" data-data="{{item}}" bindtap="toPage">{{item.problem}}</view>
     </view>
   </view>
+
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+
+
 </view>

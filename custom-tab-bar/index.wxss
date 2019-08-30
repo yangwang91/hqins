@@ -6,6 +6,7 @@
   height: 48px;
   background: white;
   display: flex;
+  z-index: 99;
   /* padding-bottom: env(safe-area-inset-bottom); */
 }
 
@@ -28,12 +29,12 @@
   flex-direction: column;
 }
 
-.tab-bar-item cover-image {
+.tab-bar-item image {
   max-width: 36rpx;
   max-height: 36rpx;
   margin-bottom: 6rpx;
 }
 
-.tab-bar-item cover-view {
+.tab-bar-item view {
   font-size: 10px;
 }

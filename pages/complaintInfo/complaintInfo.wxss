@@ -1,0 +1,100 @@
+/* pages/complaintInfo/complaintInfo.wxss */
+
+page {
+  background: #fafafa;
+}
+
+.complaint-info-desc {
+  padding: 30rpx;
+  background: #fff;
+}
+
+.complaint-info-desc_title {
+  font-size: 34rpx;
+  font-weight: 500;
+  color: #000;
+}
+
+.complaint-info-desc_text {
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #333;
+  margin-top: 30rpx;
+}
+
+.complaint-info-desc_feedback {
+  font-size: 28rpx;
+  color: #B78A47;
+  background: #FAEBD6;
+  border-radius: 4rpx;
+  padding: 24rpx;
+  margin-top: 30rpx;
+}
+
+.complaint-info-desc_feedback_title {
+  font-size: 28rpx;
+  margin-bottom: 18rpx;
+}
+
+.complaint-info-step {
+  position: relative;
+  padding: 0 30rpx;
+}
+
+.complaint-info-step_line {
+  position: absolute;
+  left: 36rpx;
+  top: 0;
+  width: 1rpx;
+  height: 100%;
+  background: #ddd;
+}
+
+.complaint-info-step_list {
+  position: relative;
+  padding: 30rpx 30rpx 30rpx 76rpx;
+}
+.complaint-info-step_item {
+  padding-bottom: 52rpx;
+}
+.complaint-info-step_item_title {
+  position: relative;
+  font-size: 30rpx;
+  line-height: 36rpx;
+  font-weight: 500;
+  color: #666;
+}
+
+.complaint-info-step_item_time {
+  font-size: 26rpx;
+  line-height: 36rpx;
+  margin-top: 10rpx;
+  color: #666;
+}
+
+.complaint-info-step_item_title_dot {
+  position: absolute;
+  left: -47rpx;
+  top: 8rpx;
+  width: 18rpx;
+  height: 18rpx;
+  background: #ddd;
+  border-radius: 18rpx;
+}
+.complaint-info-step_item_title_dot_active {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -54rpx;
+  top: 8rpx;
+  padding: 4rpx;
+  border-radius: 100%;
+  border: 1rpx solid #D3A468;
+}
+.complaint-info-step_item_title_dot_active .active_dot {
+  width: 18rpx;
+  height: 18rpx;
+  background: #D3A468;
+  border-radius: 100%;
+}

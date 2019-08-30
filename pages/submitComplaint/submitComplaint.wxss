@@ -1,0 +1,42 @@
+/* pages/submitComplaint/submitComplaint.wxss */
+.submit-complaint-cont {
+  padding: 30rpx;
+}
+.submit-complaint-title {
+  display: flex;
+  align-items: center;
+  /* padding: 30rpx; */
+}
+.submit-complaint-title_text {
+  flex: 1;
+  font-size: 30rpx;
+  color: #333;
+}
+.submit-complaint-title_count {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.submit-complaint-textarea {
+  /* width: 100%; */
+  padding: 30rpx;
+  height: 340rpx;
+  margin-top: 30rpx;
+  background: #fafafa;
+}
+.submit-complaint-textarea textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 30rpx;
+}
+
+.submit-complaint-btn {
+  height: 82rpx;
+  line-height: 82rpx;
+  text-align: center;
+  border-radius: 6rpx;
+  font-size: 30rpx;
+  margin-top: 80rpx;
+  color: #000;
+  background: #FACE97;
+}

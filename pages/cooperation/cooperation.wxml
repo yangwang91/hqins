@@ -5,31 +5,31 @@
     <view class="cooperation-form_title">基本信息</view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">姓名：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入您的姓名"></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入您的姓名" data-key="name" bindinput="inputChange"></input>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">预期经营地区：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入所在城市"></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入所在城市" data-key="area" bindinput="inputChange"></input>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">预期经营方式：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入渠道/场景/销售方式"></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入渠道/场景/销售方式" data-key="jyms" bindinput="inputChange"></input>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name">推荐人：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入推荐人姓名"></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入推荐人姓名" data-key="tjr" bindinput="inputChange"></input>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">手机号码：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入您的手机号码" type="number"></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入您的手机号码" type="number" data-key="phone" bindinput="inputChange"></input>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">验证码：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder=""></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="" data-key="code" bindinput="inputChange"></input>
       <view wx:if="{{isGetCode}}" class="get-code-cutdown">{{timer}}s</view>
-      <view wx:else class="get-code-btn" bindtap="getCode">获取验证码</view>
+      <view wx:else class="get-code-btn" bindtap="getVcode">获取验证码</view>
     </view>
   </view>
 
-  <view class="comfirm-btn is-disabled">提交</view>
+  <view class="comfirm-btn" bindtap="submitForm">提交</view>
 </view>

@@ -1,0 +1,81 @@
+<!--pages/team/team.wxml-->
+<view class="container">
+
+  <view class="team-header">
+    <view class="team-user-wrap">
+      <view class="team-user-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class="team-user-aname">
+        <open-data type="userNickName"></open-data>
+      </view>
+    </view>
+  </view>
+
+  <view class="team-slogon-wrap">
+    <image src="../../assets/icons/question_icon.svg" mode="aspectFit"></image>
+    <view class="team-slogon-list">
+      <view class="team-slogon-item">
+        <view class="team-slogon-item_title">横琴顶尖团队</view>
+        <view class="team-slogon-item_desc">“用心经营过程，结果自然产生”</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="team-card-wrap">
+    <view class="team-card-header">
+      <view class="team-card-header_title">我要推广</view>
+      <view class="team-card-header_sub">
+        <view class="team-card-num">洽谈数：05</view>
+      </view>
+    </view>
+    <scroll-view scroll-x class="team-poster-wrap">
+      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill" bindtap="fnShowPoster"></image>
+      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill"></image>
+      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill"></image>
+      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill"></image>
+    </scroll-view>
+  </view>
+
+  <view class="team-card-wrap">
+    <view class="team-card-header">
+      <view class="team-card-header_title">投诉建议</view>
+      <view class="team-card-header_sub">
+        <view class="team-card-more" bindtap="toComplaintList">更多</view>
+      </view>
+    </view>
+    <view class="team-card-cont">
+      <!-- <view class="team-card-complaint-none">
+        <view class="team-card-complaint-none_text">当前无任何投诉</view>
+        <view class="team-card-complaint-none_btn" bindtap="toComplaint">添加投诉</view>
+      </view> -->
+      <complaint-card></complaint-card>
+    </view>
+  </view>
+
+  <view class="team-card-wrap" bindtap="toTeamMember">
+    <view class="team-card-header">
+      <view class="team-card-header_title">团队成员</view>
+    </view>
+  </view>
+
+  <view class="team-card-wrap">
+    <view class="team-card-header">
+      <view class="team-card-header_title">中台赋能</view>
+    </view>
+    <view class="team-funeng-list">
+      <view class="team-funeng-item" wx:for="{{6}}">
+        <view class="team-funeng-item_header">销售支持</view>
+        <view class="team-funeng-item_name">陈金瑞</view>
+        <view class="team-funeng-item_mobile">13800138000</view>
+      </view>
+    </view>
+  </view>
+
+  <poster open="{{showPoster}}"></poster>
+
+
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+
+
+</view>

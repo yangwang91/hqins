@@ -29,6 +29,7 @@ Component({
         this.setData({
           hidden: true
         })
+        this.login()
       }
     },
 
@@ -41,8 +42,73 @@ Component({
             this.setData({
               hidden: false
             })
+          } else {
+            // 
+            this.login()
           }
         }
+      })
+    },
+
+    // login
+    login () {
+      wx.showToast({
+        title: '正在加载...',
+        icon: 'loading',
+      })
+      // 登录
+      wx.login({
+        success: res => {
+          const code = res.code
+          console.log('login', res)
+
+          app.API.getToken({ userId: 'ekp' }).then(res => {
+            console.log(res)
+            const token = res.result[0].token
+            wx.setStorageSync('token', token)
+            this.getOpenId(token, code)
+          }).catch(err => {
+            console.log(err)
+          })
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        }
+      })
+    },
+
+
+    // 获取openID
+    getOpenId(token, code) {
+      app.API.getOpenId({
+        token: token,
+        code: code
+      }).then(res => {
+        console.log(res)
+        const info = res.result[0]
+        wx.setStorage({
+          key: 'userInfo',
+          data: {
+            openid: res.openid,
+            info: info
+          },
+          success: (res) => {
+            this.intoApp(info.present)
+          },
+          fail: (res) => {},
+          complete: (res) => {},
+        })
+      })
+    },
+
+    // 进入
+    intoApp(present) {
+      wx.reLaunch({
+        url: present === '1' ? '../index2/index2' : '../index/index',
+        success: function (res) {
+          wx.hideTabBar()
+          wx.hideLoading()
+        },
+        fail: function (res) { },
+        complete: function (res) { },
       })
     }
   },

@@ -1,0 +1,60 @@
+/* components/complaint-card/complaint-card.wxss */
+
+.complaint-card {
+  background: #fff;
+  border: 1rpx solid rgba(248, 248, 248, 1);
+  box-shadow: 0rpx 4rpx 10rpx 0rpx rgba(51, 51, 51, 0.04);
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.complaint-card-info {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  padding: 30rpx 30rpx 0;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  color: #333;
+}
+
+.complaint-card-feedback {
+  margin: 30rpx;
+  padding: 24rpx;
+  color: #B78A47;
+  background: #FAEBD6;
+  border-radius: 3rpx;
+}
+.complaint-card-feedback_title {
+  font-size: 24rpx;
+  color: #B78A47;
+}
+.complaint-card-feedback_desc {
+  font-size: 26rpx;
+  font-weight: 500;
+  margin-top: 10rpx;
+  line-height: 32rpx;
+}
+.complaint-card-status {
+  display: flex;
+  height: 78rpx;
+  padding: 0 30rpx;
+  margin-top: 30rpx;
+  align-items: center;
+  background: #efefef;
+  border-radius: 0 0 6rpx 6rpx;
+  overflow: hidden;
+}
+
+.complaint-card-status_text {
+  flex: 1;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #ff3939;
+}
+
+.complaint-card-status_date {
+  font-size: 26rpx;
+  color: #666;
+}

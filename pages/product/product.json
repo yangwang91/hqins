@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "产品",
   "usingComponents": {
-    "pro-item": "./components/pro-item/pro-item"
+    "pro-item": "./components/pro-item/pro-item",
+    "tabbar": "../../components/tabbar/tabbar"
   }
 }

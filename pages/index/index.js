@@ -4,13 +4,14 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    tabbar: {},
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
  
   onLoad: function () {
+    app.editTabbar()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,6 +51,20 @@ Page({
   toJionUs: function() {
     wx.navigateTo({
       url: '../jionus/jionus'
+    })
+  },
+
+  openMini() {
+    wx.navigateToMiniProgram({
+      appId: 'wx4f0c08a031479e5b',
+      path: '/pages/index/index',
+      extraData: {
+        foo: 'bar'
+      },
+      envVersion: 'release',
+      success(res) {
+        // 打开成功
+      }
     })
   }
 })

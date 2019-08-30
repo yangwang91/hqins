@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "cooperation-meeting": "../../components/cooperation-meeting/cooperation-meeting"
+    "cooperation-meeting": "../../components/cooperation-meeting/cooperation-meeting",
+    "tabbar": "../../components/tabbar/tabbar"
   }
 }

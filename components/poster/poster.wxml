@@ -1,0 +1,20 @@
+<!--components/poster/poster.wxml-->
+<canvas class="poster-canvas" style="width: 660px; height: 970px;" canvas-id="poster"></canvas>
+
+<view hidden="{{!showPoster}}" class="poster-modle" catchtouchmove="fnCatchtouchmove">
+<view class="poster-modle-mask"></view>
+<view class="poster-modle-cont">
+  <image class="poster-modle-img" src="{{tempFilePath}}" mode="widthFix"></image>
+  <view class="poster-modle-btns">
+    <view class="poster-modle-btn_cancel" bindtap="closePoster">取消</view>
+    <view wx:if="{{canSave}}" class="poster-modle-btn_save" bindtap="savePoster">
+      <image src="../../assets/icons/download_icon.svg"></image>
+      <text>保存到相册</text>
+    </view>
+    <view wx:else class="poster-modle-btn_save" bindtap="openSetting">
+      <image src="../../assets/icons/download_icon.svg"></image>
+      <text>保存到相册</text>
+    </view>
+  </view>
+</view>
+</view>

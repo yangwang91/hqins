@@ -3,9 +3,9 @@
   <view class="question-wrap">
   <view class="question-title">
     <image src="../../assets/icons/question_icon.svg" mode="aspeectFit"></image>
-    <view>如何成为合伙人？</view>
+    <view>{{question.problem}}</view>
   </view>
 
-  <view class="question-desc">理念一致，能力互补，这通常是我们普遍认同的合伙人标准。如果彼此真诚，那更好!而即使这样，我们也不可避免的争执矛盾可以让团队成员的感情升华、共同创业经历取得成果，也可能让团队瓦解，所以的辛劳付出在瞬间完败。所以，在寻找创业合伙人时，需要关注一个重要因素是：你如何处理与潜在合作者之间的矛盾。</view>
+  <view class="question-desc">{{question.answer}}</view>
   </view>
 </view>

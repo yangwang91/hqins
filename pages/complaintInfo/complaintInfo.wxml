@@ -1,0 +1,26 @@
+<!--pages/complaintInfo/complaintInfo.wxml-->
+<view class="container">
+  <view class="complaint-info-desc">
+    <view class="complaint-info-desc_title">投诉详情</view>
+    <view class="complaint-info-desc_text">某些业务需要加深理解并在当前的基础上做进一步修改,另外整个文档的编写缺乏深度，主题不够突出，没有把握中心思想，建议在此基础上重新考虑整体框架，再做一份。</view>
+    <view class="complaint-info-desc_feedback">
+      <view class="complaint-info-desc_feedback_title">投诉反馈：</view>
+      <view>您的建议非常好，总部也考虑到这一点，目前已经开展相关调研。最终结果将会在月底公布。</view>
+    </view>
+  </view>
+
+  <view class="complaint-info-step">
+    <view class="complaint-info-step_list">
+      <view class="complaint-info-step_line"></view>
+      <view class="complaint-info-step_item" wx:for="{{3}}">
+        <view class="complaint-info-step_item_title">
+          <view class="complaint-info-step_item_title_dot"></view>
+          <!-- <view class="complaint-info-step_item_title_dot_active">
+            <view class="active_dot"></view>
+          </view> -->
+          办结</view>
+        <view class="complaint-info-step_item_time">2019/08/08 18:00</view>
+      </view>
+    </view>
+  </view>
+</view>

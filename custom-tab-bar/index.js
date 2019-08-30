@@ -8,18 +8,18 @@ Component({
     isIpx: app.globalData.sysInfo.statusBarHeight >= 44,
     list: [{
       pagePath: "/pages/index/index",
-      iconPath: "../assets/tabImg/home.png",
-      selectedIconPath: "../assets/tabImg/home.png",
+      iconPath: "../assets/tabImg/home.svg",
+      selectedIconPath: "../assets/tabImg/home_selected.svg",
       text: "首页"
     }, {
       pagePath: "/pages/product/product",
-      iconPath: "../assets/tabImg/product.png",
-      selectedIconPath: "../assets/tabImg/home.png",
+      iconPath: "../assets/tabImg/product.svg",
+      selectedIconPath: "../assets/tabImg/product_selected.svg",
       text: "产品"
     }, {
       pagePath: "/pages/advisory/advisory",
-      iconPath: "../assets/tabImg/product.png",
-      selectedIconPath: "../assets/tabImg/home.png",
+      iconPath: "../assets/tabImg/advisory.svg",
+      selectedIconPath: "../assets/tabImg/advisory_selected.svg",
       text: "咨询"
     }]
   },

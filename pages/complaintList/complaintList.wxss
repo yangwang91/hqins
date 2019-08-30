@@ -1,0 +1,36 @@
+/* pages/complaintList/complaintList.wxss */
+
+.complaint-list-tab {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 102rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+}
+
+.complaint-list-tab_item {
+  width: 50%;
+  text-align: center;
+}
+.complaint-list-tab_item text {
+  display: inline-block;
+  height: 102rpx;
+  line-height: 102rpx;
+  border-bottom: 4rpx solid transparent;
+}
+.complaint-list-tab_item text.is-active {
+  color: #D3A468;
+  border-bottom: 4rpx solid #D3A468;
+}
+
+.complaint-list {
+  padding: 132rpx 30rpx 30rpx;
+}
+.complaint-list complaint-card {
+  display: block;
+  margin-bottom: 30rpx;
+}

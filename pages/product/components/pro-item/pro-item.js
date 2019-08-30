@@ -4,7 +4,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    tabName: {
+      type: String,
+      value: '明星产品'
+    },
+    data: {
+      type: Object,
+      value: {}
+    }
   },
 
   /**
@@ -12,6 +19,14 @@ Component({
    */
   data: {
     slideHidden: true
+  },
+
+  lifetimes: {
+    attached: function() {
+      this.setData({
+        slideHidden: true
+      })
+    }
   },
 
   /**

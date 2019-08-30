@@ -1,4 +1,5 @@
 // pages/cooperation/cooperation.js
+const app = getApp()
 Page({
 
   /**
@@ -6,7 +7,15 @@ Page({
    */
   data: {
     timer: 60,
-    isGetCode: false
+    isGetCode: false,
+    postData: {
+      name: '',
+      area: '',
+      jyms: '',
+      tjr: '',
+      phone: '',
+      code: ''
+    }
   },
 
   /**
@@ -58,11 +67,12 @@ Page({
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  inputChange: function(e) {
+    const key = e.currentTarget.dataset.key
+    const value = e.detail.value
+    this.setData({
+      [`postData.${key}`]: value
+    })
   },
 
   getCode: function () {
@@ -70,7 +80,7 @@ Page({
       isGetCode: true,
       timer: 60
     })
-    let time = 60;
+    let time = this.data.timer;
     let timer = setInterval(() => {
       time--;
       this.setData({
@@ -83,5 +93,110 @@ Page({
         })
       }
     }, 1000)
+  },
+
+  getVcode: function() {
+    const data = this.data.postData
+    if (!data.phone) {
+      wx.showToast({
+        title: '请输入您的手机号码',
+        icon: 'none'
+      })
+      return
+    }
+
+    this.getCode()
+
+    app.API.getMessage({ phone: data.phone}).then(res => {
+      console.log(res)
+      if(res.code === '200') {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+        this.setData({
+          isGetCode: false,
+          timer: 60
+        })
+      }
+    })
+  },
+
+  submitForm: function () {
+    const data = this.data.postData
+    if(!data.name) {
+      wx.showToast({
+        title: '请输入姓名',
+        icon: 'none'
+      })
+      return
+    }
+    if(!data.area) {
+      wx.showToast({
+        title: '请输入所在城市',
+        icon: 'none'
+      })
+      return
+    }
+    if(!data.jyms) {
+      wx.showToast({
+        title: '请输入渠道/场景/销售方式',
+        icon: 'none'
+      })
+      return
+    }
+    if(!data.phone) {
+      wx.showToast({
+        title: '请输入您的手机号码',
+        icon: 'none'
+      })
+      return
+    }
+    if(!data.code) {
+      wx.showToast({
+        title: '请输入验证码',
+        icon: 'none'
+      })
+      return
+    }
+
+    app.API.addCooperation(data).then(res => {
+      console.log(res)
+      if(res.code == 200) {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+        this.resetForm()
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: -1,
+          })
+        }, 2000)
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+      }
+    })
+  },
+
+  resetForm:function() {
+    this.setData({
+      postData: {
+        name: '',
+        area: '',
+        jyms: '',
+        tjr: '',
+        phone: '',
+        code: ''
+      }
+    })
   }
 })

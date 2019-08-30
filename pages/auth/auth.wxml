@@ -1,0 +1,3 @@
+<!--pages/auth/auth.wxml-->
+
+<login-model></login-model>

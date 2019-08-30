@@ -7,22 +7,40 @@
   <!-- jion us -->
   <view class="jion-us-wrap">
     <image src="../../assets/images/jionus_img.png" mode="aspectFit"></image>
-    <view class="jion-us-text">
-      <view>
-        <text>·</text>
-        <text>未来合伙人招募令</text>
-      </view>
-      <view>
-        <text>·</text>
-        <text>未来合伙人荣耀册</text>
-      </view>
-    </view>
+    <swiper vertical autoplay circular>
+      <swiper-item>
+        <view class="jion-us-text">
+          <view>
+            <text>·</text>
+            <text>未来合伙人招募令</text>
+          </view>
+          <view>
+            <text>·</text>
+            <text>未来合伙人荣耀册</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="jion-us-text">
+          <view>
+            <text>·</text>
+            <text>2未来合伙人招募令</text>
+          </view>
+          <view>
+            <text>·</text>
+            <text>2未来合伙人荣耀册</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
     <view class="jion-us-show" bindtap="toJionUs">去看看</view>
   </view>
 
+  <!-- <view bindtap="openMini">打开</view> -->
+
   <!-- video -->
   <view class="index-video-wrap">
-    <video id="myVideo" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"></video>
+    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4" show-center-play-btn="{{false}}" object-fit="cover"></video>
   </view>
 
 
@@ -184,6 +202,9 @@
       <view class="recruitment-example-item">
         <text>Ⅳ</text>保险产品企划经验者及优秀培训讲师
       </view>
+      <view class="recruitment-example-item">
+        <text>Ⅴ</text>......
+      </view>
     </view>
   </view>
 
@@ -218,6 +239,8 @@
 
 
   <cooperation-meeting></cooperation-meeting>
+
+  <tabbar tabbar="{{tabbar}}"></tabbar>
 
 </view>
 

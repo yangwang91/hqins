@@ -1,0 +1,68 @@
+/* components/poster/poster.wxss */
+
+.poster-canvas {
+  position: absolute;
+  top: -1000%;
+  left: -100%;
+}
+
+.poster-modle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  transition:  all .4s;
+}
+
+.poster-modle-mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.poster-modle-cont {
+  width: 600rpx;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 0;
+  transform: translate(-50%, -40%);
+  background: #fff;
+}
+
+.poster-modle-img {
+  width: 100%;
+}
+
+.poster-modle-btns {
+  display: flex;
+  align-items: center;
+  height: 92rpx;
+  line-height: 92rpx;
+  font-size: 30rpx;
+  background: #f7f7f7;
+}
+
+.poster-modle-btn_cancel {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-right: 1rpx solid #ddd;
+}
+
+.poster-modle-btn_save {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #D3A468;
+}
+.poster-modle-btn_save image {
+  width: 48rpx;
+  height: 38rpx;
+  margin-right: 8rpx;
+}

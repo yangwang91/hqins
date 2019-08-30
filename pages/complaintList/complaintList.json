@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "投诉建议",
+  "usingComponents": {
+    "complaint-card": "../../components/complaint-card/complaint-card"
+  }
+}
