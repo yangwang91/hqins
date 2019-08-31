@@ -1,4 +1,5 @@
 // pages/submitComplaint/submitComplaint.js
+const app = getApp()
 Page({
 
   /**
@@ -57,6 +58,37 @@ Page({
    */
   onReachBottom: function() {
 
+  },
+
+  addPropose: function() {
+    const val = this.data.val
+    if (!val) return
+    wx.showLoading({
+      title: '正在提交...'
+    })
+    app.API.addPropose({
+      tsxq: val
+    }).then(res => {
+      wx.hideLoading()
+      console.log(res)
+      if(res.code == 200) {
+        wx.showToast({
+          title: '提交成功',
+          icon: 'none'
+        })
+
+        setTimeout(() => {
+          wx.navigateBack({
+            delta: -1,
+          })
+        }, 2000)
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+      }
+    })
   },
 
   inputChange: function(e) {

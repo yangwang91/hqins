@@ -2,16 +2,18 @@
 <view class="container">
   <view class="complaint-list-tab">
     <view class="complaint-list-tab_item">
-      <text class="{{isActive === 1 ? 'is-active' : ''}}" data-index="1" bindtap="tabChange">未处理</text>
+      <text class="{{isActive === 0 ? 'is-active' : ''}}" data-index="0" bindtap="tabChange">未处理</text>
     </view>
     <view class="complaint-list-tab_item">
-      <text class="{{isActive === 2 ? 'is-active' : ''}}" data-index="2" bindtap="tabChange">已完成</text>
+      <text class="{{isActive === 1 ? 'is-active' : ''}}" data-index="1" bindtap="tabChange">已完成</text>
     </view>
   </view>
 
   <view class="complaint-list">
-    <block wx:for="{{6}}">
-      <complaint-card></complaint-card>
+    <block wx:for="{{proposeList}}" wx:key="{{index}}">
+      <complaint-card propose="{{item}}"></complaint-card>
     </block>
   </view>
+
+  <view class="complaint-list-add" bindtap="toComplaint">+</view>
 </view>

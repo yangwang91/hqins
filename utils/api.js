@@ -11,7 +11,11 @@ const URL = {
   addCooperation: BASE_URL + 'addCooperation',
   getMessage: BASE_URL + 'getMessage',
   getCategorylist: BASE_URL + 'getCategorylist',
-  getProductlist: BASE_URL + 'getProductlist'
+  getProductlist: BASE_URL + 'getProductlist',
+  getSales: BASE_URL + 'getSales',
+  getProposeList: BASE_URL + 'getProposeList',
+  addPropose: BASE_URL + 'addPropose',
+  getProposeById: BASE_URL + 'getProposeById'
 }
 
 function getRequestData(data) {
@@ -59,6 +63,26 @@ function getProductlist(data) {
   return _request.send('GET', URL.getProductlist, data).then(res => res.data)
 }
 
+function getSales(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getSales, data).then(res => res.data)
+}
+
+function getProposeList(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getProposeList, data).then(res => res.data)
+}
+
+function addPropose(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.addPropose, data).then(res => res.data)
+}
+
+function getProposeById(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getProposeById, data).then(res => res.data)
+}
+
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -67,5 +91,9 @@ module.exports = {
   addCooperation: addCooperation,
   getMessage: getMessage,
   getCategorylist: getCategorylist,
-  getProductlist: getProductlist
+  getProductlist: getProductlist,
+  getSales: getSales,
+  getProposeList: getProposeList,
+  addPropose: addPropose,
+  getProposeById: getProposeById
 }

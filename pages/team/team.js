@@ -7,7 +7,9 @@ Page({
    */
   data: {
     tabbar: {},
-    showPoster: false
+    showPoster: false,
+    teamModle: false,
+    proposeList: []
   },
 
   /**
@@ -15,6 +17,8 @@ Page({
    */
   onLoad: function (options) {
     app.editTabbar()
+
+    this.getProposeList()
   },
 
   /**
@@ -59,6 +63,22 @@ Page({
 
   },
 
+  getProposeList: function() {
+    app.API.getProposeList().then(res => {
+      console.log(res)
+      if(res.code == 200) {
+        this.setData({
+          proposeList: res.result || []
+        })
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+      }
+    })
+  },
+
   toComplaint: function() {
     wx.navigateTo({
       url: '../submitComplaint/submitComplaint'
@@ -77,9 +97,41 @@ Page({
     })
   },
 
+  toPromotionDetails: function() {
+    wx.navigateTo({
+      url: '../promotionDetails/promotionDetails'
+    })
+  },
+
   fnShowPoster: function () {
     this.setData({
       showPoster: true
+    })
+  },
+
+  phoneCall: function(e) {
+    const phone = e.currentTarget.dataset.phone
+    wx.makePhoneCall({
+      phoneNumber: phone
+    })
+  },
+
+  copyText: function(e) {
+    const text = e.currentTarget.dataset.text
+    wx.setClipboardData({
+      data: text
+    })
+  },
+
+  openTeamModle: function() {
+    this.setData({
+      teamModle: true
+    })
+  },
+
+  closeTeamModle: function() {
+    this.setData({
+      teamModle: false
     })
   }
 

@@ -65,6 +65,8 @@
     </view>
   </view>
 
+  <contact></contact>
+
   <tabbar tabbar="{{tabbar}}"></tabbar>
 
 

@@ -1,0 +1,50 @@
+<!--pages/calculating/calculating.wxml-->
+<view class="calculating-wrap">
+  <view class="calculating-cont">
+    <!-- 第一题 -->
+    <view wx:if="{{step === 1}}" class="calculating-question">
+      <view class="calculating-num">
+        <text>1</text>/2</view>
+      <view class="calculating-question-title">请选择您团队的销售场景：</view>
+      <view class="calculating-question-answer">
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label wx:for="{{question1}}" class="radio">
+            <radio value="{{item.value}}" class="{{item.checked ? 'is-checked' : ''}}" checked="{{item.checked}}" color="#D3A468">
+              <text>{{item.name}}</text>
+            </radio>
+          </label>
+        </radio-group>
+      </view>
+      <view class="calculating-btns">
+        <view class="calculating-comfirm-btn">下一题</view>
+      </view>
+    </view>
+    <!-- 第二（1） -->
+    <view wx:if="{{step === 2}}" class="calculating-question">
+      <view class="calculating-num">
+        <text>2</text>/2</view>
+      <view class="calculating-question-title">请预估您团队的12个月保费业绩：</view>
+      <view class="calculating-question-answer">
+        <view class="calculating-question-input-wrap">
+          <block>
+            <view class="calculating-question-answer_sub">您已选择销售场景：XXXX</view>
+            <view class="calculating-question-input">
+              <input placeholder="请输入保费业绩"></input>
+              <view>万元</view>
+            </view>
+          </block>
+          <block>
+            <view class="calculating-question-input">
+              <input placeholder="请输入保费业绩"></input>
+              <view>万元</view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="calculating-btns">
+        <view class="calculating-comfirm-btn">下一题</view>
+      </view>
+    </view>
+    <!--  -->
+  </view>
+</view>

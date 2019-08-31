@@ -7,16 +7,13 @@ Page({
    */
   data: {
     tabbar: {},
+    topSales: [],
     imgUrls: [{
-        src: '../../assets/images/index2_banner1.png',
+        src: app.images.index2_banner_1,
         link: ''
       },
       {
-        src: '../../assets/images/index2_banner2.png',
-        link: ''
-      },
-      {
-        src: '../../assets/images/index2_banner3.png',
+        src: app.images.index2_banner_2,
         link: ''
       }
     ]
@@ -27,6 +24,10 @@ Page({
    */
   onLoad: function (options) {
     app.editTabbar()
+
+    console.log(app)
+
+    this.getSales()
   },
 
   /**
@@ -70,5 +71,16 @@ Page({
   onReachBottom: function () {
 
   },
+
+  getSales: function() {
+    app.API.getSales().then(res => {
+      console.log(res)
+      if(res.code == 200) {
+        this.setData({
+          topSales: res.result
+        })
+      }
+    })
+  }
 
 })

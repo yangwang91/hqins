@@ -1,18 +1,20 @@
 // pages/complaintInfo/complaintInfo.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    id: '',
+    propose: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getProposeInfo(options.id)
   },
 
   /**
@@ -43,18 +45,22 @@ Page({
 
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
+  getProposeInfo: function(id) {
+    app.API.getProposeById({docId: id}).then(res => {
+      console.log(res)
+      if(res.code == 200){
+        this.setData({
+          propose: res.result[0]
+        })
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+      }
+    })
+  }
 
-  },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
 
 })

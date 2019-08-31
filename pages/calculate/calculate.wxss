@@ -1,0 +1,22 @@
+/* pages/calculate/calculate.wxss */
+.calculate-wrap {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 50px);
+}
+.calculate-start-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 132rpx;
+  width: 376rpx;
+  height: 92rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #333;
+  background: #FACE97;
+  border-radius: 46rpx;
+  transform: translateX(-50%);
+}
+

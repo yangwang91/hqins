@@ -15,10 +15,20 @@
   <view class="team-slogon-wrap">
     <image src="../../assets/icons/question_icon.svg" mode="aspectFit"></image>
     <view class="team-slogon-list">
-      <view class="team-slogon-item">
-        <view class="team-slogon-item_title">横琴顶尖团队</view>
-        <view class="team-slogon-item_desc">“用心经营过程，结果自然产生”</view>
-      </view>
+      <swiper vertical autoplay circular>
+        <swiper-item>
+          <view class="team-slogon-item">
+            <view class="team-slogon-item_title">横琴顶尖团队</view>
+            <view class="team-slogon-item_desc">“用心经营过程，结果自然产生”</view>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="team-slogon-item">
+            <view class="team-slogon-item_title">2横琴顶尖团队</view>
+            <view class="team-slogon-item_desc">“2用心经营过程，结果自然产生”</view>
+          </view>
+        </swiper-item>
+      </swiper>
     </view>
   </view>
 
@@ -26,7 +36,8 @@
     <view class="team-card-header">
       <view class="team-card-header_title">我要推广</view>
       <view class="team-card-header_sub">
-        <view class="team-card-num">洽谈数：05</view>
+        <!-- <view class="team-card-num">洽谈数：05</view> -->
+        <view class="team-card-more" bindtap="toPromotionDetails">推广详情</view>
       </view>
     </view>
     <scroll-view scroll-x class="team-poster-wrap">
@@ -40,22 +51,29 @@
   <view class="team-card-wrap">
     <view class="team-card-header">
       <view class="team-card-header_title">投诉建议</view>
-      <view class="team-card-header_sub">
+      <view wx:if="{{proposeList.length}}" class="team-card-header_sub">
         <view class="team-card-more" bindtap="toComplaintList">更多</view>
       </view>
     </view>
     <view class="team-card-cont">
-      <!-- <view class="team-card-complaint-none">
-        <view class="team-card-complaint-none_text">当前无任何投诉</view>
-        <view class="team-card-complaint-none_btn" bindtap="toComplaint">添加投诉</view>
-      </view> -->
-      <complaint-card></complaint-card>
+      <block wx:if="{{!proposeList.length}}">
+        <view class="team-card-complaint-none">
+          <view class="team-card-complaint-none_text">当前无任何投诉</view>
+          <view class="team-card-complaint-none_btn" bindtap="toComplaint">添加投诉</view>
+        </view>
+      </block>
+      <block wx:else>
+        <complaint-card propose="{{proposeList[0]}}"></complaint-card>
+      </block>
     </view>
   </view>
 
-  <view class="team-card-wrap" bindtap="toTeamMember">
+  <view class="team-card-wrap">
     <view class="team-card-header">
       <view class="team-card-header_title">团队成员</view>
+    </view>
+    <view class="team-member-img">
+      <image src="../../assets/images/team_member_img.png" mode="widthFix" bindtap="toTeamMember"></image>
     </view>
   </view>
 
@@ -65,10 +83,28 @@
     </view>
     <view class="team-funeng-list">
       <view class="team-funeng-item" wx:for="{{6}}">
-        <view class="team-funeng-item_header">销售支持</view>
+        <view class="team-funeng-item_header">销售支持
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
+        </view>
         <view class="team-funeng-item_name">陈金瑞</view>
-        <view class="team-funeng-item_mobile">13800138000</view>
+        <view class="team-funeng-item_mobile" data-phone="13800138000" bindtap="phoneCall">
+          <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
+          <text>13800138000</text>
+        </view>
+        <view class="team-funeng-item_mobile" data-text="sadasdada" bindtap="copyText">
+          <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
+          <text>asadadawdqw</text>
+        </view>
       </view>
+    </view>
+  </view>
+
+  <view wx:if="{{teamModle}}" class="team-funeng-modle">
+    <view class="team-funeng-modle_mask"></view>
+    <view class="team-funeng-modle_cont">
+      <view class="team-funeng-modle_header">企划咨询
+        <text bindtap="closeTeamModle">×</text> </view>
+      <view class="team-funeng-modle_info">营销方案、荣誉体系、队伍活动量管</view>
     </view>
   </view>
 

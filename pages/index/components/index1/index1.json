@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "cooperation-meeting": "../../../../components/cooperation-meeting/cooperation-meeting"
+  }
+}

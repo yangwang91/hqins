@@ -1,0 +1,102 @@
+/* pages/calculating/calculating.wxss */
+
+page {
+  background: #433b38;
+}
+
+.calculating-wrap {
+  width: 100vw;
+  height: 100vh;
+}
+
+.calculating-cont {
+  position: absolute;
+  width: calc(100vw - 60rpx);
+  height: calc(100vh - 100rpx);
+  background: #fff;
+  border-radius: 20rpx;
+  top: 50rpx;
+  left: 30rpx;
+}
+
+.calculating-question {
+  padding: 30rpx 30rpx 60rpx;
+}
+
+.calculating-num {
+  font-size: 26rpx;
+  color: #d3a468;
+}
+
+.calculating-num text {
+  font-size: 88rpx;
+}
+
+.calculating-question-title {
+  font-size: 34rpx;
+  color: #222;
+  font-weight: 500;
+  margin-top: 20rpx;
+}
+
+.calculating-question-answer .radio {
+  display: flex;
+  align-items: center;
+  height: 110rpx;
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1rpx solid #eee;
+}
+
+.radio .wx-radio-input {
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: -4rpx;
+  margin-right: 20rpx;
+}
+
+.radio .wx-radio-input.wx-radio-input-checked text {
+  color: #d3a468 !important;
+}
+
+
+.calculating-btns {
+  position: absolute;
+  left: 0;
+  bottom: 50rpx;
+  width: calc(100% - 60rpx);
+  margin: 0 30rpx;
+}
+
+.calculating-comfirm-btn {
+  width: 100%;
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6rpx;
+  font-size: 30rpx;
+  background: #FACE97;
+}
+
+.calculating-question-input-wrap {
+  margin-top: 50rpx;
+}
+
+.calculating-question-answer_sub {
+  font-size: 28rpx;
+  color: #555;
+}
+
+.calculating-question-input {
+  display: flex;
+  align-items: center;
+  height: 88rpx;
+  color: #222;
+  font-size: 30rpx;
+  border-bottom: 1rpx solid #eee;
+}
+.calculating-question-input input {
+  flex: 1;
+  margin-right: 20rpx;
+}

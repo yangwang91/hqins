@@ -102,7 +102,7 @@ Component({
     // 进入
     intoApp(present) {
       wx.reLaunch({
-        url: present === '1' ? '../index2/index2' : '../index/index',
+        url: '../index/index',
         success: function (res) {
           wx.hideTabBar()
           wx.hideLoading()

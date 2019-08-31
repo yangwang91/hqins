@@ -1,0 +1,7 @@
+<!--components/contact/contact.wxml-->
+<view class="cooperation-meeting" bindtap="toPage">
+  <view class="cooperation-meeting_img">
+    <image src="../../assets/icons/contact_icon.svg" mode="aspectFit"></image>
+  </view>
+  <view class="cooperation-meeting_text">在线客服</view>
+</view>

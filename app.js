@@ -1,5 +1,6 @@
 //app.js
 import API from './utils/api.js'
+import images from './utils/images.js'
 // import request from './utils/request.js'
 // const _request = new request
 
@@ -81,6 +82,7 @@ App({
   },
   
   API: API,
+  images: images,
   globalData: {
     userInfo: null,
     sysInfo: {},
@@ -89,7 +91,7 @@ App({
       "color": "#999",
       "selectedColor": "#D3A468",
       "list": [{
-        pagePath: "/pages/index2/index2",
+        pagePath: "/pages/index/index",
         iconPath: "../../assets/tabImg/home.svg",
         selectedIconPath: "../../assets/tabImg/home_selected.svg",
         text: "首页"
@@ -115,11 +117,16 @@ App({
         selectedIconPath: "../../assets/tabImg/home_selected.svg",
         text: "首页"
       }, {
-        pagePath: "/pages/product/product",
-        iconPath: "../../assets/tabImg/product.svg",
-        selectedIconPath: "../../assets/tabImg/product_selected.svg",
-        text: "产品"
-      }, {
+          pagePath: "/pages/product/product",
+          iconPath: "../../assets/tabImg/product.svg",
+          selectedIconPath: "../../assets/tabImg/product_selected.svg",
+          text: "产品"
+        }, {
+          pagePath: "/pages/calculate/calculate",
+          iconPath: "../../assets/tabImg/compute.svg",
+          selectedIconPath: "../../assets/tabImg/compute_selected.svg",
+          text: "测算"
+        }, {
         pagePath: "/pages/advisory/advisory",
         iconPath: "../../assets/tabImg/advisory.svg",
         selectedIconPath: "../../assets/tabImg/advisory_selected.svg",

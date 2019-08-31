@@ -1,0 +1,12 @@
+<!--pages/calculate/calculate.wxml-->
+<view class="container">
+
+<view class="calculate-wrap">
+  <view class="calculate-start-btn" bindtap="toPage">开始测算</view>
+
+</view>
+
+
+<tabbar tabbar="{{tabbar}}"></tabbar>
+
+</view>

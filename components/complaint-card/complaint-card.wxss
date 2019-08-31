@@ -53,6 +53,9 @@
   font-weight: 500;
   color: #ff3939;
 }
+.complaint-card-status_text.is-done {
+  color: #555;
+}
 
 .complaint-card-status_date {
   font-size: 26rpx;

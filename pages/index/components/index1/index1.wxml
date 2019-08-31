@@ -1,0 +1,241 @@
+<view class="">
+  <!-- 头图 -->
+  <view class="banner-wrap">
+    <image src="{{banner_img}}" mode="widthFix"></image>
+  </view>
+
+  <!-- jion us -->
+  <view class="jion-us-wrap">
+    <image src="../../../../assets/images/jionus_img.png" mode="aspectFit"></image>
+    <swiper vertical autoplay circular>
+      <swiper-item>
+        <view class="jion-us-text">
+          <view>
+            <text>·</text>
+            <text>未来合伙人招募令</text>
+          </view>
+          <view>
+            <text>·</text>
+            <text>未来合伙人荣耀册</text>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item>
+        <view class="jion-us-text">
+          <view>
+            <text>·</text>
+            <text>2未来合伙人招募令</text>
+          </view>
+          <view>
+            <text>·</text>
+            <text>2未来合伙人荣耀册</text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="jion-us-show" bindtap="toJionUs">去看看</view>
+  </view>
+
+  <!-- video -->
+  <view class="index-video-wrap">
+    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4" show-center-play-btn="{{false}}" object-fit="cover"></video>
+  </view>
+
+
+  <view class="support-wrap">
+    <view class="support-title">六大支持</view>
+    <view class="support-list">
+      <view class="support-item">
+        <view class="support-item_img">
+          <image src="../../../../assets/icons/support_icon_1.svg" mode="aspectFit"></image>
+        </view>
+        <view class="support-item_title">多元业务</view>
+        <view class="support-item_desc">支持各类场景的展业工具</view>
+      </view>
+      <view class="support-item">
+        <view class="support-item_img">
+          <image src="../../../../assets/icons/support_icon_2.svg" mode="aspectFit"></image>
+        </view>
+        <view class="support-item_title">平台赋能</view>
+        <view class="support-item_desc">自由定价及订阅式的培训赋能支持</view>
+      </view>
+      <view class="support-item">
+        <view class="support-item_img">
+          <image src="../../../../assets/icons/support_icon_3.svg" mode="aspectFit"></image>
+        </view>
+        <view class="support-item_title">产品供应</view>
+        <view class="support-item_desc">全渠道产品供应与专属开发特权</view>
+      </view>
+      <view class="support-item">
+        <view class="support-item_img">
+          <image src="../../../../assets/icons/support_icon_4.svg" mode="aspectFit"></image>
+        </view>
+        <view class="support-item_title">资本支持</view>
+        <view class="support-item_desc">股权合伙专属经营</view>
+      </view>
+      <view class="support-item">
+        <view class="support-item_img">
+          <image src="../../../../assets/icons/support_icon_5.svg" mode="aspectFit"></image>
+        </view>
+        <view class="support-item_title">品牌打造</view>
+        <view class="support-item_desc">品牌授权与媒体支持</view>
+      </view>
+      <view class="support-item">
+        <view class="support-item_img">
+          <image src="../../../../assets/icons/support_icon_6.svg" mode="aspectFit"></image>
+        </view>
+        <view class="support-item_title">总部服务</view>
+        <view class="support-item_desc">直接签约总部快速响应</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- partner -->
+  <view class="partner-warp">
+    <view class="partner-title">合伙人案例</view>
+    <view class="partner-list">
+      <view class="partner-item">
+        <image class="partner-item-img" src="../../../../assets/images/partner_img_1.png" mode="aspectFill"></image>
+        <view class="partner-item_center">
+          <view class="partner-item_center_title">深耕中小银行</view>
+          <view class="partner-item_center_tags">
+            <view class="partner-item_center_tag">45天连通系统</view>
+            <view class="partner-item_center_tag">30天平台上量</view>
+          </view>
+        </view>
+        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+      </view>
+      <view class="partner-item">
+        <image class="partner-item-img" src="../../../../assets/images/partner_img_2.png" mode="aspectFill"></image>
+        <view class="partner-item_center">
+          <view class="partner-item_center_title">小团队多场景</view>
+          <view class="partner-item_center_tags">
+            <view class="partner-item_center_tag">支持联营开拓</view>
+            <view class="partner-item_center_tag">线上线下融合</view>
+          </view>
+        </view>
+        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+      </view>
+      <view class="partner-item">
+        <image class="partner-item-img" src="../../../../assets/images/partner_img_3.png" mode="aspectFill"></image>
+        <view class="partner-item_center">
+          <view class="partner-item_center_title">中介服务为王</view>
+          <view class="partner-item_center_tags">
+            <view class="partner-item_center_tag">人均高产高收</view>
+            <view class="partner-item_center_tag">专属产品支持</view>
+          </view>
+        </view>
+        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+      </view>
+      <view class="partner-item">
+        <image class="partner-item-img" src="../../../../assets/images/partner_img_4.png" mode="aspectFill"></image>
+        <view class="partner-item_center">
+          <view class="partner-item_center_title">个险服务平台</view>
+          <view class="partner-item_center_tags">
+            <view class="partner-item_center_tag">个险服务内容</view>
+            <view class="partner-item_center_tag">个险服务内容</view>
+          </view>
+        </view>
+        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+      </view>
+      <view class="partner-item">
+        <image class="partner-item-img" src="../../../../assets/images/partner_img_5.png" mode="aspectFill"></image>
+        <view class="partner-item_center">
+          <view class="partner-item_center_title">股权合伙平台</view>
+          <view class="partner-item_center_tags">
+            <view class="partner-item_center_tag">支持二次创业</view>
+            <view class="partner-item_center_tag">联手打造品牌</view>
+          </view>
+        </view>
+        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+      </view>
+    </view>
+  </view>
+
+  <!-- Recruitment -->
+  <view class="recruitment-wrap">
+    <!-- <image class="recruitment-back-img" src="../../../../assets/images/recruitment_back_img.png" mode="aspectFit"></image> -->
+    <view class="recruitment-title">如果您：</view>
+    <view class="recruitment-list">
+      <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_1.svg" mode="aspectFit"></image>
+        <view>有能力</view>
+      </view>
+      <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_2.svg" mode="aspectFit"></image>
+        <view>有资源</view>
+      </view>
+      <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_3.svg" mode="aspectFit"></image>
+        <view>有团队</view>
+      </view>
+    </view>
+    <view class="recruitment-line"></view>
+    <view class="recruitment-list">
+      <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_4.svg" mode="aspectFit"></image>
+        <view>懂用户</view>
+      </view>
+      <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_5.svg" mode="aspectFit"></image>
+        <view>会经营</view>
+      </view>
+      <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_6.svg" mode="aspectFit"></image>
+        <view>想跨界</view>
+      </view>
+    </view>
+    <view class="recruitment-example-list">
+      <view class="recruitment-example-list_text">理解寿险事业，认可持续经营的合伙愿景，满足以下其一：</view>
+
+      <view class="recruitment-example-item">
+        <text>Ⅰ</text>在保险市场有一定的个人品牌影响力
+      </view>
+      <view class="recruitment-example-item">
+        <text>Ⅱ</text>熟悉本地保险市场资源与经营模式
+      </view>
+      <view class="recruitment-example-item">
+        <text>Ⅲ</text>有互联网思维与懂得用户经营的跨界人士
+      </view>
+      <view class="recruitment-example-item">
+        <text>Ⅳ</text>保险产品企划经验者及优秀培训讲师
+      </view>
+      <view class="recruitment-example-item">
+        <text>Ⅴ</text>......
+      </view>
+    </view>
+  </view>
+
+  <view class="jion-tips-wrap">
+    <view class="jion-tips-title">如何加入</view>
+    <view class="jion-tips-list">
+      <view class="jion-tips-item-con">
+        <view class="jion-tips-line"></view>
+        <view class="jion-tips-item">
+          <view class="jion-tips-item_title">
+            <view class="jion-tips-item_dot"></view>第一步：合作洽谈</view>
+          <view class="jion-tips-item_desc">咨询互动后，留下您的联系方式，我们将第一时间安排专属人员跟您进行联系，进一步了解合作意向与解释合伙规则。</view>
+        </view>
+        <view class="jion-tips-item">
+          <view class="jion-tips-item_title">
+            <view class="jion-tips-item_dot"></view>第二步：商业设计</view>
+          <view class="jion-tips-item_desc">根据您的专长与资源，由专属人员与您共同完成商业计划书。</view>
+        </view>
+        <view class="jion-tips-item">
+          <view class="jion-tips-item_title">
+            <view class="jion-tips-item_dot"></view>第三步：高层交流</view>
+          <view class="jion-tips-item_desc">根据商业模式，由专属人员安排您与公司高层进一步交流，并进行项目路演。</view>
+        </view>
+        <view class="jion-tips-item">
+          <view class="jion-tips-item_title">
+            <view class="jion-tips-item_dot"></view>第四步：合伙签约</view>
+          <view class="jion-tips-item_desc">双方合意达成后，进行签约，在公司合伙平台开设独立经营单元。</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <cooperation-meeting></cooperation-meeting>
+
+</view>

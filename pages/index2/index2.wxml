@@ -3,23 +3,53 @@
     <swiper previous-margin="22rpx" next-margin="22rpx" autoplay="true" class="banner_swiper">
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">
         <swiper-item class="swiper_item">
-          <view class="swiper_item_view"><image src="{{item.src}}"/></view>
+          <view class="swiper_item_view">
+            <image src="{{item.src}}" />
+          </view>
         </swiper-item>
       </block>
     </swiper>
   </view>
+
+  <!-- <view class="main-target-wrap">
+    <view class="main-target-title">
+      <view class="main-target-title_text">关键业绩目标</view>
+      <view class="main-target-title_link">商业计划书
+        <image src="../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
+      </view>
+    </view>
+    <view class="main-target-progress-cont">
+      <view class="main-target-progress-bar">
+        <view class="main-target-progress-bar_done" style="width: 80%;"></view>
+        <view class="main-target-progress-tag1" style="left: calc(80% - 12rpx);">
+          <view class="main-target-progress-tag1_dot"></view>
+          <view class="main-target-progress-tag1_num">80
+            <text>个</text>
+          </view>
+        </view>
+        <view class="main-target-progress-tag2" style="left: calc(60% - 12rpx);">
+          <view class="main-target-progress-tag2_dot"></view>
+          <view class="main-target-progress-tag2_num">100
+            <text>个</text>
+            <text class="main-target-progress-tag2_num_tag">目标</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
   <view class="common_con">
     <view class="common_tit">运营服务</view>
     <view class="service_big_box">
       <view class="service_left">
-        <image  src="../../assets/images/index2_yunying_img1.png"></image>
+        <image src="../../assets/images/index2_yunying_img1.png"></image>
       </view>
       <view class="service_right">
         <view class="service_right_1">
-          <image  src="../../assets/images/index2_yunying_img2.png"></image>
+          <image src="../../assets/images/index2_yunying_img2.png"></image>
         </view>
         <view class="service_right_2">
-          <image  src="../../assets/images/index2_yunying_img3.png"></image>
+          <image src="../../assets/images/index2_yunying_img3.png"></image>
         </view>
       </view>
     </view>
@@ -27,56 +57,17 @@
   <view class="common_con sales_con">
     <view class="sales_tit">销售排行(TOP5)</view>
     <view>
-      <view class="sales_ranking">
+      <view wx:for="{{topSales}}" wx:key="{{index}}" class="sales_ranking">
         <view class="sales_ranking_left">
-          <text class="text1">01</text>
-          <text class="text2">横琴一路无忧交通意外伤害保险</text>
+          <text class="text1">0{{index + 1}}</text>
+          <text class="text2">{{item.salename}}</text>
         </view>
         <view class="sales_ranking_right">
-          <text class="text1">5452203</text>
-          <text class="text2">万</text>
-        </view>
-      </view>
-      <view class="sales_ranking">
-        <view class="sales_ranking_left">
-          <text class="text1">02</text>
-          <text class="text2">一路无忧交通意外伤害保险</text>
-        </view>
-        <view class="sales_ranking_right">
-          <text class="text1">56703</text>
-          <text class="text2">万</text>
-        </view>
-      </view>
-      <view class="sales_ranking">
-        <view class="sales_ranking_left">
-          <text class="text1">03</text>
-          <text class="text2">一路无忧交通意外伤害保险</text>
-        </view>
-        <view class="sales_ranking_right">
-          <text class="text1">98203</text>
-          <text class="text2">万</text>
-        </view>
-      </view>
-      <view class="sales_ranking">
-        <view class="sales_ranking_left">
-          <text class="text1">04</text>
-          <text class="text2">一路无忧交通意外伤害保险</text>
-        </view>
-        <view class="sales_ranking_right">
-          <text class="text1">52203</text>
-          <text class="text2">万</text>
-        </view>
-      </view>
-      <view class="sales_ranking">
-        <view class="sales_ranking_left">
-          <text class="text1">05</text>
-          <text class="text2">一路无忧交通意外伤害保险</text>
-        </view>
-        <view class="sales_ranking_right">
-          <text class="text1">2203</text>
-          <text class="text2">万</text>
+          <text class="text1">{{item.saleresult}}</text>
+          <text class="text2"> 万元</text>
         </view>
       </view>
     </view>
   </view>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
 </view>

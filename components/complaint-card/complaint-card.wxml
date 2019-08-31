@@ -1,12 +1,12 @@
 <!--components/complaint-card/complaint-card.wxml-->
-<view class="complaint-card" bindtap="toComplaintInfo">
-  <view class="complaint-card-info">某些业务需要加深理解并在当前的基础上做进一步修改,另外整个文档的编写缺乏深度，主题不够突出，没有把握中心思想，建议在此基础上...</view>
-  <view class="complaint-card-feedback">
+<view class="complaint-card" data-id="{{propose.proposeId}}" bindtap="toComplaintInfo">
+  <view class="complaint-card-info">{{propose.propose}}</view>
+  <view wx:if="{{propose.feedback}}" class="complaint-card-feedback">
   <view class="complaint-card-feedback_title">投诉反馈：</view>
-  <view class="complaint-card-feedback_desc">您的建议非常好，总部也考虑到这一点，目前已经开展相关调研。</view>
+  <view class="complaint-card-feedback_desc">{{propose.feedback}}</view>
   </view>
   <view class="complaint-card-status">
-    <view class="complaint-card-status_text">处理中</view>
-    <view class="complaint-card-status_date">提交时间：2019/08/08</view>
+    <view class="complaint-card-status_text {{propose.status === 1 ? 'is-done' : ''}}">{{propose.status === 0 ? '处理中' : '已完成'}}</view>
+    <view class="complaint-card-status_date">提交时间：{{propose.time}}</view>
   </view>
 </view>

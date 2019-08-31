@@ -16,6 +16,11 @@
     "pages/teamMember/teamMember",
     "pages/partnershipplatform/partnershipplatform",
     "pages/businessPlanWeb/businessPlanWeb",
+    "pages/promotionDetails/promotionDetails",
+    "pages/contractDetails/contractDetails",
+    "pages/contactWeb/contactWeb",
+    "pages/calculate/calculate",
+    "pages/calculating/calculating",
     "pages/specialservice/specialservice",
     "pages/exhibitionindustry/exhibitionindustry"
   ],
@@ -29,13 +34,13 @@
         "pagePath": "pages/index/index"
       },
       {
-        "pagePath": "pages/index2/index2"
-      },
-      {
         "pagePath": "pages/product/product"
       },
       {
         "pagePath": "pages/advisory/advisory"
+      },
+      {
+        "pagePath": "pages/calculate/calculate"
       },
       {
         "pagePath": "pages/team/team"

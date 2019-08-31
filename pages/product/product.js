@@ -12,14 +12,19 @@ Page({
     categoryList: [],
     fdSceneId: '',
     productList: [],
-    imgUrls: [{
-        src: '../../assets/images/index_banner.png',
-        link: ''
+    imgUrls: wx.getStorageSync('userInfo') && wx.getStorageSync('userInfo').info.present === '1' ? [{
+        src: app.images.product1_banner_1,
+        link: 'miniApp'
       },
       {
-        src: '../../assets/images/index_banner.png',
+        src: app.images.product1_banner_2,
         link: ''
       }
+    ] : [
+        {
+          src: app.images.product1_banner_2,
+          link: ''
+        }
     ],
     curTab: 0,
     tabName: '明星产品'
@@ -115,7 +120,7 @@ Page({
     }).then(res => {
       wx.hideLoading()
       console.log(res)
-      if(res.code == 200) {
+      if (res.code == 200) {
         this.setData({
           productList: res.result || []
         })
@@ -143,5 +148,22 @@ Page({
     })
 
     this.getProductlist(id)
+  },
+
+  openLink: function(e) {
+    const link = e.currentTarget.dataset.link
+    if (link && link === 'miniApp') {
+      wx.navigateToMiniProgram({
+        appId: 'wx4f0c08a031479e5b',
+        path: '/pages/index/index',
+        extraData: {
+          foo: 'bar'
+        },
+        envVersion: 'release',
+        success(res) {
+          // 打开成功
+        }
+      })
+    }
   }
 })
