@@ -16,7 +16,8 @@
     "pages/teamMember/teamMember",
     "pages/partnershipplatform/partnershipplatform",
     "pages/businessPlanWeb/businessPlanWeb",
-    "pages/specialservice/specialservice"
+    "pages/specialservice/specialservice",
+    "pages/exhibitionindustry/exhibitionindustry"
   ],
   "tabBar": {
     "color": "#7A7E83",

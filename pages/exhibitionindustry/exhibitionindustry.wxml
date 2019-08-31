@@ -1,0 +1,69 @@
+<view class="exhibition">
+  <view class="exhi_tit {{agentHidden?'exhi_tit_down':''}} " data-tab="agentHidden" catchtap="showContent">
+    <view class="exhi_img"><image src="../../assets/icons/exhibition1.png"></image></view>
+    <view class="exhi_wz">
+      <view class="exhi_wz_tit">代理人综合展业平台</view>
+      <view class="exhi_wz_desc">（i保天下）</view>
+    </view>
+  </view>
+  <view class="exhi_desc" hidden="{{agentHidden}}">
+    <view>
+      一款面向保险代理人的全场景综合展业平台。研发期间，通过追踪、调研多个成熟市场团队的作业日常而精心打造。其中，全流程数字化出单管理功能，采用多项主流技术，不仅有效支持代理人与客户进行出单交互，更进一步打通代理人与运营团队之间的沟通壁垒，实现无障碍线上协同。
+    </view>
+    <view>
+      <text>平台专注于提升团队与客户之间的黏度</text>。针对赠险互动、活动邀请、祝福定制、获客文章海报、以及客户动态跟踪等现实场景，设计了丰富多样的互动方式。
+    </view>
+    <view>
+    除了与代理人、客户之间建立联系与沟通，平台还聚焦团队内部管理。针对团队业绩动态跟踪、活动量、线上增员、线上出勤、实时提佣、在线培训学习等各方面，提供独具团队管理特色的服务场景，致力于为合伙人深耕代理人业务提供全方位的支持。
+    </view>
+  </view>
+  <!-- 代理人综合展业平台end -->
+  <view class="exhi_tit {{microShopHidden?'exhi_tit_down':''}} " data-tab="microShopHidden" catchtap="showContent">
+    <view class="exhi_img"><image src="../../assets/icons/exhibition2.png"></image></view>
+    <view class="exhi_wz">
+      <view class="exhi_wz_tit">代理人保险微店</view>
+    </view>
+  </view>
+  <view class="exhi_desc" hidden="{{microShopHidden}}">
+    <view>
+      <text>互联网私域流量经营的交易促成利器</text>，为合伙人团队微店装修提供方案及创意元素，并设计个性化电子名片，通过互联网进行传播与推广，助力合伙人团队线上化交易高效快捷达成，微店品牌树立、高额佣金赚取两不误      </view>
+  </view>
+  <!-- 代理人保险微店end -->
+  <view class="exhi_tit {{sharedHidden?'exhi_tit_down':''}} " data-tab="sharedHidden" catchtap="showContent">
+    <view class="exhi_img"><image src="../../assets/icons/exhibition3.png"></image></view>
+    <view class="exhi_wz">
+      <view class="exhi_wz_tit">共享云展业平台</view>
+      <view class="exhi_wz_desc">（哆来咪、电商对接、银保对接）</view>
+    </view>
+  </view>
+  <view class="exhi_desc" hidden="{{sharedHidden}}">
+    <view>
+      合伙人销售团队扁平化、没有出单平台怎么办？别担心，我们为合伙人量身定做了一款以微信公众号为载体，<text>免安装、快捷入驻的展业平台</text>，为合伙人建立专属服务的桥梁。平台通过融入身份鉴别、生物识别、智能核保和CA认证等前沿科技手段，全方位支持多种产品在不同场景的展业和销售，多样化的展业方式、简约易上手的操作流程，是合伙人高效展业的加速器。
+    </view>
+    <view>
+      反观之，对于团队成熟、有出单平台的合伙人，我们通过设计直接有效的线上化交易接口及成熟的对接流程，配备专业化技术团队，助力合伙人<text>“秒速”对接合作伙伴</text>。此外，我们还有多款线上化智能核保工具供合伙人自由选择，匹配对接方的多种个性化要求。
+    </view>
+  </view>
+  <!-- 共享云展业平台 end-->
+  <view class="exhi_tit {{platformHidden?'exhi_tit_down':''}} " data-tab="platformHidden" catchtap="showContent">
+    <view class="exhi_img"><image src="../../assets/icons/exhibition4.png"></image></view>
+    <view class="exhi_wz">
+      <view class="exhi_wz_tit">商户开放平台</view>
+    </view>
+  </view>
+  <view class="exhi_desc" hidden="{{platformHidden}}">
+    <view>
+      巨型流量如何变现？场景化帮你一招搞定！我们提供<text>线上场景集成或线下合作推广等方式</text>，由商户自主结算成交保单的推广费用，平台可支持多种方式的自主对接，如直接生成专属二维码、SDK集成、PC链接、H5链接、API对接等。同时，完整的场景化保险产品可助力合作伙伴打开下沉流量及增量市场。</view>
+  </view>
+  <!-- 商户开放平台end -->
+  <view class="exhi_tit {{iHomeHidden?'exhi_tit_down':''}} " data-tab="iHomeHidden" catchtap="showContent">
+    <view class="exhi_img"><image src="../../assets/icons/exhibition5.png"></image></view>
+    <view class="exhi_wz">
+      <view class="exhi_wz_tit">iHome家庭保障专家</view>
+    </view>
+  </view>
+  <view class="exhi_desc" hidden="{{iHomeHidden}}">
+    <view><text>业内首创，以家庭为单位，可实现动态风险测算、保单评估、保险规划的，集健康管理、财富传承策划和品质生活资源支持于一体的智能服务平台。</text></view>
+    <view>通过智能测算方案，只需要1分钟，即可帮助销售人员了解客户的家庭保障风险详细信息；通过人工智能保单扫描，可实现客户现有保单整理，为客户解析现有保险保障情况，并设计可供客户自由选择的补充投保建议方案；此外，我们构建了国际化标准的家庭健康管理平台，线上场景的扩展和数字化技术的应用，有助于合伙人团队为客户提供更加贴心温暖的线上化、场景化服务。</view>
+  </view>
+</view>
