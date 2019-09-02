@@ -10,7 +10,164 @@
       </block>
     </swiper>
   </view>
-
+  <view class="key_goal_con">
+    <view class="key_goal_tit">
+      <text>关键业绩目标</text>
+      <text class="key_goal_plan">商业计划书</text>
+    </view>
+    <!-- 期交保费滚动条start -->
+    <view class="progress_con" hidden="{{interimHidden}}">
+      <view class="goal_ts" style="width:{{interim.goalWidth}}rpx">
+        <view class="progress_goal_wz {{interim.goalReached?'progress_goal_wz_reached':''}}" id="interimGoal">
+          <text>{{interim.goal}}</text>
+          <text class="progress_goal_dw">万</text>
+          <text class="progress_goal_bz">目标</text>
+        </view>
+      </view>
+      <view class="progress_bar_con">
+        <view class="progress_bar progress_bg"></view>
+        <view class="progress_sj_con progress_sj_schedule" style="width:{{interim.scheduleLeft}}%">
+          <view class="progress_bar progress_schedule"></view>
+          <text class="progress_label progress_schedule_label"></text>
+        </view>
+        <view class="progress_sj_con progress_sj_goal" style="width:{{interim.goalLeft}}%">
+          <text class="progress_label progress_goal_label {{interim.goalReached?'progress_schedule_label':''}}"></text>
+        </view>
+      </view>
+      <view class="schedule_ts" style="width:{{interim.scheduleWidth}}rpx">
+        <view class="progress_schedule_wz" id="interimSchedule">
+          {{interim.schedule}}
+          <text class="schedule_ts_dw">万</text>
+        </view>
+      </view>
+    </view>
+    <!-- 期交保费滚动条end -->
+    <!-- 趸交保费滚动条 -->
+    <view class="progress_con" hidden="{{singleHidden}}">
+      <view class="goal_ts" style="width:{{single.goalWidth}}rpx">
+        <view class="progress_goal_wz {{single.goalReached?'progress_goal_wz_reached':''}}" id="singleGoal">
+          <text>{{single.goal}}</text>
+          <text class="progress_goal_dw">万</text>
+          <text class="progress_goal_bz">目标</text>
+        </view>
+      </view>
+      <view class="progress_bar_con">
+        <view class="progress_bar progress_bg"></view>
+        <view class="progress_sj_con progress_sj_schedule" style="width:{{single.scheduleLeft}}%">
+          <view class="progress_bar progress_schedule"></view>
+          <text class="progress_label progress_schedule_label"></text>
+        </view>
+        <view class="progress_sj_con progress_sj_goal" style="width:{{single.goalLeft}}%">
+          <text class="progress_label progress_goal_label {{single.goalReached?'progress_schedule_label':''}}"></text>
+        </view>
+      </view>
+      <view class="schedule_ts" style="width:{{single.scheduleWidth}}rpx">
+        <view class="progress_schedule_wz" id="singleSchedule">
+          {{single.schedule}}
+          <text class="schedule_ts_dw">万</text>
+        </view>
+      </view>
+    </view>
+    <!-- 趸交保费滚动条end -->
+    <!-- 意外险保费滚动条 -->
+    <view class="progress_con" hidden="{{accidentHidden}}">
+      <view class="goal_ts" style="width:{{accident.goalWidth}}rpx">
+        <view class="progress_goal_wz {{accident.goalReached?'progress_goal_wz_reached':''}}" id="accidentGoal">
+          <text>{{single.goal}}</text>
+          <text class="progress_goal_dw">万</text>
+          <text class="progress_goal_bz">目标</text>
+        </view>
+      </view>
+      <view class="progress_bar_con">
+        <view class="progress_bar progress_bg"></view>
+        <view class="progress_sj_con progress_sj_schedule" style="width:{{accident.scheduleLeft}}%">
+          <view class="progress_bar progress_schedule"></view>
+          <text class="progress_label progress_schedule_label"></text>
+        </view>
+        <view class="progress_sj_con progress_sj_goal" style="width:{{accident.goalLeft}}%">
+          <text class="progress_label progress_goal_label {{accident.goalReached?'progress_schedule_label':''}}"></text>
+        </view>
+      </view>
+      <view class="schedule_ts" style="width:{{accident.scheduleWidth}}rpx">
+        <view class="progress_schedule_wz" id="accidentSchedule">
+          {{accident.schedule}}
+          <text class="schedule_ts_dw">万</text>
+        </view>
+      </view>
+    </view>
+    <!-- 意外险保费滚动条end -->
+<!-- 家庭账户滚动条 -->
+    <view class="progress_con" hidden="{{iHomeHidden}}">
+      <view class="goal_ts" style="width:{{iHome.goalWidth}}rpx">
+        <view class="progress_goal_wz {{iHome.goalReached?'progress_goal_wz_reached':''}}" id="iHomeGoal">
+          <text>{{single.goal}}</text>
+          <text class="progress_goal_dw">个</text>
+          <text class="progress_goal_bz">目标</text>
+        </view>
+      </view>
+      <view class="progress_bar_con">
+        <view class="progress_bar progress_bg"></view>
+        <view class="progress_sj_con progress_sj_schedule" style="width:{{iHome.scheduleLeft}}%">
+          <view class="progress_bar progress_schedule"></view>
+          <text class="progress_label progress_schedule_label"></text>
+        </view>
+        <view class="progress_sj_con progress_sj_goal" style="width:{{iHome.goalLeft}}%">
+          <text class="progress_label progress_goal_label {{iHome.goalReached?'progress_schedule_label':''}}"></text>
+        </view>
+      </view>
+      <view class="schedule_ts" style="width:{{iHome.scheduleWidth}}rpx">
+        <view class="progress_schedule_wz" id="iHomeSchedule">
+          {{iHome.schedule}}
+          <text class="schedule_ts_dw">个</text>
+        </view>
+      </view>
+    </view>
+    <!-- 家庭账户滚动条end -->
+    <view class="key_goal_tab">
+      <view catchtap="changeTab" data-tab="interimHidden">
+        <text class="{{interimHidden?'':'now'}}">期交保费</text>
+      </view>
+      <view catchtap="changeTab" data-tab="singleHidden">
+        <text class="{{singleHidden?'':'now'}}">趸交保费</text>
+      </view>
+      <view catchtap="changeTab" data-tab="accidentHidden">
+        <text class="{{accidentHidden?'':'now'}}">意外险保费</text>
+      </view>
+      <view catchtap="changeTab" data-tab="iHomeHidden">
+        <text class="{{iHomeHidden?'':'now'}}">家庭账户</text>
+      </view>
+    </view>
+  </view>
+  <view class="created_con">
+    <view class="created_tit">
+      <text>创造的价值</text>
+      <text>（统计截止到:yyyy-mm-dd）</text>
+    </view>
+    <view class="created_desc">
+      <view class="created_sum">
+        <text>总金额</text>
+        <view>698,653.50<text>元</text></view>
+      </view>
+      <view class="created_item">
+        <text>保费创费</text>
+        <view>1,556,454.00<text>元</text></view>
+      </view>
+      <view class="created_item created_item_bor {{expensesHidden?'':'created_item_bor_zk'}}" catchtap="showExpenses">
+        <text>营业费用</text>
+        <view>336,478.00<text>元</text></view>
+      </view>
+      <view class="created_item_desc" hidden="{{expensesHidden}}">
+        <view><text>内勤人力费用</text><text>元</text></view>
+        <view><text>职场费用</text><text>元</text></view>
+        <view><text>手续费支出</text><text>元</text></view>
+        <view><text>佣金支出</text><text>元</text></view>
+        <view><text>业务费用</text><text>元</text></view>
+        <view><text>外勤人力费用</text><text>元</text></view>
+        <view><text>营业外支出</text><text>元</text></view>
+        <view><text>税金及附加</text><text>元</text></view>
+      </view>
+    </view>
+  </view>
   <!-- <view class="main-target-wrap">
     <view class="main-target-title">
       <view class="main-target-title_text">关键业绩目标</view>

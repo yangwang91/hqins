@@ -116,117 +116,267 @@ page{
 .sales_ranking_right .text2{
   font-size:22rpx;
 }
+.created_con{
+  padding:30rpx 30rpx 10rpx 30rpx;
+  background: #fff;
+  margin: 20rpx 0;
+}
+.created_tit{
+  display: flex;
+  align-items: center;
+}
+.created_tit text:first-child{
+  color:#000;
+  font-size:34rpx;
+  padding-right: 10rpx;
+}
+.created_tit text:last-child{
+  color:#999;
+  font-size:26rpx;
+}
+.created_desc{
+  padding: 0 30rpx;
+}
+.created_sum{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding: 30rpx 0;
+}
+.created_sum view{
+  font-size:44rpx;
+  color:#F26540;
+  font-weight: 500;
+  padding-left: 80rpx;
+}
+.created_sum text,.created_sum view text{
+  color:#333;
+  font-size:30rpx;
+}
+.created_sum view text {
+  padding-left: 10rpx;
+}
+.created_item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size:28rpx;
+  padding: 20rpx 30rpx 0 0;
 
-.main-target-wrap {
-  padding: 30rpx;
+}
+.created_item_bor{
+  padding-bottom: 20rpx;
+  position: relative;
+}
+.created_item_bor::after{
+  position: absolute;
+  content: " ";
+  width: 15rpx;
+  height: 15rpx;
+  border-top:1px solid #737373;
+  border-right:1px solid #737373;
+  transform:rotate(135deg);
+  right: 0;
+  top:30rpx;
+}
+.created_item_bor_zk::after{
+  transform:rotate(-45deg);
+  top:41rpx;
+}
+.created_item text{
+  color:#666;
+}
+.created_item view{
+  color:#000;
+}
+.created_item view text{
+  color:#737373;
+  padding-left: 25rpx;
+}
+.created_item_desc{
+  border-top: 1px solid #eee;
+  padding: 20rpx 30rpx 20rpx 20rpx;
+  font-size:22rpx;
+  color:#666;
+}
+.created_item_desc view{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12rpx;
+}
+.created_item_desc view text:first-child{
+  padding-right: 30rpx;
+}
+.key_goal_con{
+  padding:30rpx;
+  margin:20rpx 0;
   background: #fff;
 }
-
-.main-target-title {
+.key_goal_tit{
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15rpx;
 }
-
-.main-target-title_text {
-  flex: 1;
-  font-size: 34rpx;
-  font-weight: 500;
+.key_goal_tit text:first-child{
+  color:#000;
+  font-size:34rpx;
 }
-
-.main-target-title_link {
-  display: inline-flex;
-  align-items: center;
-  font-size: 26rpx;
-  color: #666;
-}
-.main-target-title_link image {
-  width: 26rpx;
-  height: 26rpx;
-  margin-left: 4rpx;
-}
-
-.main-target-progress-cont {
-  width: 100%;
-  height: 150rpx;
-  display: flex;
-  align-items: center;
-}
-
-.main-target-progress-bar {
+.key_goal_tit .key_goal_plan{
+  color:#666;
+  font-size:26rpx;
   position: relative;
+  padding-right: 25rpx;
+}
+.key_goal_tit .key_goal_plan::after{
+  position: absolute;
+  content: " ";
+  width: 15rpx;
+  height: 15rpx;
+  border-top:1px solid #ADADAD;
+  border-right:1px solid #ADADAD;
+  transform:rotate(45deg);
+  right: 0;
+  top:11rpx;
+}
+.key_goal_tab{
+  display: flex;
+  font-size:28rpx;
+  color:#999;
+  padding:30rpx 30rpx;
+}
+.key_goal_tab view{
+  padding:0 22rpx;
+  position: relative;
+}
+.key_goal_tab text{
+  position: relative;
+  padding-bottom: 8rpx;
+}
+.key_goal_tab text.now{
+  color:#6C481C;
+}
+.key_goal_tab text.now::before{
+  position: absolute;
+  content: " ";
+  height: 2rpx;
+  background: #6C481C;
   width: 100%;
-  height: 12rpx;
-  border-radius: 6rpx;
-  background: #EDEDED;
-  transition: all .5s;
-}
-
-.main-target-progress-bar_done {
-  width: 0;
-  position: absolute;
-  top: 0;
   left: 0;
+  bottom: 0
+}
+.key_goal_tab view::after{
+  position: absolute;
+  content: " ";
+  width: 1px;
+  height: 22rpx;
+  background: #999;
+  right: 0;
+  top:10rpx;
+}
+.key_goal_tab view:first-child{
+  padding-left: 0;
+}
+.key_goal_tab view:last-child{
+  padding-right: 0;
+}
+.key_goal_tab view:last-child::after{
+  display: none;
+}
+.progress_bar_con{
+  width: 690rpx;
+  height: 22rpx;
+  position: relative;
+}
+.progress_bar{
   height: 12rpx;
   border-radius: 6rpx;
+  position: absolute;
+  top:4rpx;
+  left: 0;
+  width: 100%;
+}
+.progress_bg{
+  background: #dfdfdf;
+  z-index: 1;
+}
+.progress_sj_con{
+  position: absolute;
+  height: 22rpx;
+  left:0;
+  top:0;
+}
+.progress_sj_schedule{
+   width: 50%;
+}
+.progress_sj_goal{
+  width: 100%;
+}
+.progress_schedule{
   background:linear-gradient(90deg,rgba(237,191,141,1),rgba(254,212,160,1));
-  transition: all .5s;
+  z-index: 2;
+  width: 100%;
 }
-
-.main-target-progress-tag1 {
+.progress_label{
   position: absolute;
-  left: 0;
-  top: -6rpx;
+  z-index: 10;
+  width:14rpx;
+  height: 14rpx;
+  border-radius:100%;
+  top:0;
+  right: 0;
 }
-
-.main-target-progress-tag1_dot {
-  width: 12rpx;
-  height: 12rpx;
-  border-radius: 100%;
+.progress_sj_goal{
+  width: 70%;
+}
+.progress_goal_label{
+  border:4rpx solid #c7c7c7;
+}
+.progress_schedule_label{
   background: #F0992D;
-  border: 6rpx solid #F0992D;
+  border:4rpx solid #F0992D;
 }
-
-.main-target-progress-tag1_num {
-  transform: translateX(-40%);
-  color: #F0992D;
-  font-size: 30rpx;
+.goal_ts{
+  text-align: right;
+  padding-bottom: 10rpx;
+  width: 550rpx;
 }
-.main-target-progress-tag1_num text {
-  font-size: 22rpx;
-}
-
-.main-target-progress-tag2 {
-  position: absolute;
-  left: 0;
-  top: -6rpx;
-}
-
-.main-target-progress-tag2_dot {
-  width: 12rpx;
-  height: 12rpx;
-  border-radius: 100%;
-  background: #ededed;
-  border: 6rpx solid #b7b7b7;
-}
-
-.main-target-progress-tag2_num {
-  transform: translate(-40%, -160%);
-  color: #F0992D;
-  font-size: 30rpx;
-}
-.main-target-progress-tag2_num text {
-  font-size: 22rpx;
-}
-.main-target-progress-tag2_num_tag {
+.progress_goal_wz{
+  color:#999;
+  font-size:30rpx;
   display: inline-block;
-  width: 58rpx;
+}
+.progress_goal_wz_reached{
+  color:#F56742;
+}
+.progress_goal_dw{
+  font-size:22rpx;
+  padding-right: 5rpx;
+}
+.progress_goal_bz{
+  background: #999999;
+  border-radius: 4rpx;
   height: 30rpx;
   line-height: 30rpx;
+  color:#fff;
+  font-size:22rpx;
   text-align: center;
+  padding: 0 8rpx 0 4rpx;
+}
+.progress_goal_wz_reached .progress_goal_bz{
+  background: #F56742;
+}
+.schedule_ts{
+  text-align: right;
+  color:#F0992D;
+  font-size:30rpx;
+  width: 360rpx;
+  padding-top:5rpx;
+}
+.schedule_ts_dw{
   font-size: 22rpx;
-  /* padding: 0 6rpx; */
-  color: #fff;
-  background: #999;
-  border-radius: 4rpx;
-  margin-left: 6rpx;
+}
+.progress_schedule_wz{
+  display: inline-block;
 }
