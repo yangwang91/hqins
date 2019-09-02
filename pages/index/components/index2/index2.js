@@ -203,5 +203,11 @@ Component({
       data[tab] = false;
       this.setData(data);
     },
+
+    toBookPage: function() {
+      wx.navigateTo({
+        url: '../businessplan/businessplan'
+      })
+    }
   }
 })

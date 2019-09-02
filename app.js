@@ -15,6 +15,11 @@ App({
     
     console.log('scene', decodeURIComponent(options.query.scene))
 
+    const subordinateid = decodeURIComponent(options.query.scene)
+    if(subordinateid) {
+      this.globalData.subordinateid = subordinateid
+    }
+
     wx.getSystemInfo({
       success: (res) => {
         console.log(res)
@@ -58,6 +63,7 @@ App({
   globalData: {
     userInfo: null,
     sysInfo: {},
+    subordinateid: '',
     tabBar1: {
       "backgroundColor": "#ffffff",
       "color": "#999",

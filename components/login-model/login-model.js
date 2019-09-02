@@ -12,6 +12,7 @@ Component({
    * 组件的初始数据
    */
   data: {
+    userInfo: null,
     hidden: true,
     authFailureHidden:true
   },
@@ -24,12 +25,31 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    bindSub: function() {
+      const subId = app.globalData.subordinateid
+      const myInfo = this.data.userInfo
+      if (subId && subId !== 'undefined') {
+        app.API.scanAddScande({
+          fdMainWxid: subId,
+          fdNickname: myInfo.nickName,
+          fdHeadLink: myInfo.avatarUrl,
+          fdSex: myInfo.gender
+        }).then(res => {
+          console.log(res)
+          if(res.code == 200){
+            app.globalData.subordinateid = ''
+          }
+        })
+      }
+    },
+
+
     getuserinfo(e) {
       if(e.detail.userInfo) {
         this.setData({
           hidden: true
         })
-        this.login()
+        this.fnGetUserInfo()
       } else {
         this.setData({
           hidden: true,
@@ -37,21 +57,35 @@ Component({
         })
       }
     },
+
     exitAuth(e){
       this.setData({ hidden: true, authFailureHidden: false})
     },
+
+    fnGetUserInfo: function() {
+      wx.getUserInfo({
+        success: (res) => {
+          this.setData({
+            userInfo: res.userInfo
+          })
+          console.log(res.userInfo)
+          this.login()
+        }
+      })
+    },
+
     getUserInfoAuth() {
       // 获取用户信息
       wx.getSetting({
         success: res => {
-          // console.log(res)
+          // console.log('uinfo', res)
           if (!res.authSetting['scope.userInfo']) {
             this.setData({
               hidden: false
             })
           } else {
+            this.fnGetUserInfo()
             // 
-            this.login()
           }
         }
       })
@@ -103,6 +137,8 @@ Component({
           fail: (res) => {},
           complete: (res) => {},
         })
+
+        this.bindSub(res.openid)
       })
     },
 

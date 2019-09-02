@@ -13,7 +13,7 @@
   <view class="key_goal_con">
     <view class="key_goal_tit">
       <text>关键业绩目标</text>
-      <text class="key_goal_plan">商业计划书</text>
+      <text class="key_goal_plan" bindtap="toBookPage">商业计划书</text>
     </view>
     <view class="progress">
       <!-- 期交保费滚动条start -->
