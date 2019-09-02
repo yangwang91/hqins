@@ -1,0 +1,7 @@
+page{
+  border-top:1px solid #eee;
+}
+.quality_con image{
+  width: 100%;
+  height: 240rpx;
+}

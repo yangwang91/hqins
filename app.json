@@ -22,7 +22,8 @@
     "pages/calculate/calculate",
     "pages/calculating/calculating",
     "pages/specialservice/specialservice",
-    "pages/exhibitionindustry/exhibitionindustry"
+    "pages/exhibitionindustry/exhibitionindustry",
+    "pages/businessQuality/businessQuality"
   ],
   "tabBar": {
     "color": "#7A7E83",
