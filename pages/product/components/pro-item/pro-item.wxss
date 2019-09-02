@@ -30,17 +30,31 @@ border-bottom: 1rpx solid #eee;
 }
 .insurance-products-item_hd_tags {
   margin-top: 20rpx;
+  min-block-size: 40rpx;
 }
 .insurance-products-item_hd_tag {
   display: inline-block;
   padding: 0 10rpx;
   margin-right: 14rpx;
+  margin-bottom: 6rpx;
   height: 40rpx;
   line-height: 40rpx;
   text-align: center;
   font-size: 24rpx;
   color: #D3A468;
   background-color: rgba(246,168,70,0.14);
+}
+.insurance-products-item_hd_tag:nth-child(2) {
+  color: #265BAC;
+  background-color: rgba(63,127,231,0.14);
+}
+.insurance-products-item_hd_tag:nth-child(3) {
+  color: #229F34;
+  background-color: rgba(76,215,99,0.14);
+}
+.insurance-products-item_hd_tag:nth-child(4) {
+  color: #EB3E53;
+  background-color: rgba(246,137,147,0.14);
 }
 
 .insurance-products-item_hd_slide {

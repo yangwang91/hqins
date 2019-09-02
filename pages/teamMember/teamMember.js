@@ -1,18 +1,19 @@
 // pages/teamMember/teamMember.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMemberlist()
   },
 
   /**
@@ -55,6 +56,22 @@ Page({
    */
   onReachBottom: function () {
 
+  },
+
+  getMemberlist: function() {
+    app.API.getMemberlist().then(res => {
+      console.log(res)
+      if(res.code == 200) {
+        this.setData({
+          list: res.result
+        })
+      } else {
+        wx.showToast({
+          title: res.message,
+          icon: 'none'
+        })
+      }
+    })
   },
 
   phoneCall: function(e) {

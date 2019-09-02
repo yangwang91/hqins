@@ -5,14 +5,19 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    result: {},
+    zrStatus: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(options)
+    this.setData({
+      result: JSON.parse(options.result),
+      zrStatus: Number(options.zrStatus)
+    })
   },
 
   /**
@@ -43,18 +48,10 @@ Page({
 
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
+  goBack: function() {
+    wx.switchTab({
+      url: '../index/index'
+    })
+  }
 
 })

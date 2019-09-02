@@ -17,6 +17,7 @@ page {
   border-radius: 20rpx;
   top: 50rpx;
   left: 30rpx;
+  overflow: hidden;
 }
 
 .calculating-question {
@@ -66,6 +67,15 @@ page {
   bottom: 50rpx;
   width: calc(100% - 60rpx);
   margin: 0 30rpx;
+  text-align: center;
+}
+
+.calculating-text-btn {
+  display: inline-block;
+  width: 100rpx;
+  margin: 0 auto 30rpx;
+  font-size: 30rpx;
+  color: #d3a468;
 }
 
 .calculating-comfirm-btn {
@@ -79,8 +89,29 @@ page {
   background: #FACE97;
 }
 
+.calculating-comfirm-btn2 {
+  width: 100%;
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6rpx;
+  font-size: 30rpx;
+  margin: 30rpx 0 0;
+  background: transparent;
+  color: #D3A468;
+  border:1px solid rgba(211,164,104,1);
+}
+
+.calculating-back-btn {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 30rpx;
+}
+
 .calculating-question-input-wrap {
-  margin-top: 50rpx;
+  margin-top: 40rpx;
 }
 
 .calculating-question-answer_sub {
@@ -88,15 +119,29 @@ page {
   color: #555;
 }
 
+
 .calculating-question-input {
   display: flex;
   align-items: center;
   height: 88rpx;
   color: #222;
   font-size: 30rpx;
+  margin-bottom: 30rpx;
   border-bottom: 1rpx solid #eee;
 }
 .calculating-question-input input {
   flex: 1;
   margin-right: 20rpx;
+}
+.calculating-result-wrap image {
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+  overflow: hidden;
+}
+
+.calculating-result-desc {
+  padding: 60rpx;
+  font-size: 36rpx;
+  line-height: 52rpx;
+  color: #222;
 }

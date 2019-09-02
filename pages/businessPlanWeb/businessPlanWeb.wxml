@@ -1,2 +1,2 @@
 <!--pages/businessPlan/businessPlan.wxml-->
-<web-view src="https://cschat-ccs.aliyun.com/index.htm?tntInstId=_1TfJ29Y&scene=SCE00005179"></web-view>
+<web-view src="{{link}}"></web-view>

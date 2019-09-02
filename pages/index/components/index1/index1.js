@@ -25,5 +25,10 @@ Component({
         url: '../jionus/jionus'
       })
     },
+    toPartnershipplatform: function() {
+      wx.navigateTo({
+        url: '../../../../partnershipplatform/partnershipplatform'
+      })
+    }
   }
 })

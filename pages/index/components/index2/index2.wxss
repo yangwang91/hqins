@@ -394,3 +394,8 @@ page{
 .progress_schedule_wz{
   display: inline-block;
 }
+
+.canvas-con {
+  width: 100%;
+  height: 400rpx;
+}

@@ -41,10 +41,7 @@
       </view>
     </view>
     <scroll-view scroll-x class="team-poster-wrap">
-      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill" bindtap="fnShowPoster"></image>
-      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill"></image>
-      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill"></image>
-      <image class="team-poster-img" src="../../assets/images/index_banner.png" mode="aspectFill"></image>
+      <image wx:for="{{promotionPicturelist}}" wx:key="{{index}}" class="team-poster-img" src="{{item.fdPicture}}" data-post="{{item.fdPicture}}" mode="aspectFill" bindtap="fnShowPoster"></image>
     </scroll-view>
   </view>
 
@@ -82,18 +79,85 @@
       <view class="team-card-header_title">中台赋能</view>
     </view>
     <view class="team-funeng-list">
-      <view class="team-funeng-item" wx:for="{{6}}">
-        <view class="team-funeng-item_header">销售支持
+      <view class="team-funeng-item">
+        <view class="team-funeng-item_header">属地服务人员
           <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
         </view>
-        <view class="team-funeng-item_name">陈金瑞</view>
-        <view class="team-funeng-item_mobile" data-phone="13800138000" bindtap="phoneCall">
+        <view class="team-funeng-item_name">{{ztList[0].name}}</view>
+        <view class="team-funeng-item_mobile" data-phone="{{ztList[0].phone}}" bindtap="phoneCall">
           <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
-          <text>13800138000</text>
+          <text>{{ztList[0].phone}}</text>
         </view>
-        <view class="team-funeng-item_mobile" data-text="sadasdada" bindtap="copyText">
+        <view class="team-funeng-item_mobile" data-text="{{ztList[0].loginname}}" bindtap="copyText">
           <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
-          <text>asadadawdqw</text>
+          <text>{{ztList[0].loginname}}</text>
+        </view>
+      </view>
+      <view class="team-funeng-item">
+        <view class="team-funeng-item_header">培训赋能
+        </view>
+        <view class="team-funeng-item_name">{{ztList[1].name}}</view>
+        <view class="team-funeng-item_mobile" data-phone="{{ztList[1].phone}}" bindtap="phoneCall">
+          <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
+          <text>{{ztList[1].phone}}</text>
+        </view>
+        <view class="team-funeng-item_mobile" data-text="{{ztList[1].loginname}}" bindtap="copyText">
+          <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
+          <text>{{ztList[1].loginname}}</text>
+        </view>
+      </view>
+      <view class="team-funeng-item">
+        <view class="team-funeng-item_header">产品供应
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
+        </view>
+        <view class="team-funeng-item_name">{{ztList[2].name}}</view>
+        <view class="team-funeng-item_mobile" data-phone="{{ztList[2].phone}}" bindtap="phoneCall">
+          <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
+          <text>{{ztList[2].phone}}</text>
+        </view>
+        <view class="team-funeng-item_mobile" data-text="{{ztList[2].loginname}}" bindtap="copyText">
+          <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
+          <text>{{ztList[2].loginname}}</text>
+        </view>
+      </view>
+      <view class="team-funeng-item">
+        <view class="team-funeng-item_header">利益清分
+        </view>
+        <view class="team-funeng-item_name">{{ztList[3].name}}</view>
+        <view class="team-funeng-item_mobile" data-phone="{{ztList[3].phone}}" bindtap="phoneCall">
+          <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
+          <text>{{ztList[3].phone}}</text>
+        </view>
+        <view class="team-funeng-item_mobile" data-text="{{ztList[3].loginname}}" bindtap="copyText">
+          <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
+          <text>{{ztList[3].loginname}}</text>
+        </view>
+      </view>
+      <view class="team-funeng-item">
+        <view class="team-funeng-item_header">运营服务
+        </view>
+        <view class="team-funeng-item_name">{{ztList[4].name}}</view>
+        <view class="team-funeng-item_mobile" data-phone="{{ztList[4].phone}}" bindtap="phoneCall">
+          <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
+          <text>{{ztList[4].phone}}</text>
+        </view>
+        <view class="team-funeng-item_mobile" data-text="{{ztList[4].loginname}}" bindtap="copyText">
+          <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
+          <text>{{ztList[4].loginname}}</text>
+        </view>
+      </view>
+      <view class="team-funeng-item">
+        <view class="team-funeng-item_header">企划咨询
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
+        </view>
+        <view class="team-funeng-item_name">{{ztList[5].name}}</view>
+        <view class="team-funeng-item_mobile" data-phone="{{ztList[5].phone}}" bindtap="phoneCall">
+          <image src="../../assets/images/phone_img.png" mode="aspectFit"></image>
+          <text>{{ztList[5].phone}}</text>
+        </view>
+        <view class="team-funeng-item_mobile" data-text="{{ztList[5].loginname}}" bindtap="copyText">
+          <image src="../../assets/images/kk_img.png" mode="aspectFit"></image>
+          <text>{{ztList[5].loginname}}</text>
         </view>
       </view>
     </view>
@@ -108,7 +172,7 @@
     </view>
   </view>
 
-  <poster open="{{showPoster}}"></poster>
+  <poster open="{{showPoster}}" postImg="{{postImg}}"></poster>
 
 
   <tabbar tabbar="{{tabbar}}"></tabbar>

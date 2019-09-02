@@ -2,7 +2,7 @@
   <block wx:if="{{present === '1'}}">
     <index2></index2>
   </block>
-  <block wx:else>
+  <block wx:if="{{present === '2'}}">
     <index1></index1>
   </block>
   <tabbar tabbar="{{tabbar}}"></tabbar>

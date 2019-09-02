@@ -1,5 +1,7 @@
 // pages/product/product.js
 const app = getApp()
+
+
 Page({
 
   /**
@@ -20,12 +22,10 @@ Page({
         src: app.images.product1_banner_2,
         link: ''
       }
-    ] : [
-        {
-          src: app.images.product1_banner_2,
-          link: ''
-        }
-    ],
+    ] : [{
+      src: app.images.product1_banner_2,
+      link: ''
+    }],
     curTab: 0,
     tabName: '明星产品'
   },
@@ -165,5 +165,11 @@ Page({
         }
       })
     }
+  },
+
+  toPage: function() {
+    wx.navigateTo({
+      url: '../exhibitionindustry/exhibitionindustry'
+    })
   }
 })

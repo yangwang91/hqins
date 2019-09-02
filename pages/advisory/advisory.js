@@ -11,7 +11,8 @@ Page({
     questions: [],
     totalpage: 1,
     page: 1,
-    isChecked: false
+    isChecked: false,
+    zrMiddleStatus: {}
   },
 
   /**
@@ -35,6 +36,7 @@ Page({
    */
   onShow: function() {
     this.getZrStatus()
+    this.getZrMiddleStatus()
   },
 
   /**
@@ -74,6 +76,15 @@ Page({
     })
   },
 
+  getZrMiddleStatus: function () {
+    app.API.getZrMiddleStatus().then(res => {
+      console.log(res)
+      this.setData({
+        zrMiddleStatus: res.result ? res.result[0] : {}
+      })
+    })
+  },
+
   getProblem: function () {
     wx.showLoading({
       title: '正在加载...'
@@ -87,6 +98,22 @@ Page({
           page: page,
           questions: res.result,
           totalpage: res.totalpage
+        })
+      }
+    })
+  },
+
+  zrAutoApproval: function() {
+    wx.showLoading({
+      title: '确认中...'
+    })
+    app.API.zrAutoApproval().then(res => {
+      wx.hideLoading()
+      if(res.code == 200) {
+        this.getZrMiddleStatus()
+        wx.showToast({
+          title: '已完成',
+          icon: 'none'
         })
       }
     })
@@ -106,9 +133,10 @@ Page({
   },
   
   toBook: function(e) {
-    const data = e.currentTarget.dataset.data
+    const link = e.currentTarget.dataset.link
+    console.log(link)
     wx.navigateTo({
-      url: '../businessPlanWeb/businessPlanWeb'
+      url: '../businessPlanWeb/businessPlanWeb?link=' + encodeURIComponent(link)
     })
   }
 })
