@@ -284,6 +284,20 @@ page{
 .key_goal_tab view:last-child::after{
   display: none;
 }
+.progress{
+  position: relative;
+  height: 120rpx;
+}
+.progress_con{
+  width: 690rpx;
+  position: absolute;
+  top:0;
+  left: 0;
+  opacity: 0;
+}
+.progress_con_z{
+  opacity:1;
+}
 .progress_bar_con{
   width: 690rpx;
   height: 22rpx;

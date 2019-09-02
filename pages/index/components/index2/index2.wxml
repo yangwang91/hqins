@@ -15,114 +15,116 @@
       <text>关键业绩目标</text>
       <text class="key_goal_plan">商业计划书</text>
     </view>
-    <!-- 期交保费滚动条start -->
-    <view class="progress_con" hidden="{{interimHidden}}">
-      <view class="goal_ts" style="width:{{interim.goalWidth}}rpx">
-        <view class="progress_goal_wz {{interim.goalReached?'progress_goal_wz_reached':''}}" id="interimGoal">
-          <text>{{interim.goal}}</text>
-          <text class="progress_goal_dw">万</text>
-          <text class="progress_goal_bz">目标</text>
+    <view class="progress">
+        <!-- 期交保费滚动条start -->
+      <view class="progress_con {{interimHidden?'':'progress_con_z'}}">
+        <view class="goal_ts" style="width:{{interim.goalWidth}}rpx">
+          <view class="progress_goal_wz {{interim.goalReached?'progress_goal_wz_reached':''}}" id="interimGoal">
+            <text>{{interim.goal}}</text>
+            <text class="progress_goal_dw">万</text>
+            <text class="progress_goal_bz">目标</text>
+          </view>
+        </view>
+        <view class="progress_bar_con">
+          <view class="progress_bar progress_bg"></view>
+          <view class="progress_sj_con progress_sj_schedule" style="width:{{interim.scheduleLeft}}%">
+            <view class="progress_bar progress_schedule"></view>
+            <text class="progress_label progress_schedule_label"></text>
+          </view>
+          <view class="progress_sj_con progress_sj_goal" style="width:{{interim.goalLeft}}%">
+            <text class="progress_label progress_goal_label {{interim.goalReached?'progress_schedule_label':''}}"></text>
+          </view>
+        </view>
+        <view class="schedule_ts" style="width:{{interim.scheduleWidth}}rpx">
+          <view class="progress_schedule_wz" id="interimSchedule">
+            {{interim.schedule}}
+            <text class="schedule_ts_dw">万</text>
+          </view>
         </view>
       </view>
-      <view class="progress_bar_con">
-        <view class="progress_bar progress_bg"></view>
-        <view class="progress_sj_con progress_sj_schedule" style="width:{{interim.scheduleLeft}}%">
-          <view class="progress_bar progress_schedule"></view>
-          <text class="progress_label progress_schedule_label"></text>
+      <!-- 期交保费滚动条end -->
+      <!-- 趸交保费滚动条 -->
+      <view class="progress_con {{singleHidden?'':'progress_con_z'}}">
+        <view class="goal_ts" style="width:{{single.goalWidth}}rpx">
+          <view class="progress_goal_wz {{single.goalReached?'progress_goal_wz_reached':''}}" id="singleGoal">
+            <text>{{single.goal}}</text>
+            <text class="progress_goal_dw">万</text>
+            <text class="progress_goal_bz">目标</text>
+          </view>
         </view>
-        <view class="progress_sj_con progress_sj_goal" style="width:{{interim.goalLeft}}%">
-          <text class="progress_label progress_goal_label {{interim.goalReached?'progress_schedule_label':''}}"></text>
+        <view class="progress_bar_con">
+          <view class="progress_bar progress_bg"></view>
+          <view class="progress_sj_con progress_sj_schedule" style="width:{{single.scheduleLeft}}%">
+            <view class="progress_bar progress_schedule"></view>
+            <text class="progress_label progress_schedule_label"></text>
+          </view>
+          <view class="progress_sj_con progress_sj_goal" style="width:{{single.goalLeft}}%">
+            <text class="progress_label progress_goal_label {{single.goalReached?'progress_schedule_label':''}}"></text>
+          </view>
+        </view>
+        <view class="schedule_ts" style="width:{{single.scheduleWidth}}rpx">
+          <view class="progress_schedule_wz" id="singleSchedule">
+            {{single.schedule}}
+            <text class="schedule_ts_dw">万</text>
+          </view>
         </view>
       </view>
-      <view class="schedule_ts" style="width:{{interim.scheduleWidth}}rpx">
-        <view class="progress_schedule_wz" id="interimSchedule">
-          {{interim.schedule}}
-          <text class="schedule_ts_dw">万</text>
+      <!-- 趸交保费滚动条end -->
+      <!-- 意外险保费滚动条 -->
+      <view class="progress_con {{accidentHidden?'':'progress_con_z'}}">
+        <view class="goal_ts" style="width:{{accident.goalWidth}}rpx">
+          <view class="progress_goal_wz {{accident.goalReached?'progress_goal_wz_reached':''}}" id="accidentGoal">
+            <text>{{accident.goal}}</text>
+            <text class="progress_goal_dw">万</text>
+            <text class="progress_goal_bz">目标</text>
+          </view>
+        </view>
+        <view class="progress_bar_con">
+          <view class="progress_bar progress_bg"></view>
+          <view class="progress_sj_con progress_sj_schedule" style="width:{{accident.scheduleLeft}}%">
+            <view class="progress_bar progress_schedule"></view>
+            <text class="progress_label progress_schedule_label"></text>
+          </view>
+          <view class="progress_sj_con progress_sj_goal" style="width:{{accident.goalLeft}}%">
+            <text class="progress_label progress_goal_label {{accident.goalReached?'progress_schedule_label':''}}"></text>
+          </view>
+        </view>
+        <view class="schedule_ts" style="width:{{accident.scheduleWidth}}rpx">
+          <view class="progress_schedule_wz" id="accidentSchedule">
+            {{accident.schedule}}
+            <text class="schedule_ts_dw">万</text>
+          </view>
         </view>
       </view>
+      <!-- 意外险保费滚动条end -->
+  <!-- 家庭账户滚动条 -->
+      <view class="progress_con {{iHomeHidden?'':'progress_con_z'}}">
+        <view class="goal_ts" style="width:{{iHome.goalWidth}}rpx">
+          <view class="progress_goal_wz {{iHome.goalReached?'progress_goal_wz_reached':''}}" id="iHomeGoal">
+            <text>{{single.goal}}</text>
+            <text class="progress_goal_dw">个</text>
+            <text class="progress_goal_bz">目标</text>
+          </view>
+        </view>
+        <view class="progress_bar_con">
+          <view class="progress_bar progress_bg"></view>
+          <view class="progress_sj_con progress_sj_schedule" style="width:{{iHome.scheduleLeft}}%">
+            <view class="progress_bar progress_schedule"></view>
+            <text class="progress_label progress_schedule_label"></text>
+          </view>
+          <view class="progress_sj_con progress_sj_goal" style="width:{{iHome.goalLeft}}%">
+            <text class="progress_label progress_goal_label {{iHome.goalReached?'progress_schedule_label':''}}"></text>
+          </view>
+        </view>
+        <view class="schedule_ts" style="width:{{iHome.scheduleWidth}}rpx">
+          <view class="progress_schedule_wz" id="iHomeSchedule">
+            {{iHome.schedule}}
+            <text class="schedule_ts_dw">个</text>
+          </view>
+        </view>
+      </view>
+      <!-- 家庭账户滚动条end -->
     </view>
-    <!-- 期交保费滚动条end -->
-    <!-- 趸交保费滚动条 -->
-    <view class="progress_con" hidden="{{singleHidden}}">
-      <view class="goal_ts" style="width:{{single.goalWidth}}rpx">
-        <view class="progress_goal_wz {{single.goalReached?'progress_goal_wz_reached':''}}" id="singleGoal">
-          <text>{{single.goal}}</text>
-          <text class="progress_goal_dw">万</text>
-          <text class="progress_goal_bz">目标</text>
-        </view>
-      </view>
-      <view class="progress_bar_con">
-        <view class="progress_bar progress_bg"></view>
-        <view class="progress_sj_con progress_sj_schedule" style="width:{{single.scheduleLeft}}%">
-          <view class="progress_bar progress_schedule"></view>
-          <text class="progress_label progress_schedule_label"></text>
-        </view>
-        <view class="progress_sj_con progress_sj_goal" style="width:{{single.goalLeft}}%">
-          <text class="progress_label progress_goal_label {{single.goalReached?'progress_schedule_label':''}}"></text>
-        </view>
-      </view>
-      <view class="schedule_ts" style="width:{{single.scheduleWidth}}rpx">
-        <view class="progress_schedule_wz" id="singleSchedule">
-          {{single.schedule}}
-          <text class="schedule_ts_dw">万</text>
-        </view>
-      </view>
-    </view>
-    <!-- 趸交保费滚动条end -->
-    <!-- 意外险保费滚动条 -->
-    <view class="progress_con" hidden="{{accidentHidden}}">
-      <view class="goal_ts" style="width:{{accident.goalWidth}}rpx">
-        <view class="progress_goal_wz {{accident.goalReached?'progress_goal_wz_reached':''}}" id="accidentGoal">
-          <text>{{single.goal}}</text>
-          <text class="progress_goal_dw">万</text>
-          <text class="progress_goal_bz">目标</text>
-        </view>
-      </view>
-      <view class="progress_bar_con">
-        <view class="progress_bar progress_bg"></view>
-        <view class="progress_sj_con progress_sj_schedule" style="width:{{accident.scheduleLeft}}%">
-          <view class="progress_bar progress_schedule"></view>
-          <text class="progress_label progress_schedule_label"></text>
-        </view>
-        <view class="progress_sj_con progress_sj_goal" style="width:{{accident.goalLeft}}%">
-          <text class="progress_label progress_goal_label {{accident.goalReached?'progress_schedule_label':''}}"></text>
-        </view>
-      </view>
-      <view class="schedule_ts" style="width:{{accident.scheduleWidth}}rpx">
-        <view class="progress_schedule_wz" id="accidentSchedule">
-          {{accident.schedule}}
-          <text class="schedule_ts_dw">万</text>
-        </view>
-      </view>
-    </view>
-    <!-- 意外险保费滚动条end -->
-<!-- 家庭账户滚动条 -->
-    <view class="progress_con" hidden="{{iHomeHidden}}">
-      <view class="goal_ts" style="width:{{iHome.goalWidth}}rpx">
-        <view class="progress_goal_wz {{iHome.goalReached?'progress_goal_wz_reached':''}}" id="iHomeGoal">
-          <text>{{single.goal}}</text>
-          <text class="progress_goal_dw">个</text>
-          <text class="progress_goal_bz">目标</text>
-        </view>
-      </view>
-      <view class="progress_bar_con">
-        <view class="progress_bar progress_bg"></view>
-        <view class="progress_sj_con progress_sj_schedule" style="width:{{iHome.scheduleLeft}}%">
-          <view class="progress_bar progress_schedule"></view>
-          <text class="progress_label progress_schedule_label"></text>
-        </view>
-        <view class="progress_sj_con progress_sj_goal" style="width:{{iHome.goalLeft}}%">
-          <text class="progress_label progress_goal_label {{iHome.goalReached?'progress_schedule_label':''}}"></text>
-        </view>
-      </view>
-      <view class="schedule_ts" style="width:{{iHome.scheduleWidth}}rpx">
-        <view class="progress_schedule_wz" id="iHomeSchedule">
-          {{iHome.schedule}}
-          <text class="schedule_ts_dw">个</text>
-        </view>
-      </view>
-    </view>
-    <!-- 家庭账户滚动条end -->
     <view class="key_goal_tab">
       <view catchtap="changeTab" data-tab="interimHidden">
         <text class="{{interimHidden?'':'now'}}">期交保费</text>
@@ -168,33 +170,6 @@
       </view>
     </view>
   </view>
-  <!-- <view class="main-target-wrap">
-    <view class="main-target-title">
-      <view class="main-target-title_text">关键业绩目标</view>
-      <view class="main-target-title_link">商业计划书
-        <image src="../../../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
-      </view>
-    </view>
-    <view class="main-target-progress-cont">
-      <view class="main-target-progress-bar">
-        <view class="main-target-progress-bar_done" style="width: 80%;"></view>
-        <view class="main-target-progress-tag1" style="left: calc(80% - 12rpx);">
-          <view class="main-target-progress-tag1_dot"></view>
-          <view class="main-target-progress-tag1_num">80
-            <text>个</text>
-          </view>
-        </view>
-        <view class="main-target-progress-tag2" style="left: calc(60% - 12rpx);">
-          <view class="main-target-progress-tag2_dot"></view>
-          <view class="main-target-progress-tag2_num">100
-            <text>个</text>
-            <text class="main-target-progress-tag2_num_tag">目标</text>
-          </view>
-        </view>
-      </view>
-    </view>
-  </view> -->
-
   <view class="common_con">
     <view class="common_tit">运营服务</view>
     <view class="service_big_box">

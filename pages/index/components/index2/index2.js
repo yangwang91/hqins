@@ -16,7 +16,7 @@ Component({
     topSales: [],
     expensesHidden:true,
     interimHidden:false,// 期交保费
-    singleHidden:true, // 趸交保费
+    singleHidden: true, // 趸交保费
     accidentHidden:true, // 意外险保费
     iHomeHidden:true, // 家庭账户
     interim: { // 期交保费
@@ -36,7 +36,7 @@ Component({
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
       sum: 500,// 进度条总数
       goal: 300, // 进度条目标
-      schedule: 100,// 当前已达成目标
+      schedule: 400,// 当前已达成目标
       goalReached: false, // 是否达成目标
     },
     accident: { // 意外险保费
@@ -134,7 +134,9 @@ Component({
         this.createSelectorQuery().select('#' + goalElementId).boundingClientRect((rect) => {
           // 按照算法，本应是width，但不知道为啥，width总少点，right反倒是正好得
           if (rect) {
-            var rpxWidth = rect.right * app.globalData.sysInfo.pixelRatio;
+            console.log('----------------------------------------------')
+            console.log(rect,fieldName)
+            var rpxWidth = rect.width * app.globalData.sysInfo.pixelRatio;
             // // 690 是进度条总宽
             var goalWidth = rpxWidth / 2 + goalLeft * 690 / 100;
             if (goalWidth < rpxWidth) {
@@ -154,7 +156,7 @@ Component({
         this.createSelectorQuery().select('#' + scheduleElementId).boundingClientRect((rect) => {
           // 按照算法，本应是width，但不知道为啥，width总少点，right反倒是正好得
           if(rect){
-            var sWidth = rect.right * app.globalData.sysInfo.pixelRatio;
+            var sWidth = rect.width * app.globalData.sysInfo.pixelRatio;
             // // 690 是进度条总宽
             var scheduleWidth = sWidth / 2 + scheduleLeft * 690 / 100;
             if (scheduleWidth < sWidth) {
@@ -174,7 +176,8 @@ Component({
       Promise.all(list).then(()=>{
         var sData = {}
         sData[fieldName] = newData
-        console.log()
+        console.log('--------------------------------------------------')
+        console.log(fieldName,newData)
         this.setData(sData)
       })
     },
@@ -191,18 +194,6 @@ Component({
       data.iHomeHidden = true;
       data[tab] = false;
       this.setData(data);
-      if (tab ==='interimHidden'){
-        this.calculateSchedule('interim', 'interimGoal', 'interimSchedule');
-      }
-      if (tab === 'singleHidden') {
-        this.calculateSchedule('single', 'singleGoal', 'singleSchedule');
-      }
-      if (tab === 'accidentHidden') {
-        this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
-      }
-      if (tab === 'iHomeHidden') {
-        this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
-      }
     },
   }
 })
