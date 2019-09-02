@@ -18,8 +18,9 @@ page{
   font-weight: 500;
   padding-left: 16rpx;
   position: relative;
-  height: 100rpx;
-  line-height: 100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin:35rpx 0;
 }
 .case_tit::before{
   content: ' ';
@@ -28,18 +29,19 @@ page{
   height: 28rpx;
   background: #D3A468;
   left: 0;
-  top: 36rpx;
+  top: 1rpx;
 }
 .case_con{
   border:1px solid #D8D8D8;
   box-shadow:1px 0px 11px 2px rgba(216,216,216,0.36);
   border-radius:12rpx;
   padding: 20rpx;
+  margin:30rpx 0;
 }
 .company{
   display: flex;
   align-items: top;
-  padding: 10rpx 0 30rpx;
+  padding: 10rpx 0;
 }
 .company .left{
   width: 280rpx;
@@ -92,6 +94,7 @@ page{
   border-top: 1px dotted #D3A468;
   height: 80rpx;
   line-height: 80rpx;
+  margin-top: 20rpx;
 }
 .feature_tit::before{
   top:26rpx;
@@ -127,7 +130,7 @@ page{
   height: 214rpx;
 }
 .case_company_bottom{
-  margin:30rpx 0;
+  
 }
 .case_company_bottom .company{
   padding: 10rpx 0 10rpx;

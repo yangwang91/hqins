@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    wysbHidden:false
   },
 
   /**
@@ -21,7 +21,13 @@ Page({
   onReady: function () {
 
   },
-
+  changeShow: function (e) {
+    var tab = e.currentTarget.dataset.tab
+    var hideValue = !this.data[tab]
+    var data = {}
+    data[tab] = hideValue;
+    this.setData(data);
+  },
   /**
    * 生命周期函数--监听页面显示
    */
