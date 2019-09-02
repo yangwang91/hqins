@@ -1,4 +1,7 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "pie-chart": "../../../components/pie-chart/pie-chart",
+    "bar-chart": "../../../components/bar-chart/bar-chart"
+    }
 }

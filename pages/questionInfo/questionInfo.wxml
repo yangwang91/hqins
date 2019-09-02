@@ -6,6 +6,8 @@
     <view>{{question.problem}}</view>
   </view>
 
-  <view class="question-desc">{{question.answer}}</view>
+  <view class="question-desc">
+    <view wx:for="{{question.answer}}" wx:key="{{index}}">{{item.name}}</view>
+  </view>
   </view>
 </view>

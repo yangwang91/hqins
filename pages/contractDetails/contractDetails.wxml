@@ -1,11 +1,11 @@
 <!--pages/contractDetails/contractDetails.wxml-->
 <view class="container">
   <view class="contract-details-list"> 
-    <view class="contract-details-item">
-      <image src="../../assets/images/index_banner.png" mode="aspectFill"></image>
-      <view class="contract-details-item_name">马化腾</view>
+    <view class="contract-details-item" wx:for="{{result}}" wx:key="{{index}}">
+      <image src="{{item.link}}" mode="aspectFill"></image>
+      <view class="contract-details-item_name">{{item.name}}</view>
       <view class="contract-details-item_time">
-        <view class="contract-details-item_time_date">2019-09-09</view>
+        <view class="contract-details-item_time_date">{{item.time}}</view>
         <view>签约日期</view>
       </view>
     </view>

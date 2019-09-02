@@ -1,4 +1,5 @@
 // components/poster/poster.js
+const app = getApp()
 Component({
   /**
    * 组件的属性列表
@@ -8,23 +9,18 @@ Component({
       type: Boolean,
       value: false
     },
-    posterData: {
-      type: Object,
-      value: {
-        imgSrc: '../../assets/images/index_banner.png'
-      }
+    postImg: {
+      type: String,
+      value: ''
     }
   },
 
   observers: {
-    'open': function (val) {
+    'open': function(val) {
       console.log(val)
-      if(val) {
-        this.drawPoster()
+      if (val) {
+        this.getQc()
       }
-      this.setData({
-        showPoster: val
-      })
     }
   },
 
@@ -40,7 +36,7 @@ Component({
   lifetimes: {
     attached: function() {
       this.checkSetting()
-      console.log('poster', this.properties.posterData)
+      console.log('poster', this.properties.postImg)
       // this.drawPoster()
     }
   },
@@ -49,32 +45,66 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    drawPoster() {
+    drawPoster(qrcode) {
 
-      const imgSrc = this.properties.posterData.imgSrc
-
-      var ctx = wx.createCanvasContext('poster', this)
-
-      ctx.setFillStyle('#ffffff')
-      ctx.fillRect(0, 0, 660, 970)
-      ctx.drawImage(imgSrc, 50, 30, 560, 696)
-      ctx.drawImage(imgSrc, 50, 762, 165, 165)
-      ctx.setFillStyle('#333333')
-      ctx.setFontSize(30)
-      ctx.fillText('定制产品，更有市场！', 245, 792)
-      ctx.setFillStyle('#666666')
-      ctx.setFontSize(26)
-      ctx.fillText('扫码变身合伙人，定制产品闯', 245, 845)
-      ctx.fillText('市场！转发寻找你的合伙人！', 245, 880)
-      ctx.draw(false, () => {
-        this.fnCanvasToTempFilePath()
-        this.setData({
-          showPoster: true
-        })
+      wx.showLoading({
+        title: '正在生成图片...'
       })
 
+      const imgSrc = this.properties.postImg
 
+      console.log('---------', imgSrc)
 
+      let postImage = this.getImg(imgSrc)
+      let QRImage = this.getImg(qrcode)
+
+      Promise.all([postImage, QRImage]).then(res => {
+        console.log(res)
+        var ctx = wx.createCanvasContext('poster', this)
+
+        ctx.setFillStyle('#ffffff')
+        ctx.fillRect(0, 0, 660, 970)
+        ctx.drawImage(res[0], 50, 30, 560, 696)
+        ctx.drawImage(res[1], 50, 762, 165, 165)
+        ctx.setFillStyle('#333333')
+        ctx.setFontSize(30)
+        ctx.fillText('定制产品，更有市场！', 245, 812)
+        ctx.setFillStyle('#666666')
+        ctx.setFontSize(26)
+        ctx.fillText('扫码变身合伙人，定制产品闯', 245, 865)
+        ctx.fillText('市场！转发寻找你的合伙人！', 245, 900)
+        ctx.draw(false, () => {
+          this.fnCanvasToTempFilePath()
+          this.setData({
+            showPoster: true
+          })
+        })
+      }).catch(err => {
+        console.log(err)
+        wx.hideLoading()
+      })
+
+    },
+
+    getQc: function() {
+      app.API.getQc().then(res => {
+        console.log(res)
+        this.drawPoster(res.url || '')
+      })
+    },
+
+    getImg: function(src) {
+      return new Promise((resolve, reject) => {
+        wx.getImageInfo({
+          src: src,
+          success(res) {
+            resolve(res.path)
+          },
+          fail(err) {
+            reject(err)
+          }
+        })
+      })
     },
 
     fnCanvasToTempFilePath() {
@@ -82,11 +112,14 @@ Component({
         canvasId: 'poster',
         success: (res) => {
           this.setData({
-            tempFilePath: res.tempFilePath
+            tempFilePath: res.tempFilePath,
+            showPoster: true
           })
         },
         fail: (res) => {},
-        complete: (res) => {},
+        complete: (res) => {
+          wx.hideLoading()
+        },
       }, this)
     },
 
@@ -115,7 +148,7 @@ Component({
         success(res) {
           console.log(res)
           const auth = res.authSetting['scope.writePhotosAlbum']
-          if(auth) {
+          if (auth) {
             self.setData({
               canSave: true
             })
@@ -128,7 +161,7 @@ Component({
       })
     },
 
-    checkSetting () {
+    checkSetting() {
       const self = this
       wx.getSetting({
         success(res) {

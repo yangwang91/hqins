@@ -73,6 +73,7 @@ Component({
   lifetimes: {
     attached: function () {
       this.getSales();
+      this.getAchievementTarget();
       this.calculateSchedule('interim', 'interimGoal','interimSchedule');
       this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
       this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
@@ -93,6 +94,13 @@ Component({
         }
       })
     },
+
+    getAchievementTarget: function() {
+      app.API.getAchievementTarget().then(res => {
+        console.log(res)
+      })
+    },
+
     calculateSchedule: function (fieldName, goalElementId, scheduleElementId){
       // 之所以这么区分，是因为当算出小数时出现schedule和goal不相等，但却重合了的情况
       // 暂定这么处理

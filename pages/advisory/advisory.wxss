@@ -199,3 +199,8 @@
   color: #fff;
   background: #E0E0E0;
 }
+
+.advisory-business-plan-done {
+  text-align: center;
+  color: #555;
+}

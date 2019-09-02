@@ -36,20 +36,25 @@
       </view>
     </view>
 
-    <view wx:if="{{false}}" class="advisory-business-plan-wrap">
-      <image src="../../assets/images/index_banner.png" mode="widthFix"></image>
+    <view wx:if="{{zrMiddleStatus.middleflag === 'true'}}" class="advisory-business-plan-wrap">
+      <image src="../../assets/images/book_img.png" mode="widthFix"></image>
       <view class="advisory-business-plan-cont">
-        <view class="advisory-business-plan-title">尊敬的「呃呃呃」</view>
-        <view class="advisory-business-plan-desc">请查阅您的商业计划书,如对商业计划书有异议,可联系您的中台专员【中台专员姓名】进行确认。</view>
-        <view class="advisory-business-plan-book" bindtap="toBook">查看商业计划书</view>
-        <view class="advisory-business-plan-check">
-          <checkbox-group bindchange="checkChane">
-            <checkbox value="bookCheck" color="#333"></checkbox>
-          </checkbox-group>
-          <text>勾选，表示确认该商业计划书无误。</text>
-        </view>
-        <view wx:if="{{isChecked}}" class="advisory-business-plan-btn">完成</view>
-        <view wx:else class="advisory-business-plan-btn is-disabled">完成</view>
+        <block wx:if="{{zrMiddleStatus.approvalflag === 'false'}}">
+          <view class="advisory-business-plan-done">查阅我的<text class="advisory-business-plan-book" data-link="{{zrMiddleStatus.link}}" bindtap="toBook">查看商业计划书</text></view>
+        </block>
+        <block wx:else>
+          <view class="advisory-business-plan-title">尊敬的「{{zrMiddleStatus.person}}」</view>
+          <view class="advisory-business-plan-desc">请查阅您的商业计划书,如对商业计划书有异议,可联系您的中台专员【{{zrMiddleStatus.zt}}】进行确认。</view>
+          <view class="advisory-business-plan-book" data-link="{{zrMiddleStatus.link}}" bindtap="toBook">查看商业计划书</view>
+          <view class="advisory-business-plan-check">
+            <checkbox-group bindchange="checkChane">
+              <checkbox value="bookCheck" color="#333"></checkbox>
+            </checkbox-group>
+            <text>勾选，表示确认该商业计划书无误。</text>
+          </view>
+          <view wx:if="{{isChecked}}" class="advisory-business-plan-btn" bindtap="zrAutoApproval">完成</view>
+          <view wx:else class="advisory-business-plan-btn is-disabled">完成</view>
+        </block>
       </view>
     </view>
 

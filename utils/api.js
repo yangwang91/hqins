@@ -15,7 +15,16 @@ const URL = {
   getSales: BASE_URL + 'getSales',
   getProposeList: BASE_URL + 'getProposeList',
   addPropose: BASE_URL + 'addPropose',
-  getProposeById: BASE_URL + 'getProposeById'
+  getProposeById: BASE_URL + 'getProposeById',
+  getMemberlist: BASE_URL + 'getMemberlist',
+  getZtList: BASE_URL + 'getZtList',
+  getZrMiddleStatus: BASE_URL + 'getZrMiddleStatus',
+  getEstimate: BASE_URL + 'getEstimate',
+  getPromotionPicturelist: BASE_URL + 'getPromotionPicturelist',
+  getQc: BASE_URL + 'getQc',
+  getTgSuccess: BASE_URL + 'getTgSuccess',
+  getTgQysum: BASE_URL + 'getTgQysum',
+  getAchievementTarget: BASE_URL + 'getAchievementTarget'
 }
 
 function getRequestData(data) {
@@ -83,6 +92,51 @@ function getProposeById(data) {
   return _request.send('GET', URL.getProposeById, data).then(res => res.data)
 }
 
+function getMemberlist(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getMemberlist, data).then(res => res.data)
+}
+
+function getZtList(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getZtList, data).then(res => res.data)
+}
+
+function getZrMiddleStatus(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getZrMiddleStatus, data).then(res => res.data)
+}
+
+function getEstimate(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getEstimate, data).then(res => res.data)
+}
+
+function getPromotionPicturelist(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getPromotionPicturelist, data).then(res => res.data)
+}
+
+function getQc(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getQc, data).then(res => res.data)
+}
+
+function getTgSuccess(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getTgSuccess, data).then(res => res.data)
+}
+
+function getTgQysum(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getTgQysum, data).then(res => res.data)
+}
+
+function getAchievementTarget(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getAchievementTarget, data).then(res => res.data)
+}
+
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -95,5 +149,14 @@ module.exports = {
   getSales: getSales,
   getProposeList: getProposeList,
   addPropose: addPropose,
-  getProposeById: getProposeById
+  getProposeById: getProposeById,
+  getMemberlist: getMemberlist,
+  getZtList: getZtList,
+  getZrMiddleStatus: getZrMiddleStatus,
+  getEstimate: getEstimate,
+  getPromotionPicturelist: getPromotionPicturelist,
+  getQc: getQc,
+  getTgSuccess: getTgSuccess,
+  getTgQysum: getTgQysum,
+  getAchievementTarget: getAchievementTarget
 }

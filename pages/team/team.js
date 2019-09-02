@@ -1,4 +1,4 @@
-// pages/team/team.js
+  // pages/team/team.js
 const app = getApp()
 Page({
 
@@ -9,7 +9,9 @@ Page({
     tabbar: {},
     showPoster: false,
     teamModle: false,
-    proposeList: []
+    proposeList: [],
+    ztList: [],
+    postImg: ''
   },
 
   /**
@@ -19,6 +21,8 @@ Page({
     app.editTabbar()
 
     this.getProposeList()
+    this.getZtList()
+    this.getPromotionPicturelist()
   },
 
   /**
@@ -79,6 +83,27 @@ Page({
     })
   },
 
+  getPromotionPicturelist: function() {
+    app.API.getPromotionPicturelist().then(res => {
+      if(res.code == 200){
+        this.setData({
+          promotionPicturelist: res.result || []
+        })
+      }
+    })
+  },
+
+  getZtList: function() {
+    app.API.getZtList().then(res => {
+      console.log(res)
+      if(res.code == 200) {
+        this.setData({
+          ztList: res.result
+        })
+      }
+    })
+  },
+
   toComplaint: function() {
     wx.navigateTo({
       url: '../submitComplaint/submitComplaint'
@@ -103,8 +128,10 @@ Page({
     })
   },
 
-  fnShowPoster: function () {
+  fnShowPoster: function (e) {
+    const post = e.currentTarget.dataset.post
     this.setData({
+      postImg: post,
       showPoster: true
     })
   },

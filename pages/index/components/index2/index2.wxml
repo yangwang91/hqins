@@ -16,7 +16,7 @@
       <text class="key_goal_plan">商业计划书</text>
     </view>
     <view class="progress">
-        <!-- 期交保费滚动条start -->
+      <!-- 期交保费滚动条start -->
       <view class="progress_con {{interimHidden?'':'progress_con_z'}}">
         <view class="goal_ts" style="width:{{interim.goalWidth}}rpx">
           <view class="progress_goal_wz {{interim.goalReached?'progress_goal_wz_reached':''}}" id="interimGoal">
@@ -97,7 +97,7 @@
         </view>
       </view>
       <!-- 意外险保费滚动条end -->
-  <!-- 家庭账户滚动条 -->
+      <!-- 家庭账户滚动条 -->
       <view class="progress_con {{iHomeHidden?'':'progress_con_z'}}">
         <view class="goal_ts" style="width:{{iHome.goalWidth}}rpx">
           <view class="progress_goal_wz {{iHome.goalReached?'progress_goal_wz_reached':''}}" id="iHomeGoal">
@@ -148,28 +148,68 @@
     <view class="created_desc">
       <view class="created_sum">
         <text>总金额</text>
-        <view>698,653.50<text>元</text></view>
+        <view>698,653.50
+          <text>元</text>
+        </view>
       </view>
       <view class="created_item">
         <text>保费创费</text>
-        <view>1,556,454.00<text>元</text></view>
+        <view>1,556,454.00
+          <text>元</text>
+        </view>
       </view>
       <view class="created_item created_item_bor {{expensesHidden?'':'created_item_bor_zk'}}" catchtap="showExpenses">
         <text>营业费用</text>
-        <view>336,478.00<text>元</text></view>
+        <view>336,478.00
+          <text>元</text>
+        </view>
       </view>
       <view class="created_item_desc" hidden="{{expensesHidden}}">
-        <view><text>内勤人力费用</text><text>元</text></view>
-        <view><text>职场费用</text><text>元</text></view>
-        <view><text>手续费支出</text><text>元</text></view>
-        <view><text>佣金支出</text><text>元</text></view>
-        <view><text>业务费用</text><text>元</text></view>
-        <view><text>外勤人力费用</text><text>元</text></view>
-        <view><text>营业外支出</text><text>元</text></view>
-        <view><text>税金及附加</text><text>元</text></view>
+        <view>
+          <text>内勤人力费用</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>职场费用</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>手续费支出</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>佣金支出</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>业务费用</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>外勤人力费用</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>营业外支出</text>
+          <text>元</text>
+        </view>
+        <view>
+          <text>税金及附加</text>
+          <text>元</text>
+        </view>
       </view>
     </view>
   </view>
+
+  <view class="canvas-con">
+    <bar-chart></bar-chart>
+  </view>
+
+  <view class="canvas-con">
+    <pie-chart></pie-chart>
+  </view>
+
+
   <view class="common_con">
     <view class="common_tit">运营服务</view>
     <view class="service_big_box">

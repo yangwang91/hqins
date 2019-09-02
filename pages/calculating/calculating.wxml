@@ -8,43 +8,94 @@
       <view class="calculating-question-title">请选择您团队的销售场景：</view>
       <view class="calculating-question-answer">
         <radio-group class="radio-group" bindchange="radioChange">
-          <label wx:for="{{question1}}" class="radio">
-            <radio value="{{item.value}}" class="{{item.checked ? 'is-checked' : ''}}" checked="{{item.checked}}" color="#D3A468">
+          <label wx:for="{{question1}}" class="radio" wx:key="{{index}}">
+            <radio value="{{item.value}}" class="{{item.checked || index === (fdXscj - 1) ? 'is-checked' : ''}}" checked="{{item.checked || index === (fdXscj - 1)}}" color="#D3A468">
               <text>{{item.name}}</text>
             </radio>
           </label>
         </radio-group>
       </view>
       <view class="calculating-btns">
-        <view class="calculating-comfirm-btn">下一题</view>
+        <view class="calculating-comfirm-btn" bindtap="nextQuestion">下一题</view>
       </view>
     </view>
-    <!-- 第二（1） -->
+    <!-- 第二题 -->
     <view wx:if="{{step === 2}}" class="calculating-question">
       <view class="calculating-num">
         <text>2</text>/2</view>
       <view class="calculating-question-title">请预估您团队的12个月保费业绩：</view>
       <view class="calculating-question-answer">
         <view class="calculating-question-input-wrap">
-          <block>
-            <view class="calculating-question-answer_sub">您已选择销售场景：XXXX</view>
+
+          <block wx:if="{{fdXscj === '5'}}">
+            <view class="calculating-question-answer_sub">个人营销</view>
             <view class="calculating-question-input">
-              <input placeholder="请输入保费业绩"></input>
+              <input placeholder="请输入个人营销费用" value="{{postData.fdGrPremium}}" data-key="fdGrPremium" bindinput="inputChange"></input>
+              <view>万元</view>
+            </view>
+            <view class="calculating-question-answer_sub">银邮业务</view>
+            <view class="calculating-question-input">
+              <input placeholder="请输入个人营销费用" value="{{postData.fdYyPremium}}" data-key="fdYyPremium" bindinput="inputChange"></input>
+              <view>万元</view>
+            </view>
+            <view class="calculating-question-answer_sub">经代业务</view>
+            <view class="calculating-question-input">
+              <input placeholder="请输入个人营销费用" value="{{postData.fdJdPremium}}" data-key="fdJdPremium" bindinput="inputChange"></input>
+              <view>万元</view>
+            </view>
+            <view class="calculating-question-answer_sub">网络平台销售</view>
+            <view class="calculating-question-input">
+              <input placeholder="请输入个人营销费用" value="{{postData.fdWlPremium}}" data-key="fdWlPremium" bindinput="inputChange"></input>
               <view>万元</view>
             </view>
           </block>
-          <block>
+          <block wx:else>
+            <view class="calculating-question-answer_sub">您已选择销售场景：{{question1[fdXscj - 1].name}}</view>
             <view class="calculating-question-input">
-              <input placeholder="请输入保费业绩"></input>
+              <input placeholder="请输入保费业绩" value="{{postData.fdPremium}}" data-key="fdPremium" bindinput="inputChange"></input>
               <view>万元</view>
             </view>
           </block>
         </view>
       </view>
       <view class="calculating-btns">
-        <view class="calculating-comfirm-btn">下一题</view>
+        <text class="calculating-text-btn" bindtap="pevQuestion">上一题</text>
+        <view class="calculating-comfirm-btn" bindtap="comfirmForm">确认无误，提交</view>
       </view>
     </view>
-    <!--  -->
+    <!-- 第三步 -->
+    <view wx:if="{{step === 3}}" class="calculating-result-wrap">
+      <image src="../../assets/images/index_banner.png" mode="widthFix"></image>
+      <view class="calculating-result-desc">
+        <block wx:if="{{flag == 1}}">
+          <view>这位客官，您认真的吗？</view>
+          <view>我们对合伙人是有期待的哦!</view>
+        </block>
+        <block wx:if="{{flag == 2}}">
+          <view>未来合伙人，</view>
+          <view>说的就是您，</view>
+          <view>我们将火速联系您!</view>
+        </block>
+        <block wx:if="{{flag == 3}}">
+          <view>看到数据，</view>
+          <view>希望您有心动的感觉！</view>
+          <view>凝新聚力，</view>
+          <view>梦想的收入触手可及！</view>
+        </block>
+      </view>
+      <view wx:if="{{flag == 1}}" class="calculating-btns">
+        <view class="calculating-comfirm-btn" bindtap="pevQuestion">重新测算</view>
+        <text class="calculating-back-btn" bindtap="backTab">返回首页</text>
+      </view>
+      <view wx:if="{{flag == 2}}" class="calculating-btns">
+        <view wx:if="{{zrStatus === 0}}" class="calculating-comfirm-btn" bindtap="toCooperation">留下联系方式</view>
+        <view class="calculating-comfirm-btn2" bindtap="toResult">查看测算结果</view>
+        <text class="calculating-back-btn" bindtap="backTab">返回首页</text>
+      </view>
+      <view wx:if="{{flag == 3}}" class="calculating-btns">
+        <view class="calculating-comfirm-btn" bindtap="toResult">查看测算结果</view>
+        <text class="calculating-back-btn" bindtap="backTab">返回首页</text>
+      </view>
+    </view>
   </view>
 </view>

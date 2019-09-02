@@ -6,11 +6,15 @@ Page({
   data: {
     tabbar: {},
     banner_img: app.images.index1_banner,
-    present: wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2',
+    present: '',
   },
  
   onLoad: function () {
     app.editTabbar()
+
+    this.setData({
+      present: wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2'
+    })
     
   },
 

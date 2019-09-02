@@ -1,18 +1,19 @@
 // pages/promotionDetails/promotionDetails.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    result: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getTgSuccess()
   },
 
   /**
@@ -42,19 +43,16 @@ Page({
   onUnload: function () {
 
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  
+  getTgSuccess: function() {
+    app.API.getTgSuccess().then(res => {
+      console.log(res)
+      if(res.code == 200){
+        this.setData({
+          result: res.result[0]
+        })
+      }
+    })
   },
 
   toContractDetails: function() {

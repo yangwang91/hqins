@@ -6,10 +6,12 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
+		"enhance": false,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
+		"nodeModules": true,
 		"autoAudits": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -48,21 +50,28 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/team/team",
-					"pathName": "pages/team/team",
+					"name": "pages/contactWeb/contactWeb",
+					"pathName": "pages/contactWeb/contactWeb",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 1,
-					"name": "pages/index/index",
-					"pathName": "pages/index/index",
+					"name": "pages/advisory/advisory",
+					"pathName": "pages/advisory/advisory",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/auth/auth",
+					"pathName": "pages/auth/auth",
+					"query": "scene=oLd145DfhMLBQNoGzGWBecMVRM8M",
+					"scene": 1047
 				}
 			]
 		}

@@ -1,14 +1,14 @@
 <!--pages/teamMember/teamMember.wxml-->
 <view class="container">
   <view class="team-member-list">
-    <view class="team-member-item" wx:for="{{6}}">
+    <view class="team-member-item" wx:for="{{list}}" wx:key="{{index}}">
       <view class="team-member-item_name">
-        <view class="team-member-item_name_main">宋爱梅</view>
-        <view class="team-member-item_name_sub">行政助理</view>
+        <view class="team-member-item_name_main">{{item.fdName}}</view>
+        <view class="team-member-item_name_sub">{{item.fdPost}}</view>
       </view>
-      <view class="team-member-item_phone" data-phone="13689463626" bindtap="phoneCall">
+      <view class="team-member-item_phone" data-phone="{{item.fdPhone}}" bindtap="phoneCall">
         <image src="../../assets/icons/phone_icon.svg" mode="aspectFit"></image>
-        <text>13689463626</text>
+        <text>{{item.fdPhone}}</text>
       </view>
     </view>
   </view>

@@ -94,7 +94,7 @@
   <view class="partner-warp">
     <view class="partner-title">合伙人案例</view>
     <view class="partner-list">
-      <view class="partner-item">
+      <view class="partner-item" bindtap="toPartnershipplatform">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_1.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">深耕中小银行</view>

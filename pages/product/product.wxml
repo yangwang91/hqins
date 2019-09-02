@@ -16,8 +16,10 @@
     </view>
   </view>
 
-  <view wx:if="{{present == 2}}" class="tech-platform-wrap">
-    <view class="text">科技平台</view>
+  <view wx:if="{{present == 2}}" class="tech-platform-wrap" bindtap="toPage">
+    <view class="tag">展业赋能</view>
+    <view class="text">为团队提供定制化管理方案及团队成长方案</view>
+    <view class="more">了解更多</view>
     <image src="../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
   </view>
 
