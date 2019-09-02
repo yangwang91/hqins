@@ -12,7 +12,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-    hidden: true
+    hidden: true,
+    authFailureHidden:true
   },
 
   attached() {
@@ -24,15 +25,21 @@ Component({
    */
   methods: {
     getuserinfo(e) {
-      console.log(e)
       if(e.detail.userInfo) {
         this.setData({
           hidden: true
         })
         this.login()
+      } else {
+        this.setData({
+          hidden: true,
+          authFailureHidden: false
+        })
       }
     },
-
+    exitAuth(e){
+      this.setData({ hidden: true, authFailureHidden: false})
+    },
     getUserInfoAuth() {
       // 获取用户信息
       wx.getSetting({

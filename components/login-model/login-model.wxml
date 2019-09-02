@@ -1,12 +1,36 @@
 <!--components/login-model/login-model.wxml-->
-<view class="login-model" hidden="{{hidden}}" catchtouchstart="">
+<view class="login-model" catchtouchstart="">
   <view class="login-model-mask"></view>
-  <view class="login-model-cont">
-    <view class="login-model-title">授权</view>
-    <view class="login-model-content">请允许获取你的微信个人信息</view>
-    <view class="login-model-btns">
-      <navigator open-type="exit" target="miniProgram" class="login-model-btns_cancel">拒绝</navigator>
-      <button open-type="getUserInfo" class="login-model-btns_comfirm" bindgetuserinfo="getuserinfo">允许</button>
+  <view class="login-model-cont" hidden="{{hidden}}">
+    <view class="auth_con">
+      <view class="auth_img"><image src="../../assets/images/auth1.png"></image></view>
+      <view class="auto_sj">
+        <view class="login-model-title">提示</view>
+        <view class="login-model-content">
+          <view>欢迎加入【鲲雁iBoss计划】</view>
+          <view>为便于获取更好的服务体验</view>
+          <view>请先进行小程序授权</view>
+        </view>
+      </view>
     </view>
+    <view class="login-model-btns">
+      <view catchtap="exitAuth">
+        取消
+      </view>
+      <button open-type="getUserInfo" class="login-model-btns_comfirm" bindgetuserinfo="getuserinfo">
+        去授权
+      </button>
+    </view>
+  </view>
+  <view class="auth_failure" hidden="{{authFailureHidden}}">
+    <view class="no_img"><image src="../../assets/images/auth2.png"></image></view>
+    <view class="auth_no_con">
+      <view class="auth_no_tit">授权失败</view>
+      <view class="auth_no_des">小程序需要您的微信授权才能使用哦</view>
+      <view class="auth_no_des">请重新授权</view>
+    </view>
+     <button open-type="getUserInfo" class="auth_but" bindgetuserinfo="getuserinfo">
+        重新授权
+      </button>
   </view>
 </view>
