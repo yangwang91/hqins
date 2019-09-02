@@ -23,7 +23,8 @@
     "pages/calculating/calculating",
     "pages/specialservice/specialservice",
     "pages/exhibitionindustry/exhibitionindustry",
-    "pages/businessQuality/businessQuality"
+    "pages/businessQuality/businessQuality",
+    "pages/calculateResult/calculateResult"
   ],
   "tabBar": {
     "color": "#7A7E83",

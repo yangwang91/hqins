@@ -1,0 +1,36 @@
+<view class="result_wrap">
+  <view class="result_top">
+    <image src="../../assets/images/calculateResult.png"></image>
+  </view>
+  <view class="result_con">
+    <view class="result_sj">
+      <view class="result_sum">
+        <view class="sum_wz">保费总计</view>
+        <view class="sum_num">546,123,12<text>万元</text></view>
+      </view>
+      <view class="sum_wz">个人营销+银邮业务+经代业务+网络平台销售</view>
+      <view class="sum_fg">
+        <view></view>
+      </view>
+      <!-- 第一个 -->
+      <view class="other_tit">您所获得的直接销售费用预计</view>
+      <view class="other_desc">可用于营销佣金支付、合作渠道手续费结算等</view>
+      <view class="other_sum">5,566.45<text>万元</text></view>
+      <!-- 第二个 -->
+      <view class="other_tit">您所支配的销售管理费用预计</view>
+      <view class="other_desc">
+        <view>可用于内勤团队薪酬支付、业务推动方案设计等，</view>
+        <view>运用得当都将成为可分配价值的重要来源</view>
+      </view>
+      <view class="other_sum">3,426.45<text>万元</text></view>
+      <!--第三个-->
+      <view class="other_tit">您团队可分配的价值盈余预计</view>
+      <view class="other_sum">3,426.45~5,556.11<text>万元</text></view>
+      <!-- 第三个结束 -->
+      <view class="result_but">
+        <view class="but but1">留下联系方式</view>
+        <view class="but but2">层返回测算首页</view>
+      </view>
+    </view>
+  </view>
+</view>
