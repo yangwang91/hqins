@@ -1,10 +1,9 @@
 <view class="container">
-  <index2></index2>
-  <!-- <block wx:if="{{present === '1'}}">
+  <block wx:if="{{present === '1'}}">
     <index2></index2>
   </block>
   <block wx:else>
     <index1></index1>
-  </block> -->
+  </block>
   <tabbar tabbar="{{tabbar}}"></tabbar>
 </view>
