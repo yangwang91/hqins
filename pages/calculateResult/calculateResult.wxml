@@ -8,7 +8,7 @@
         <view class="sum_wz">保费总计</view>
         <view class="sum_num">{{result.fdXscjName === '多场景多渠道' ? result.fdSumPremium : result.fdPremium}}<text>万元</text></view>
       </view>
-      <view class="sum_wz">个人营销+银邮业务+经代业务+网络平台销售</view>
+      <view class="sum_wz">{{result.fdXscjName}}</view>
       <view class="sum_fg">
         <view></view>
       </view>

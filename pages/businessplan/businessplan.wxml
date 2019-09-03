@@ -3,13 +3,17 @@
     <image src="../../assets/images/plan_img.png"></image>
   </view>
   <view class="plan_detail">
-    <view class="plan_detail_tit">尊敬的「姓啥名啥」</view>
-    <view class="plan_detail_des">请查阅您的商业计划书,如对商业计划书有异议,可联系您的中台专员【中台专员姓名】进行确认</view>
+    <view class="plan_detail_tit">尊敬的「{{zrMiddleStatus.person}}」</view>
+    <view class="plan_detail_des">请查阅您的商业计划书,如对商业计划书有异议,可联系您的中台专员【{{zrMiddleStatus.zt}}】进行确认</view>
   </view>
-  <view class="plan_show_but">查看商业计划书</view>
+  <view class="plan_show_but" data-link="{{zrMiddleStatus.link}}" bindtap="toBook">查看商业计划书</view>
   <view class="plan_confirm">
-    <view><checkbox  checked="{{confirm}}" color="#333333"/></view>
-    <view class="text">勾选，表示确认该商业计划书无误！</view>
+    <view>
+      <checkbox-group bindchange="checkChange">
+        <checkbox value="comfirm" checked="{{confirm}}" color="#333333" />
+      </checkbox-group>
+    </view>
+    <view wx:if="{{zrMiddleStatus.approvalflag === 'false'}}" class="text">勾选，表示确认该商业计划书无误！</view>
   </view>
-  <view class="plan_bottom_but">完成</view>
+  <view wx:if="{{zrMiddleStatus.approvalflag === 'false'}}" class="plan_bottom_but" bindtap="zrAutoApproval">完成</view>
 </view>

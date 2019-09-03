@@ -14,6 +14,8 @@ Component({
    */
   data: {
     topSales: [],
+    czdjz: {},
+    dayScore: [],
     expensesHidden:true,
     interimHidden:false,// 期交保费
     singleHidden: true, // 趸交保费
@@ -75,6 +77,7 @@ Component({
       this.getSales();
       this.getAchievementTarget();
       this.getCzdjz();
+      this.getDayScore();
       this.calculateSchedule('interim', 'interimGoal','interimSchedule');
       this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
       this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
@@ -107,6 +110,23 @@ Component({
       app.API.getCzdjz().then(res => {
         console.log('--------------getCzdjz------------------------')
         console.log(res)
+        if(res.code == 200){
+          this.setData({
+            czdjz: res.result[0]
+          })
+        }
+      })
+    },
+
+    // 每日业绩
+    getDayScore: function() {
+      app.API.getDayScore().then(res => {
+        console.log(res)
+        if(res.code == 200) {
+          this.setData({
+            dayScore: res.result[0] && res.result[0].code != 212 ? res.result : []
+          })
+        }
       })
     },
 

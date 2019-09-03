@@ -27,7 +27,8 @@ const URL = {
   getAchievementTarget: BASE_URL + 'getAchievementTarget',
   scanAddScande: BASE_URL + 'scanAddScande',
   getCzdjz: BASE_URL + 'getCzdjz',
-  zrAutoApproval: BASE_URL + 'zrAutoApproval'
+  zrAutoApproval: BASE_URL + 'zrAutoApproval',
+  getDayScore: BASE_URL + 'getDayScore'
 }
 
 function getRequestData(data) {
@@ -155,6 +156,11 @@ function getCzdjz(data) {
   return _request.send('GET', URL.getCzdjz, data).then(res => res.data)
 }
 
+function getDayScore(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getDayScore, data).then(res => res.data)
+}
+
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -179,5 +185,6 @@ module.exports = {
   getAchievementTarget: getAchievementTarget,
   scanAddScande: scanAddScande,
   getCzdjz: getCzdjz,
-  zrAutoApproval: zrAutoApproval
+  zrAutoApproval: zrAutoApproval,
+  getDayScore: getDayScore
 }

@@ -1,5 +1,7 @@
 // tabBarComponent/tabBar.js
 const app = getApp();
+const sysInfo = app.globalData.sysInfo;
+
 Component({
   /**
    * 组件的属性列表
@@ -22,7 +24,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    isIphoneX: app.globalData.sysInfo.statusBarHeight >= 44,
+    isIphoneX: (sysInfo.screenHeight - sysInfo.windowHeight - sysInfo.statusBarHeight - 32) > 72,
   },
 
   /**

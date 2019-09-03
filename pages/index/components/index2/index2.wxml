@@ -143,66 +143,66 @@
   <view class="created_con">
     <view class="created_tit">
       <text>创造的价值</text>
-      <text>（统计截止到:yyyy-mm-dd）</text>
+      <text>（统计截止到:{{czdjz.Date}}）</text>
     </view>
     <view class="created_desc">
       <view class="created_sum">
         <text>总金额</text>
-        <view>698,653.50
+        <view>{{czdjz.Total}}
           <text>元</text>
         </view>
       </view>
       <view class="created_item">
         <text>保费创费</text>
-        <view>1,556,454.00
+        <view>{{czdjz.CreateIn}}
           <text>元</text>
         </view>
       </view>
       <view class="created_item created_item_bor {{expensesHidden?'':'created_item_bor_zk'}}" catchtap="showExpenses">
         <text>营业费用</text>
-        <view>336,478.00
+        <view>{{czdjz.TrafficCost}}
           <text>元</text>
         </view>
       </view>
       <view class="created_item_desc" hidden="{{expensesHidden}}">
         <view>
           <text>内勤人力费用</text>
-          <text>元</text>
+          <text>{{czdjz.InsideCost}} 元</text>
         </view>
         <view>
           <text>职场费用</text>
-          <text>元</text>
+          <text>{{czdjz.WorkplaceCost}} 元</text>
         </view>
         <view>
           <text>手续费支出</text>
-          <text>元</text>
+          <text>{{czdjz.HandOutlay}} 元</text>
         </view>
         <view>
           <text>佣金支出</text>
-          <text>元</text>
+          <text>{{czdjz.ComOutlay}} 元</text>
         </view>
         <view>
           <text>业务费用</text>
-          <text>元</text>
+          <text>{{czdjz.BusinessCost}} 元</text>
         </view>
         <view>
           <text>外勤人力费用</text>
-          <text>元</text>
+          <text>{{czdjz.OutsideCost}} 元</text>
         </view>
         <view>
           <text>营业外支出</text>
-          <text>元</text>
+          <text>{{czdjz.TrafficOutlay}} 元</text>
         </view>
         <view>
           <text>税金及附加</text>
-          <text>元</text>
+          <text>{{czdjz.TaxAttach}} 元</text>
         </view>
       </view>
     </view>
   </view>
 
   <view class="canvas-con">
-    <bar-chart></bar-chart>
+    <bar-chart data="{{dayScore}}"></bar-chart>
   </view>
 
   <view class="canvas-con">

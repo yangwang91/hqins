@@ -3,39 +3,8 @@ const F2 = require('@antv/wx-f2')
 let chart = null;
 
 function initChart(canvas, width, height, F2) {
-  var data = [{
-      year: '1951 年',
-      sales: 38
-    },
-    {
-      year: '1952 年',
-      sales: 52
-    },
-    {
-      year: '1956 年',
-      sales: 61
-    },
-    {
-      year: '1957 年',
-      sales: 145
-    },
-    {
-      year: '1958 年',
-      sales: 48
-    },
-    {
-      year: '1959 年',
-      sales: 38
-    },
-    {
-      year: '1960 年',
-      sales: 38
-    },
-    {
-      year: '1962 年',
-      sales: 38
-    },
-  ];
+  console.log(23333)
+  var data = [];
   chart = new F2.Chart({
     el: canvas,
     width,
@@ -43,14 +12,14 @@ function initChart(canvas, width, height, F2) {
   });
 
   chart.source(data, {
-    sales: {
+    Number: {
       tickCount: 5
     }
   });
 
   chart.legend(false);
-  // chart.axis('sales', false)
-  chart.axis('sales', {
+  // chart.axis('Number', false)
+  chart.axis('Number', {
     line: null,
     grid: null,
     tickLine: null,
@@ -62,7 +31,7 @@ function initChart(canvas, width, height, F2) {
   });
 
   chart.tooltip(false);
-  chart.interval().position('year*sales');
+  chart.interval().position('ProductName*Number');
   chart.render();
 
   // 绘制柱状图文本
@@ -76,14 +45,14 @@ function initChart(canvas, width, height, F2) {
       attrs: {
         x: point.x + 5,
         y: point.y + 7,
-        text: obj.sales,
+        text: obj.Number,
         textAlign: 'start',
         textBaseline: 'bottom',
         fill: '#808080'
       }
     });
 
-    shapes[obj.year] = text; // 缓存该 shape, 便于后续查找
+    shapes[obj.ProductName] = text; // 缓存该 shape, 便于后续查找
   });
 
   let lastTextShape; // 上一个被选中的 text
@@ -104,7 +73,7 @@ function initChart(canvas, width, height, F2) {
         fontWeight: 'normal'
       });
       if (selected) {
-        const textShape = shapes[data.year];
+        const textShape = shapes[data.ProductName];
         textShape.attr({
           fill: '#000',
           fontWeight: 'bold'
@@ -122,7 +91,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    data: {
+      type: Array,
+      value: []
+    }
   },
 
   /**
@@ -132,6 +104,21 @@ Component({
     opts: {
       onInit: initChart
     },
+  },
+
+  observers: {
+    'data': function(val) {
+      console.log(val)
+      this.setData({
+        [`opts.onInit`]: initChart
+      })
+    }
+  },
+
+  lifetimes: {
+    attached() {
+      
+    }
   },
 
   /**
