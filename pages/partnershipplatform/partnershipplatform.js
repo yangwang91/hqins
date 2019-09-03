@@ -37,15 +37,27 @@ Page({
   },
   showPage:function(page){
     if (page == '1') {
+      wx.setNavigationBarTitle({
+        title: '深圳中小银行'
+      })
       this.setData({ szBankHidden:false})
     }
     if (page == '2') {
+      wx.setNavigationBarTitle({
+        title: '小团队多场景'
+      })
       this.setData({ smallTeamHidden: false })
     }
     if (page == '3') {
+      wx.setNavigationBarTitle({
+        title: '中介服务为王'
+      })
       this.setData({ zjHidden: false })
     }
     if (page == '4') {
+      wx.setNavigationBarTitle({
+        title: '持续组织发展'
+      })
       this.setData({ cxfzHidden: false })
     }
     if (page == '5') {
