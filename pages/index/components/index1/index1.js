@@ -25,9 +25,10 @@ Component({
         url: '../jionus/jionus'
       })
     },
-    toPartnershipplatform: function() {
+    toPartnershipplatform: function(e) {
+      var page = e.currentTarget.dataset.page
       wx.navigateTo({
-        url: '../../../../partnershipplatform/partnershipplatform'
+        url: '../../../../partnershipplatform/partnershipplatform?page='+page
       })
     }
   }

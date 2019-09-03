@@ -8,10 +8,12 @@ page{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 6rpx;
 }
 .partership_top image{
   width:690rpx;
   height: 340rpx;
+  border-radius: 6rpx;
 }
 .case_tit{
   font-size:28rpx;

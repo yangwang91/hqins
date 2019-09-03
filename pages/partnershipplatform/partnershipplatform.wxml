@@ -1,82 +1,162 @@
 <view class="partership">
-  <view class="partership_top">
-    <image src="../../assets/images/partnership_img1.png"></image>
-  </view>
-  <!-- 注释掉的部分是另外一个案例详情的模板，实际运用时，判断显示即可 -->
-  <!-- <view class="case_tit">
-    案例代表
-  </view>
-  <view class="company case_2">
-    <view class="left"><image src="../../assets/images/partnership_img5.png"></image></view>
-    <view class="right">
-      <view class="company_tit">宁方华</view>
-      <text class="text">80后经代经营精英\n事业合伙人</text>
+<!-- 股权合伙平台 -->
+  <view hidden="{{partnershipHidden}}">
+    <view class="partership_top">
+      <image src="../../assets/images/partnership_img1.png"></image>
+    </view>
+    <view class="case_tit">
+      案例展示
+    </view> 
+    <!-- 伟逸盛邦 -->
+    <view class="case_con">
+      <view class="company" bindtap="changeShow" data-tab="wysbHidden">
+        <view class="left"><image src="../../assets/images/partnership_img2.png"></image></view>
+        <view class="right">
+          <view class="company_icon {{wysbHidden?'company_icon_r2':'company_icon_r1'}}"><image src="../../assets/icons/arrow_partnership.svg"></image></view>
+          <view class="company_tit">伟逸盛邦</view>
+          <text class="text">15年保险培训专业团队\n股权合伙模式</text>
+        </view>
+      </view>
+      <view hidden="{{wysbHidden}}">
+        <view class="case_tit feature_tit">
+          股权合伙特点
+        </view>
+        <view class="company_jy">
+          <view class="company_jy_tit">广州朴智：</view>
+          <view class="company_desc">资本投入（持股65%）、培训管理输出、专属经营</view>
+          <view class="company_jy_tit">横琴人寿：</view>
+          <view class="company_desc">资本投入（持股35%）、产品供应、科技平台赋能</view>
+        </view>
+        <view class="case_tit">
+          案例详情
+        </view>
+        <view class="company_detail">
+          <view class="company_detail_img"><image src="../../assets/images/partnership_img3.png"></image></view>
+          <text>公司携手广州朴智企业管理咨询公司（拥有近50名来自保险和银行行业的丰富经验咨询培训讲师，近8年先后服务为180多家企业提供咨询培训服务），共同入股广州伟逸盛邦保险代理有限公司。伟逸盛邦以“家庭账户、科技驱动、混合前端”为核心，集合科技、培训、社会、健康管理等各领域资源，打造满足家庭综合需求生态链一站式闭环服务，为家庭提供一整套系统化风险解决方案，并将秉承“专业创造价值”的原则，通过行业创新的“众创计划”虚拟股权激励来为员工和合作伙伴建造长期稳定的工作平台，抢占在产销分离趋势的保险中介3.0时代的发展新格局机遇。</text>
+        </view>
+      </view>
+    </view>
+    <!-- 路通集团 -->
+    <view class="case_con">
+      <view class="company" bindtap="changeShow" data-tab="ltHidden">
+        <view class="left"><image src="../../assets/images/partnership_img4.png"></image></view>
+        <view class="right">
+        <view class="company_icon {{ltHidden?'company_icon_r2':'company_icon_r1'}}"><image src="../../assets/icons/arrow_partnership.svg"></image></view>
+          <view class="company_tit">路通集团</view>
+          <text class="text">15年保险培训专业团队\n股权合伙模式</text>
+        </view>
+      </view>
+      <view hidden="{{ltHidden}}">
+        <view class="case_tit feature_tit">
+          股权合伙特点
+        </view>
+        <view class="company_jy">
+          <view class="company_jy_tit">广州朴智：</view>
+          <view class="company_desc">资本投入（持股65%）、培训管理输出、专属经营</view>
+          <view class="company_jy_tit">横琴人寿：</view>
+          <view class="company_desc">资本投入（持股35%）、产品供应、科技平台赋能</view>
+        </view>
+        <view class="case_tit">
+          案例详情
+        </view>
+        <view class="company_detail">
+          <view class="company_detail_img"><image src="../../assets/images/partnership_img3.png"></image></view>
+          <text>公司携手广州朴智企业管理咨询公司（拥有近50名来自保险和银行行业的丰富经验咨询培训讲师，近8年先后服务为180多家企业提供咨询培训服务），共同入股广州伟逸盛邦保险代理有限公司。伟逸盛邦以“家庭账户、科技驱动、混合前端”为核心，集合科技、培训、社会、健康管理等各领域资源，打造满足家庭综合需求生态链一站式闭环服务，为家庭提供一整套系统化风险解决方案，并将秉承“专业创造价值”的原则，通过行业创新的“众创计划”虚拟股权激励来为员工和合作伙伴建造长期稳定的工作平台，抢占在产销分离趋势的保险中介3.0时代的发展新格局机遇。</text>
+        </view>
+      </view>
     </view>
   </view>
-  <view class="case_tit">
-    案例详情
-  </view>
-  <view class="case2_detail">
-有别于原机构层级化递减的费用形式，事业合伙人直接由总部服务管理。宁方华发挥其丰富的渠道销售经营经验，助以公司对永达理、大童保险渠道的专属产品支持，其5个人的小团队从过去为老板干转变为自己干的事业心态，聚焦经营重点渠道，通过对费用采取“合理分配，重点投入，创费结余团队自分配”方式，激发团队活力，历经2个月，标准保费平台规模翻翻，团队人均收入大幅度提升。
-  </view> -->
-  <view class="case_tit">
-    案例展示
-  </view> 
-  <view class="case_con">
-    <view class="company" bindtap="changeShow" data-tab="wysbHidden">
-      <view class="left"><image src="../../assets/images/partnership_img2.png"></image></view>
+  <!-- 股权合伙平台end -->
+  <!-- 深耕中小银行 -->
+  <view hidden="{{szBankHidden}}">
+    <view class="partership_top">
+      <image src="../../assets/images/partnership_img6.png"></image>
+    </view>
+    <view class="case_tit">
+      案例代表
+    </view>
+    <view class="company case_2">
+      <view class="left"><image src="../../assets/images/partnership_img6.png"></image></view>
       <view class="right">
-        <view class="company_icon {{wysbHidden?'company_icon_r2':'company_icon_r1'}}"><image src="../../assets/icons/arrow_partnership.svg"></image></view>
-        <view class="company_tit">伟逸盛邦</view>
-        <text class="text">15年保险培训专业团队\n股权合伙模式</text>
+        <view class="company_tit">李智</view>
+        <text class="text">深挖资源与变现流量\n事业合伙人</text>
       </view>
     </view>
-    <view hidden="{{wysbHidden}}">
-      <view class="case_tit feature_tit">
-        股权合伙特点
-      </view>
-      <view class="company_jy">
-        <view class="company_jy_tit">广州朴智：</view>
-        <view class="company_desc">资本投入（持股65%）、培训管理输出、专属经营</view>
-        <view class="company_jy_tit">横琴人寿：</view>
-        <view class="company_desc">资本投入（持股35%）、产品供应、科技平台赋能</view>
-      </view>
-      <view class="case_tit">
-        案例详情
-      </view>
-      <view class="company_detail">
-        <view class="company_detail_img"><image src="../../assets/images/partnership_img3.png"></image></view>
-        <text>公司携手广州朴智企业管理咨询公司（拥有近50名来自保险和银行行业的丰富经验咨询培训讲师，近8年先后服务为180多家企业提供咨询培训服务），共同入股广州伟逸盛邦保险代理有限公司。伟逸盛邦以“家庭账户、科技驱动、混合前端”为核心，集合科技、培训、社会、健康管理等各领域资源，打造满足家庭综合需求生态链一站式闭环服务，为家庭提供一整套系统化风险解决方案，并将秉承“专业创造价值”的原则，通过行业创新的“众创计划”虚拟股权激励来为员工和合作伙伴建造长期稳定的工作平台，抢占在产销分离趋势的保险中介3.0时代的发展新格局机遇。</text>
-      </view>
+    <view class="case_tit">
+      案例详情
+    </view>
+    <view class="case2_detail">
+  专注两件事情，中小银行渠道的价值挖掘+银保长期期交产品的推广，李智运用其10年银保经营经验，以事业合伙人身份代表公司，进行当地农商行银保渠道的价值经营。该模式立项通过后，团队通过45天完成了公司与当地农商行的银保通系统对接、代理签约与重点产品培训推广。在正式业务开展的首月，已实现趸交保费5800万元，长期期交保费335万元。
     </view>
   </view>
-
-  <view class="case_con">
-    <view class="company" bindtap="changeShow" data-tab="ltHidden">
-      <view class="left"><image src="../../assets/images/partnership_img4.png"></image></view>
+  <!-- 深耕中小银行end -->
+  <!-- 小团队多场景 -->
+  <view hidden="{{smallTeamHidden}}">
+    <view class="partership_top">
+      <image src="../../assets/images/partnership_img6.png"></image>
+    </view>
+    <view class="case_tit">
+      案例代表
+    </view>
+    <view class="company case_2">
+      <view class="left"><image src="../../assets/images/partnership_img6.png"></image></view>
       <view class="right">
-      <view class="company_icon {{ltHidden?'company_icon_r2':'company_icon_r1'}}"><image src="../../assets/icons/arrow_partnership.svg"></image></view>
-        <view class="company_tit">路通集团</view>
-        <text class="text">15年保险培训专业团队\n股权合伙模式</text>
+        <view class="company_tit">赵黎明团队</view>
+        <text class="text">互联网数字化运营专家</text>
       </view>
     </view>
-    <view hidden="{{ltHidden}}">
-      <view class="case_tit feature_tit">
-        股权合伙特点
-      </view>
-      <view class="company_jy">
-        <view class="company_jy_tit">广州朴智：</view>
-        <view class="company_desc">资本投入（持股65%）、培训管理输出、专属经营</view>
-        <view class="company_jy_tit">横琴人寿：</view>
-        <view class="company_desc">资本投入（持股35%）、产品供应、科技平台赋能</view>
-      </view>
-      <view class="case_tit">
-        案例详情
-      </view>
-      <view class="company_detail">
-        <view class="company_detail_img"><image src="../../assets/images/partnership_img3.png"></image></view>
-        <text>公司携手广州朴智企业管理咨询公司（拥有近50名来自保险和银行行业的丰富经验咨询培训讲师，近8年先后服务为180多家企业提供咨询培训服务），共同入股广州伟逸盛邦保险代理有限公司。伟逸盛邦以“家庭账户、科技驱动、混合前端”为核心，集合科技、培训、社会、健康管理等各领域资源，打造满足家庭综合需求生态链一站式闭环服务，为家庭提供一整套系统化风险解决方案，并将秉承“专业创造价值”的原则，通过行业创新的“众创计划”虚拟股权激励来为员工和合作伙伴建造长期稳定的工作平台，抢占在产销分离趋势的保险中介3.0时代的发展新格局机遇。</text>
-      </view>
+    <view class="case_tit">
+      案例详情
+    </view>
+    <view class="case2_detail">
+  团队核心成员来自众安科技、众安国际、阿里、蚂蚁金服等互联网公司，有着互联网的基因和丰富的销售经历。遵从合伙人机制，在半年筹备期内，完成团队组建和销售体系的搭建。团队专注于数字化营销和运营，通过寻找互联网优质的流量，采用有效、精准、动态优化的营销和流量牵引模式，聚焦横琴人寿产品和家庭账户，进行流量导入、数据运营、流量优化与用户转化，并联手公司经纪平台与自建地推团队，实现线上线下相融合的创新商业方式，达成保险产品的推广和销售，并有效提升公司在互联网上的品牌效应。
     </view>
   </view>
+  <!-- 小团队多场景end -->
+  <!-- 中介服务为王 -->
+  <view hidden="{{zjHidden}}">
+    <view class="partership_top">
+      <image src="../../assets/images/partnership_img7.png"></image>
+    </view>
+    <view class="case_tit">
+      案例代表
+    </view>
+    <view class="company case_2">
+      <view class="left"><image src="../../assets/images/partnership_img8.png"></image></view>
+      <view class="right">
+        <view class="company_tit">宁方华</view>
+        <text class="text">80后经代经营精英\n事业合伙人</text>
+      </view>
+    </view>
+    <view class="case_tit">
+      案例详情
+    </view>
+    <view class="case2_detail">
+  有别于原机构层级化递减的费用形式，事业合伙人直接由总部服务管理。宁方华发挥其丰富的渠道销售经营经验，助以公司对永达理、大童保险渠道的专属产品支持，其5个人的小团队从过去为老板干转变为自己干的事业心态，聚焦经营重点渠道，通过对费用采取“合理分配，重点投入，创费结余团队自分配”方式，激发团队活力，历经2个月，标准保费平台规模翻翻，团队人均收入大幅度提升。
+    </view>
+  </view>
+  <!-- 中介服务为王end -->
+  <!-- 持续组织发展 -->
+  <view hidden="{{cxfzHidden}}">
+    <view class="partership_top">
+      <image src="../../assets/images/partnership_img9.png"></image>
+    </view>
+    <view class="case_tit">
+      案例代表
+    </view>
+    <view class="company case_2">
+      <view class="left"><image src="../../assets/images/partnership_img10.png"></image></view>
+      <view class="right">
+        <view class="company_tit">贺旭军</view>
+        <text class="text">80后团队筹建精英</text>
+      </view>
+    </view>
+    <view class="case_tit">
+      案例详情
+    </view>
+    <view class="case2_detail">
+  自加盟横琴人寿那天起，贺旭军便决定要在横琴人寿的平台上建立自己的保险企业。惠州分公司筹建初期，贺旭军以连续3个月每日逾16小时的面谈建立起了自己的团队。2019年开门红，贺旭军以230人出勤，总计644万的业绩为自己奠定了团队的基础。3月至今，贺旭军投入了更多精力在团队组织发展上，通过展开丰富多元的活动、对基本法精准到位的解读及尽职尽责的辅导和帮助提高了团队凝聚力和团队产能。目前已实现团队日均出勤500人，月均保费平台300万。
+    </view>
+  </view>
+  <!-- 持续组织发展end -->
 </view>

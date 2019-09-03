@@ -38,7 +38,11 @@
 
   <!-- video -->
   <view class="index-video-wrap">
-    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4" show-center-play-btn="{{false}}" object-fit="cover"></video>
+    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" >
+      <!-- poster="../../../../assets/images/video_poster.png" <cover-view>
+       <cover-image mode="widthFix" src='{{banner_img}}'></cover-image>  
+      </cover-view> -->
+    </video>
   </view>
 
 
@@ -94,7 +98,7 @@
   <view class="partner-warp">
     <view class="partner-title">合伙人案例</view>
     <view class="partner-list">
-      <view class="partner-item" bindtap="toPartnershipplatform">
+      <view class="partner-item" bindtap="toPartnershipplatform" data-page="1">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_1.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">深耕中小银行</view>
@@ -105,7 +109,7 @@
         </view>
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
-      <view class="partner-item">
+      <view class="partner-item" bindtap="toPartnershipplatform" data-page="2">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_2.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">小团队多场景</view>
@@ -116,7 +120,7 @@
         </view>
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
-      <view class="partner-item">
+      <view class="partner-item" bindtap="toPartnershipplatform" data-page="3">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_3.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">中介服务为王</view>
@@ -127,7 +131,7 @@
         </view>
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
-      <view class="partner-item">
+      <view class="partner-item" bindtap="toPartnershipplatform" data-page="4">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_4.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">持续组织发展</view>
@@ -138,7 +142,7 @@
         </view>
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
-      <view class="partner-item">
+      <view class="partner-item"  bindtap="toPartnershipplatform" data-page="5">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_5.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">股权合伙平台</view>
