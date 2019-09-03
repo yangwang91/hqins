@@ -71,12 +71,12 @@
           <view>这位客官，您认真的吗？</view>
           <view>我们对合伙人是有期待的哦!</view>
         </block>
-        <block wx:if="{{flag == 2}}">
+        <block wx:if="{{flag == 3}}">
           <view>未来合伙人，</view>
           <view>说的就是您，</view>
           <view>我们将火速联系您!</view>
         </block>
-        <block wx:if="{{flag == 3}}">
+        <block wx:if="{{flag == 2}}">
           <view>看到数据，</view>
           <view>希望您有心动的感觉！</view>
           <view>凝新聚力，</view>

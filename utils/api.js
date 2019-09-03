@@ -25,6 +25,7 @@ const URL = {
   getTgSuccess: BASE_URL + 'getTgSuccess',
   getTgQysum: BASE_URL + 'getTgQysum',
   getAchievementTarget: BASE_URL + 'getAchievementTarget',
+  zrAutoApproval: BASE_URL + 'zrAutoApproval',
   scanAddScande: BASE_URL + 'scanAddScande'
 }
 
@@ -138,6 +139,11 @@ function getAchievementTarget(data) {
   return _request.send('GET', URL.getAchievementTarget, data).then(res => res.data)
 }
 
+function zrAutoApproval(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.zrAutoApproval, data).then(res => res.data)
+}
+
 function scanAddScande(data) {
   data = getRequestData(data)
   return _request.send('GET', URL.scanAddScande, data).then(res => res.data)
@@ -165,5 +171,6 @@ module.exports = {
   getTgSuccess: getTgSuccess,
   getTgQysum: getTgQysum,
   getAchievementTarget: getAchievementTarget,
+  zrAutoApproval: zrAutoApproval,
   scanAddScande: scanAddScande
 }
