@@ -19,4 +19,13 @@
   border-radius: 46rpx;
   transform: translateX(-50%);
 }
+.calculate-image{
+  text-align: center;
+  padding:100rpx 0;
+  font-size: 0;
+}
+.calculate-image image{
+  width: 555rpx;
+  height: 565rpx;
+}
 

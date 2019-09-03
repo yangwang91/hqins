@@ -88,7 +88,9 @@ page {
   font-size: 30rpx;
   background: #FACE97;
 }
-
+.calculating-comfirm-btn-bot {
+  margin-bottom: 20rpx;
+}
 .calculating-comfirm-btn2 {
   width: 100%;
   height: 82rpx;
@@ -144,4 +146,20 @@ page {
   font-size: 36rpx;
   line-height: 52rpx;
   color: #222;
+}
+.calculating-result-img{
+  text-align: center;
+  font-size: 0;
+}
+.calculating-result-img .img2{
+  width: 564rpx;
+  height: 368rpx;
+}
+.calculating-result-img .img3{
+  width: 562rpx;
+  height: 394rpx;
+}
+.calculating-result-img .img4{
+  width: 590rpx;
+  height: 342rpx;
 }

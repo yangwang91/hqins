@@ -60,40 +60,50 @@
       </view>
       <view class="calculating-btns">
         <text class="calculating-text-btn" bindtap="pevQuestion">上一题</text>
-        <view class="calculating-comfirm-btn" bindtap="comfirmForm">确认无误，提交</view>
+        <view class="calculating-comfirm-btn" bindtap="comfirmForm">下一步</view>
       </view>
     </view>
     <!-- 第三步 -->
     <view wx:if="{{step === 3}}" class="calculating-result-wrap">
-      <image src="../../assets/images/index_banner.png" mode="widthFix"></image>
       <view class="calculating-result-desc">
         <block wx:if="{{flag == 1}}">
-          <view>这位客官，您认真的吗？</view>
-          <view>我们对合伙人是有期待的哦!</view>
+          <view class="calculating-result-img">
+            <image src="{{calculating_img2}}" class="img2"></image>
+          </view>
+          <view>这位客官</view>
+          <view>您认真的吗</view>
+          <view>我们对合伙人是有期待的哦</view>
         </block>
         <block wx:if="{{flag == 3}}">
-          <view>未来合伙人，</view>
-          <view>说的就是您，</view>
-          <view>我们将火速联系您!</view>
+          <view class="calculating-result-img">
+            <image src="{{calculating_img3}}" class="img3"></image>
+          </view>
+          <view>未来合伙人</view>
+          <view>说的就是您</view>
+          <view>请直接留下联系方式</view>
+          <view>我们将火速联系您</view>
         </block>
         <block wx:if="{{flag == 2}}">
+          <view class="calculating-result-img">
+            <image src="{{calculating_img4}}" class="img4"></image>
+          </view>
           <view>看到数据，</view>
-          <view>希望您有心动的感觉！</view>
-          <view>凝新聚力，</view>
-          <view>梦想的收入触手可及！</view>
+          <view>希望你有心动的感觉</view>
+          <view>凝心聚力</view>
+          <view>梦想的收入触手可及</view>
         </block>
       </view>
       <view wx:if="{{flag == 1}}" class="calculating-btns">
-        <view class="calculating-comfirm-btn" bindtap="pevQuestion">重新测算</view>
+        <view class="calculating-comfirm-btn" bindtap="pevQuestion">返回重新测算</view>
         <text class="calculating-back-btn" bindtap="backTab">返回首页</text>
       </view>
       <view wx:if="{{flag == 2}}" class="calculating-btns">
-        <view wx:if="{{zrStatus === 0}}" class="calculating-comfirm-btn" bindtap="toCooperation">留下联系方式</view>
         <view class="calculating-comfirm-btn2" bindtap="toResult">查看测算结果</view>
         <text class="calculating-back-btn" bindtap="backTab">返回首页</text>
       </view>
       <view wx:if="{{flag == 3}}" class="calculating-btns">
-        <view class="calculating-comfirm-btn" bindtap="toResult">查看测算结果</view>
+        <view wx:if="{{zrStatus === 0}}" class="calculating-comfirm-btn calculating-comfirm-btn-bot" bindtap="toCooperation">留下联系方式</view>
+        <view class="calculating-comfirm-btn2" bindtap="toResult">查看测算结果</view>
         <text class="calculating-back-btn" bindtap="backTab">返回首页</text>
       </view>
     </view>

@@ -113,4 +113,11 @@ page {
 .result_but .but2{
   border:1px solid rgba(211,164,104,1);
   color: #D3A468;
+  margin-top: 20rpx;
+}
+.calculating-back-btn {
+  font-size: 28rpx;
+  color: #666;
+  margin-top: 30rpx;
+  text-align: center;
 }

@@ -52,6 +52,11 @@ Page({
     wx.switchTab({
       url: '../index/index'
     })
-  }
+  },
+  pevQuestion: function () {
+    wx.navigateTo({
+      url: '../../../../calculating/calculating'
+    })
+  },
 
 })

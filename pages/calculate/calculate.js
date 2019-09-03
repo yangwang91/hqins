@@ -1,4 +1,4 @@
-// pages/calculate/calculate.js
+ // pages/calculate/calculate.js
 const app = getApp()
 Page({
 
@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabbar: {}
+    tabbar: {},
+    calculating_img1: app.images.calculating_img1
   },
 
   /**

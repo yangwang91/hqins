@@ -43,7 +43,10 @@ Page({
       fdWlPremium: ''
     },
     flag: 0,
-    result: {}
+    result: {},
+    calculating_img2: app.images.calculating_img2,
+    calculating_img3: app.images.calculating_img3,
+    calculating_img4: app.images.calculating_img4
   },
 
   /**
