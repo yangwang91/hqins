@@ -25,7 +25,8 @@ const URL = {
   getTgSuccess: BASE_URL + 'getTgSuccess',
   getTgQysum: BASE_URL + 'getTgQysum',
   getAchievementTarget: BASE_URL + 'getAchievementTarget',
-  scanAddScande: BASE_URL + 'scanAddScande'
+  scanAddScande: BASE_URL + 'scanAddScande',
+  getCzdjz: BASE_URL + 'getCzdjz'
 }
 
 function getRequestData(data) {
@@ -143,6 +144,11 @@ function scanAddScande(data) {
   return _request.send('GET', URL.scanAddScande, data).then(res => res.data)
 }
 
+function getCzdjz(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getCzdjz, data).then(res => res.data)
+}
+
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -165,5 +171,6 @@ module.exports = {
   getTgSuccess: getTgSuccess,
   getTgQysum: getTgQysum,
   getAchievementTarget: getAchievementTarget,
-  scanAddScande: scanAddScande
+  scanAddScande: scanAddScande,
+  getCzdjz: getCzdjz
 }

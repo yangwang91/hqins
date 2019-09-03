@@ -74,6 +74,7 @@ Component({
     attached: function () {
       this.getSales();
       this.getAchievementTarget();
+      this.getCzdjz();
       this.calculateSchedule('interim', 'interimGoal','interimSchedule');
       this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
       this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
@@ -94,9 +95,17 @@ Component({
         }
       })
     },
-
+// 关键目标接口
     getAchievementTarget: function() {
       app.API.getAchievementTarget().then(res => {
+        console.log('--------------getAchievementTarget------------------------')
+        console.log(res)
+      })
+    },
+// 创造的价值接口
+    getCzdjz: function() {
+      app.API.getCzdjz().then(res => {
+        console.log('--------------getCzdjz------------------------')
         console.log(res)
       })
     },
@@ -142,8 +151,6 @@ Component({
         this.createSelectorQuery().select('#' + goalElementId).boundingClientRect((rect) => {
           // 按照算法，本应是width，但不知道为啥，width总少点，right反倒是正好得
           if (rect) {
-            console.log('----------------------------------------------')
-            console.log(rect,fieldName)
             var rpxWidth = rect.width * app.globalData.sysInfo.pixelRatio;
             // // 690 是进度条总宽
             var goalWidth = rpxWidth / 2 + goalLeft * 690 / 100;
@@ -184,8 +191,6 @@ Component({
       Promise.all(list).then(()=>{
         var sData = {}
         sData[fieldName] = newData
-        console.log('--------------------------------------------------')
-        console.log(fieldName,newData)
         this.setData(sData)
       })
     },
