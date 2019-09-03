@@ -7,7 +7,7 @@
     <view class="insurance-products-item_hd_info">
       <view class="insurance-products-item_hd_title">{{data.fdEnclosure}}</view>
       <view class="insurance-products-item_hd_tags">
-        <view wx:for="{{data.fdTargetCrowd}}" wx:key="{{index}}" class="insurance-products-item_hd_tag">{{item.name}}</view>
+        <view wx:for="{{data.fdTargetCrowd}}" wx:key="{{index}}" class="insurance-products-item_hd_tag" style="color:{{item.typeface}};background:{{item.background}}">{{item.name}}</view>
       </view>
       <view class="insurance-products-item_hd_slide" bindtap="slideChange">
         <block wx:if="{{tabName === '明星产品'}}">
