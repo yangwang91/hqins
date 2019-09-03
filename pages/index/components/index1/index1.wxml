@@ -130,10 +130,10 @@
       <view class="partner-item">
         <image class="partner-item-img" src="../../../../assets/images/partner_img_4.png" mode="aspectFill"></image>
         <view class="partner-item_center">
-          <view class="partner-item_center_title">个险服务平台</view>
+          <view class="partner-item_center_title">持续组织发展</view>
           <view class="partner-item_center_tags">
-            <view class="partner-item_center_tag">个险服务内容</view>
-            <view class="partner-item_center_tag">个险服务内容</view>
+            <view class="partner-item_center_tag">团队过800人</view>
+            <view class="partner-item_center_tag">月入超20万</view>
           </view>
         </view>
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
