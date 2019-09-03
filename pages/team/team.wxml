@@ -81,7 +81,7 @@
     <view class="team-funeng-list">
       <view class="team-funeng-item">
         <view class="team-funeng-item_header">属地服务人员
-          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" data-index="1" bindtap="openTeamModle"></image>
         </view>
         <view class="team-funeng-item_name">{{ztList[0].name}}</view>
         <view class="team-funeng-item_mobile" data-phone="{{ztList[0].phone}}" bindtap="phoneCall">
@@ -148,7 +148,7 @@
       </view>
       <view class="team-funeng-item">
         <view class="team-funeng-item_header">企划咨询
-          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" data-index="2" bindtap="openTeamModle"></image>
         </view>
         <view class="team-funeng-item_name">{{ztList[5].name}}</view>
         <view class="team-funeng-item_mobile" data-phone="{{ztList[5].phone}}" bindtap="phoneCall">
@@ -163,12 +163,20 @@
     </view>
   </view>
 
-  <view wx:if="{{teamModle}}" class="team-funeng-modle">
+  <view wx:if="{{teamModle1}}" class="team-funeng-modle">
+    <view class="team-funeng-modle_mask"></view>
+    <view class="team-funeng-modle_cont">
+      <view class="team-funeng-modle_header">属地服务人员
+        <text bindtap="closeTeamModle">×</text> </view>
+      <view class="team-funeng-modle_info">展业工具、宣传物料</view>
+    </view>
+  </view>
+  <view wx:if="{{teamModle2}}" class="team-funeng-modle">
     <view class="team-funeng-modle_mask"></view>
     <view class="team-funeng-modle_cont">
       <view class="team-funeng-modle_header">企划咨询
         <text bindtap="closeTeamModle">×</text> </view>
-      <view class="team-funeng-modle_info">营销方案、荣誉体系、队伍活动量管</view>
+      <view class="team-funeng-modle_info">营销方案、荣誉体系、队伍活动量管理之类全方位智库经营决策分析支持</view>
     </view>
   </view>
 
