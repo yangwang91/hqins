@@ -18,7 +18,17 @@
 
   <view wx:if="{{present == 2}}" class="tech-platform-wrap" bindtap="toPage">
     <view class="tag">展业赋能</view>
-    <view class="text">为团队提供定制化管理方案及团队成长方案</view>
+    <swiper vertical autoplay circular interval="1500">
+      <swiper-item>
+        <view class="text">支撑全场景形态下的高效展业</view>
+      </swiper-item>
+      <swiper-item>
+        <view class="text">为团队提供定制化管理方案及团队成长方案</view>
+      </swiper-item>
+      <swiper-item>
+        <view class="text">提供团队人员契合作业场景的科技服务</view>
+      </swiper-item>
+    </swiper>
     <view class="more">了解更多</view>
     <image src="../../assets/icons/right_allow_icon.svg" mode="aspectFit"></image>
   </view>

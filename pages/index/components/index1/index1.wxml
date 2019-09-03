@@ -7,7 +7,7 @@
   <!-- jion us -->
   <view class="jion-us-wrap">
     <image src="../../../../assets/images/jionus_img.png" mode="aspectFit"></image>
-    <swiper vertical autoplay circular>
+    <swiper vertical autoplay circular interval="1500">
       <swiper-item>
         <view class="jion-us-text">
           <view>

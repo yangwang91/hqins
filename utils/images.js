@@ -6,6 +6,7 @@ const images = {
   index2_banner_2: BASE_URL + 'index2_banner_2.jpg',
   product1_banner_1: BASE_URL + 'product1_banner_1.png',
   product1_banner_2: BASE_URL + 'product1_banner_2.jpg',
+  product1_banner_3: BASE_URL + 'product1_banner_3.jpg',
   calculating_img1: BASE_URL + 'calculating_img1.png',
   calculating_img2: BASE_URL + 'calculating_img2.png',
   calculating_img3: BASE_URL + 'calculating_img3.png',

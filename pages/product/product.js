@@ -14,7 +14,7 @@ Page({
     categoryList: [],
     fdSceneId: '',
     productList: [],
-    imgUrls: wx.getStorageSync('userInfo') && wx.getStorageSync('userInfo').info.present === '1' ? [{
+    imgUrls: wx.getStorageSync('userInfo') && wx.getStorageSync('userInfo').info.present === '2' ? [{
         src: app.images.product1_banner_1,
         link: 'miniApp'
       },
@@ -23,6 +23,10 @@ Page({
         link: ''
       }
     ] : [{
+        src: app.images.product1_banner_3,
+        link: ''
+      },
+      {
       src: app.images.product1_banner_2,
       link: ''
     }],
@@ -35,7 +39,6 @@ Page({
    */
   onLoad: function(options) {
     app.editTabbar()
-
     this.getCategorylist()
   },
 

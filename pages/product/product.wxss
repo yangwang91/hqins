@@ -58,6 +58,10 @@ page {
   font-weight: 500;
   color: #E69B24;
 }
+.tech-platform-wrap swiper {
+  flex: 1;
+  height: 32rpx;
+}
 .tech-platform-wrap .text {
   flex: 1;
   font-size: 22rpx;
