@@ -48,10 +48,12 @@ page{
 .company .left{
   width: 280rpx;
   height: 180rpx;
+  border-radius: 6rpx;
 }
 .company .left image{
   width: 100%;
   height: 100%;
+  border-radius: 6rpx;
 }
 .company .right{
   padding-left: 50rpx;
@@ -84,7 +86,7 @@ page{
 .company .text{
   font-size:30rpx;
   font-weight: 400;
-  color:#adadad;
+  color:#999;
 }
 .case_2{
   padding:0 0 10rpx;
