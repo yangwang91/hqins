@@ -1,18 +1,21 @@
-// pages/contactWeb/contactWeb.js
+ // pages/contactWeb/contactWeb.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    cinfo:'',
+    key:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCinfoAndKey()
   },
 
   /**
@@ -42,5 +45,17 @@ Page({
   onUnload: function () {
 
   },
-  
+  getCinfoAndKey: function(){
+    app.API.getCinfoAndKey().then(res => {
+      console.log('------------------------------resresresresresresres-------')
+      console.log(res, '--------resresresresresresres-------')
+      if (res.code === '200') {
+        this.setData({
+          cinfo: res.cinfo,
+          key: res.key,
+        })
+        console.log(res,'--------resresresresresresres-------')
+      }
+    })
+  }
 })

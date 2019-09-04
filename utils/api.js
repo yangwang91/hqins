@@ -29,7 +29,8 @@ const URL = {
   scanAddScande: BASE_URL + 'scanAddScande',
   getCzdjz: BASE_URL + 'getCzdjz',
   zrAutoApproval: BASE_URL + 'zrAutoApproval',
-  getDayScore: BASE_URL + 'getDayScore'
+  getDayScore: BASE_URL + 'getDayScore',
+  getCinfoAndKey: BASE_URL + 'getCinfoAndKey'
 }
 
 function getRequestData(data) {
@@ -162,6 +163,10 @@ function getDayScore(data) {
   return _request.send('GET', URL.getDayScore, data).then(res => res.data)
 }
 
+function getCinfoAndKey(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getCinfoAndKey, data).then(res => res.data)
+}
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -187,5 +192,6 @@ module.exports = {
   scanAddScande: scanAddScande,
   getCzdjz: getCzdjz,
   zrAutoApproval: zrAutoApproval,
-  getDayScore: getDayScore
+  getDayScore: getDayScore,
+  getCinfoAndKey: getCinfoAndKey
 }

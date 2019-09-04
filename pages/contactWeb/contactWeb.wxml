@@ -1,2 +1,2 @@
-<!--pages/contactWeb/contactWeb.wxml-->
-<web-view src="https://cschat-ccs.aliyun.com/index.htm?tntInstId=_1TfJ29Y&scene=SCE00005179&cinfo%3D%7Buserid%3A123%7D"></web-view>
+ <!--pages/contactWeb/contactWeb.wxml-->
+<web-view src="https://1TfJ29Y.cschat-ccs.aliyun.com/index.htm?tntInstId=_1TfJ29Y&scene=SCE00005179&cinfo={{cinfo}}&key={{key}}"></web-view>
