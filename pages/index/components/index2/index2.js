@@ -26,9 +26,9 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 1000,// 进度条总数
-      goal: 800, // 进度条目标
-      schedule: 300,// 当前已达成目标
+      sum: 0,// 进度条总数
+      goal: 0, // 进度条目标
+      schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
     },
     single: { // 趸交保费
@@ -36,9 +36,9 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 500,// 进度条总数
-      goal: 300, // 进度条目标
-      schedule: 400,// 当前已达成目标
+      sum: 0,// 进度条总数
+      goal: 0, // 进度条目标
+      schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
     },
     accident: { // 意外险保费
@@ -46,9 +46,9 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 10000,// 进度条总数
-      goal: 6000, // 进度条目标
-      schedule: 5000,// 当前已达成目标
+      sum: 0,// 进度条总数
+      goal: 0, // 进度条目标
+      schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
     },
     iHome: { // 家庭账户
@@ -56,9 +56,9 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 500,// 进度条总数
-      goal: 300, // 进度条目标
-      schedule: 150,// 当前已达成目标
+      sum: 0,// 进度条总数
+      goal: 0, // 进度条目标
+      schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
     },
     imgUrls: [{
@@ -78,10 +78,6 @@ Component({
       this.getAchievementTarget();
       this.getCzdjz();
       this.getDayScore();
-      this.calculateSchedule('interim', 'interimGoal','interimSchedule');
-      this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
-      this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
-      this.calculateSchedule('single', 'singleGoal', 'singleSchedule');
     }
   },
   /**
@@ -101,15 +97,53 @@ Component({
 // 关键目标接口
     getAchievementTarget: function() {
       app.API.getAchievementTarget().then(res => {
-        console.log('--------------getAchievementTarget------------------------')
-        console.log(res)
+        if (res && res.code === '200') {
+          var result = res.result
+          if(result){
+            for (var i = 0; i < result.length; i++) {
+              var item = result[i]
+              var dataObj = {
+                goalWidth: 0,
+                scheduleWidth: 0,
+                goalLeft: 0,
+                scheduleLeft: 0,
+                sum: item.fdNext,
+                goal: item.fdTarget,
+                schedule: item.fdCurrent,
+                goalReached: false
+              }
+              if (item.fdName === '4') { // 4代表家庭账户
+                this.setData({
+                  iHome: dataObj
+                })
+              }
+              if (item.fdName === '3') { // 3代表意外险保费
+                this.setData({
+                  accident: dataObj
+                })
+              }
+              if (item.fdName === '2') { // 2代表趸交保费
+                this.setData({
+                  single: dataObj
+                })
+              }
+              if (item.fdName === '1') { // 1代表期交保费
+                this.setData({
+                  interim: dataObj
+                })
+              }
+            }
+            this.calculateSchedule('interim', 'interimGoal', 'interimSchedule');
+            this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
+            this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
+            this.calculateSchedule('single', 'singleGoal', 'singleSchedule');
+          }
+        }
       })
     },
 // 创造的价值接口
     getCzdjz: function() {
       app.API.getCzdjz().then(res => {
-        console.log('--------------getCzdjz------------------------')
-        console.log(res)
         if(res.code == 200){
           this.setData({
             czdjz: res.result[0]

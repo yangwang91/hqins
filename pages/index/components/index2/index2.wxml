@@ -101,7 +101,7 @@
       <view class="progress_con {{iHomeHidden?'':'progress_con_z'}}">
         <view class="goal_ts" style="width:{{iHome.goalWidth}}rpx">
           <view class="progress_goal_wz {{iHome.goalReached?'progress_goal_wz_reached':''}}" id="iHomeGoal">
-            <text>{{single.goal}}</text>
+            <text>{{iHome.goal}}</text>
             <text class="progress_goal_dw">个</text>
             <text class="progress_goal_bz">目标</text>
           </view>
