@@ -38,10 +38,10 @@
 
   <!-- video -->
   <view class="index-video-wrap">
-    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" >
-      <!-- poster="../../../../assets/images/video_poster.png" <cover-view>
-       <cover-image mode="widthFix" src='{{banner_img}}'></cover-image>  
-      </cover-view> -->
+    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" poster="{{videoCover}}" bindpause="bindpause" bindtap="pauseViedo">
+      <cover-view bindtap="playViedo" hidden="{{hiddenVideo}}">
+       <cover-image mode="widthFix" src='{{videoCover}}'></cover-image>  
+      </cover-view>
     </video>
   </view>
 

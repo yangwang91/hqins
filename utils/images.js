@@ -11,6 +11,7 @@ const images = {
   calculating_img2: BASE_URL + 'calculating_img2.png',
   calculating_img3: BASE_URL + 'calculating_img3.png',
   calculating_img4: BASE_URL + 'calculating_img4.png',
+  video_cover: BASE_URL + 'video_cover.png'
 }
 
 export default images
