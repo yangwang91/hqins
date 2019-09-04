@@ -1,4 +1,4 @@
-<view class="index_wrap">
+ <view class="index_wrap">
   <!-- 头图 -->
   <view class="banner-wrap">
     <image src="{{banner_img}}" mode="widthFix"></image>
@@ -38,11 +38,13 @@
 
   <!-- video -->
   <view class="index-video-wrap">
-    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" poster="{{videoCover}}" bindpause="bindpause">
-      <cover-view bindtap="playViedo" hidden="{{hiddenVideo}}">
-       <cover-image mode="widthFix" src='{{videoCover}}'></cover-image>  
-      </cover-view>
-    </video>
+    <view class="index-video-con">
+       <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" poster="{{videoCover}}" bindpause="bindpause">
+      </video>
+      <view bindtap="playViedo" hidden="{{hiddenVideo}}" class="cover">
+        <image mode="widthFix" src='{{videoCover}}'></image>  
+      </view>
+    </view>
   </view>
 
 
