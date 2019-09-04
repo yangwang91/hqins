@@ -30,22 +30,22 @@
           <block wx:if="{{fdXscj === '5'}}">
             <view class="calculating-question-answer_sub">个人营销</view>
             <view class="calculating-question-input">
-              <input placeholder="请输入个人营销费用" value="{{postData.fdGrPremium}}" data-key="fdGrPremium" bindinput="inputChange"></input>
+              <input placeholder="请输入个人营销保费业绩" value="{{postData.fdGrPremium}}" data-key="fdGrPremium" bindinput="inputChange"></input>
               <view>万元</view>
             </view>
             <view class="calculating-question-answer_sub">银邮业务</view>
             <view class="calculating-question-input">
-              <input placeholder="请输入个人营销费用" value="{{postData.fdYyPremium}}" data-key="fdYyPremium" bindinput="inputChange"></input>
+              <input placeholder="请输入银邮业务保费业绩" value="{{postData.fdYyPremium}}" data-key="fdYyPremium" bindinput="inputChange"></input>
               <view>万元</view>
             </view>
             <view class="calculating-question-answer_sub">经代业务</view>
             <view class="calculating-question-input">
-              <input placeholder="请输入个人营销费用" value="{{postData.fdJdPremium}}" data-key="fdJdPremium" bindinput="inputChange"></input>
+              <input placeholder="请输入经代业务保费业绩" value="{{postData.fdJdPremium}}" data-key="fdJdPremium" bindinput="inputChange"></input>
               <view>万元</view>
             </view>
             <view class="calculating-question-answer_sub">网络平台销售</view>
             <view class="calculating-question-input">
-              <input placeholder="请输入个人营销费用" value="{{postData.fdWlPremium}}" data-key="fdWlPremium" bindinput="inputChange"></input>
+              <input placeholder="请输入网络平台销售保费业绩" value="{{postData.fdWlPremium}}" data-key="fdWlPremium" bindinput="inputChange"></input>
               <view>万元</view>
             </view>
           </block>
