@@ -1,7 +1,8 @@
 import request from './request.js'
 const _request = new request
 
-const BASE_URL = 'http://112.74.228.70:8080/q/imax.do?method='
+// const BASE_URL = 'http://112.74.228.70:8080/q/imax.do?method='
+const BASE_URL = 'https://imax.e-hqins.com:8443/q/imax.do?method='
 
 const URL = {
   getToken: BASE_URL + 'getToken',
