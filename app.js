@@ -70,18 +70,18 @@ App({
       "selectedColor": "#D3A468",
       "list": [{
         pagePath: "/pages/index/index",
-        iconPath: "../../assets/tabImg/home.svg",
-        selectedIconPath: "../../assets/tabImg/home_selected.svg",
+        iconPath: "../../assets/tabImg/home.png",
+        selectedIconPath: "../../assets/tabImg/home_selected.png",
         text: "首页"
       }, {
         pagePath: "/pages/product/product",
-        iconPath: "../../assets/tabImg/product.svg",
-        selectedIconPath: "../../assets/tabImg/product_selected.svg",
+        iconPath: "../../assets/tabImg/product.png",
+        selectedIconPath: "../../assets/tabImg/product_selected.png",
         text: "产品"
       }, {
         pagePath: "/pages/team/team",
-        iconPath: "../../assets/tabImg/team.svg",
-        selectedIconPath: "../../assets/tabImg/team_selected.svg",
+        iconPath: "../../assets/tabImg/team.png",
+        selectedIconPath: "../../assets/tabImg/team_selected.png",
         text: "团队"
       }]
     },
@@ -91,23 +91,23 @@ App({
       "selectedColor": "#D3A468",
       "list": [{
         pagePath: "/pages/index/index",
-        iconPath: "../../assets/tabImg/home.svg",
-        selectedIconPath: "../../assets/tabImg/home_selected.svg",
+        iconPath: "../../assets/tabImg/home.png",
+        selectedIconPath: "../../assets/tabImg/home_selected.png",
         text: "首页"
       }, {
           pagePath: "/pages/product/product",
-          iconPath: "../../assets/tabImg/product.svg",
-          selectedIconPath: "../../assets/tabImg/product_selected.svg",
+          iconPath: "../../assets/tabImg/product.png",
+          selectedIconPath: "../../assets/tabImg/product_selected.png",
           text: "产品"
         }, {
           pagePath: "/pages/calculate/calculate",
-          iconPath: "../../assets/tabImg/compute.svg",
-          selectedIconPath: "../../assets/tabImg/compute_selected.svg",
+          iconPath: "../../assets/tabImg/compute.png",
+          selectedIconPath: "../../assets/tabImg/compute_selected.png",
           text: "测算"
         }, {
         pagePath: "/pages/advisory/advisory",
-        iconPath: "../../assets/tabImg/advisory.svg",
-        selectedIconPath: "../../assets/tabImg/advisory_selected.svg",
+        iconPath: "../../assets/tabImg/advisory.png",
+        selectedIconPath: "../../assets/tabImg/advisory_selected.png",
         text: "咨询"
       }]
     }
