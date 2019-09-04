@@ -47,14 +47,11 @@ Page({
   },
   getCinfoAndKey: function(){
     app.API.getCinfoAndKey().then(res => {
-      console.log('------------------------------resresresresresresres-------')
-      console.log(res, '--------resresresresresresres-------')
       if (res.code === '200') {
         this.setData({
           cinfo: res.cinfo,
           key: res.key,
         })
-        console.log(res,'--------resresresresresresres-------')
       }
     })
   }
