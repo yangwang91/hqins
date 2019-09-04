@@ -1,4 +1,4 @@
-<view class="">
+<view class="index2_wrap">
   <view class="index2-banner-wrap">
     <swiper previous-margin="22rpx" next-margin="22rpx" autoplay="true" class="banner_swiper">
       <block wx:for="{{imgUrls}}" wx:key="{{index}}">

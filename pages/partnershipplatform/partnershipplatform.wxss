@@ -84,7 +84,7 @@ page{
 .company .text{
   font-size:30rpx;
   font-weight: 400;
-  color:#666;
+  color:#adadad;
 }
 .case_2{
   padding:0 0 10rpx;

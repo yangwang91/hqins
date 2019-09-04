@@ -1,4 +1,4 @@
-<view class="">
+<view class="index_wrap">
   <!-- 头图 -->
   <view class="banner-wrap">
     <image src="{{banner_img}}" mode="widthFix"></image>
@@ -38,7 +38,7 @@
 
   <!-- video -->
   <view class="index-video-wrap">
-    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" poster="{{videoCover}}" bindpause="bindpause" bindtap="pauseViedo">
+    <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/1.mp4"  object-fit="cover" controls="true" poster="{{videoCover}}" bindpause="bindpause">
       <cover-view bindtap="playViedo" hidden="{{hiddenVideo}}">
        <cover-image mode="widthFix" src='{{videoCover}}'></cover-image>  
       </cover-view>
@@ -54,21 +54,30 @@
           <image src="../../../../assets/icons/support_icon_1.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">多元业务</view>
-        <view class="support-item_desc">支持各类场景的展业工具</view>
+        <view class="support-item_desc">
+          <view>支持各类场景的</view>
+          <view>展业工具</view>
+        </view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
           <image src="../../../../assets/icons/support_icon_2.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">平台赋能</view>
-        <view class="support-item_desc">自由定价及订阅式的培训赋能支持</view>
+        <view class="support-item_desc">
+          <view>自由定价及订阅式的</view>
+          <view>培训赋能支持</view>
+        </view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
           <image src="../../../../assets/icons/support_icon_3.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">产品供应</view>
-        <view class="support-item_desc">全渠道产品供应与专属开发特权</view>
+        <view class="support-item_desc">
+          <view>全渠道产品供应与</view>
+          <view>专属开发特权</view>
+        </view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
@@ -89,7 +98,10 @@
           <image src="../../../../assets/icons/support_icon_6.svg" mode="aspectFit"></image>
         </view>
         <view class="support-item_title">总部服务</view>
-        <view class="support-item_desc">直接签约总部快速响应</view>
+        <view class="support-item_desc">
+          <view>直接签约总部</view>
+          <view>快速响应</view>
+        </view>
       </view>
     </view>
   </view>
@@ -99,7 +111,7 @@
     <view class="partner-title">合伙人案例</view>
     <view class="partner-list">
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="1">
-        <image class="partner-item-img" src="../../../../assets/images/partner_img_1.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="../../../../assets/images/index1_img1.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">深耕中小银行</view>
           <view class="partner-item_center_tags">
@@ -110,7 +122,7 @@
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="2">
-        <image class="partner-item-img" src="../../../../assets/images/partner_img_2.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="../../../../assets/images/index1_img2.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">小团队多场景</view>
           <view class="partner-item_center_tags">
@@ -121,7 +133,7 @@
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="3">
-        <image class="partner-item-img" src="../../../../assets/images/partner_img_3.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="../../../../assets/images/index1_img3.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">中介服务为王</view>
           <view class="partner-item_center_tags">
@@ -132,7 +144,7 @@
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="4">
-        <image class="partner-item-img" src="../../../../assets/images/partner_img_4.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="../../../../assets/images/index1_img4.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">持续组织发展</view>
           <view class="partner-item_center_tags">
@@ -143,7 +155,7 @@
         <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
       </view>
       <view class="partner-item"  bindtap="toPartnershipplatform" data-page="5">
-        <image class="partner-item-img" src="../../../../assets/images/partner_img_5.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="../../../../assets/images/index1_img5.png" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">股权合伙平台</view>
           <view class="partner-item_center_tags">

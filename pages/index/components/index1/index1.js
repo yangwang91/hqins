@@ -40,9 +40,6 @@ Component({
     },
     bindpause:function(){
       this.setData({ hiddenVideo: false });
-    },
-    pauseViedo:function(){
-      this.videoContext.pause();
     }
   }
 })

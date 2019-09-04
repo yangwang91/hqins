@@ -1,6 +1,7 @@
 /* pages/index/components/index2/index2.wxss */
-page{
-  background: #F7F7F7
+.index2_wrap{
+  background: #F7F7F7;
+   min-height: 100%;
 }
 .index2-banner-wrap{
   height: 320rpx;
