@@ -101,31 +101,56 @@ Page({
   },
 
   comfirmForm: function() {
+    var reg = /^(([0-9]+\.([0-9]|[0-9][1-9]))|([0-9]*[1-9][0-9]*))$/;
+    var count = 0;
     if (this.data.fdXscj === '5') {
-      if (!this.data.postData.fdGrPremium) {
-        wx.showToast({
-          title: '请输入个人营销测算费用',
-          icon: 'none'
-        })
-        return
+      if (this.data.postData.fdGrPremium) {
+        if (reg.test(this.data.postData.fdGrPremium)){
+          count = count + 1;
+        } else {
+          wx.showToast({
+            title: '个人营销保费业绩应输入数字,且最多保留两位小数',
+            icon: 'none'
+          })
+          return
+        }
       }
-      if (!this.data.postData.fdYyPremium) {
-        wx.showToast({
-          title: '请输入银邮业务测算费用',
-          icon: 'none'
-        })
-        return
+      if (this.data.postData.fdYyPremium) {
+        if (reg.test(this.data.postData.fdYyPremium)) {
+          count = count + 1;
+        } else {
+          wx.showToast({
+            title: '银邮业务保费业绩应输入数字,且最多保留两位小数',
+            icon: 'none'
+          })
+          return
+        }
       }
-      if (!this.data.postData.fdJdPremium) {
-        wx.showToast({
-          title: '请输入经代业务测算费用',
-          icon: 'none'
-        })
-        return
+      if (this.data.postData.fdJdPremium) {
+        if (reg.test(this.data.postData.fdJdPremium)) {
+          count = count + 1;
+        } else {
+          wx.showToast({
+            title: '经代业务保费业绩应输入数字,且最多保留两位小数',
+            icon: 'none'
+          })
+          return
+        }
       }
-      if (!this.data.postData.fdWlPremium) {
+      if (this.data.postData.fdWlPremium) {
+        if (reg.test(this.data.postData.fdWlPremium)) {
+          count = count + 1;
+        } else {
+          wx.showToast({
+            title: '网络平台保费业绩应输入数字,且最多保留两位小数',
+            icon: 'none'
+          })
+          return
+        }
+      }
+      if (count<2) {
         wx.showToast({
-          title: '请输入网络平台测算费用',
+          title: '请至少填写两项',
           icon: 'none'
         })
         return
@@ -134,6 +159,13 @@ Page({
       if (!this.data.postData.fdPremium) {
         wx.showToast({
           title: '请输入保费业绩',
+          icon: 'none'
+        })
+        return
+      }
+      if (!reg.test(this.data.postData.fdPremium)) {
+        wx.showToast({
+          title: '保费业绩应输入数字,且最多保留两位小数',
           icon: 'none'
         })
         return

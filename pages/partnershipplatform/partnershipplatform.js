@@ -61,6 +61,9 @@ Page({
       this.setData({ cxfzHidden: false })
     }
     if (page == '5') {
+      wx.setNavigationBarTitle({
+        title: '股权合伙平台'
+      })
       this.setData({ partnershipHidden: false })
     }
   },

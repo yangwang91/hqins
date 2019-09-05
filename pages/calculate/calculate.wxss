@@ -1,23 +1,22 @@
 /* pages/calculate/calculate.wxss */
 .calculate-wrap {
-  position: relative;
   width: 100%;
-  height: calc(100vh - 65px);
+  padding-bottom: 65rpx;
+}
+.calculate-but-con{
+  text-align: center;
+  padding:10rpx 0 80rpx;
 }
 .calculate-start-btn {
-  position: absolute;
-  left: 50%;
-  bottom: 132rpx;
+  display: inline-block;
   width: 376rpx;
   height: 92rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 92rpx;
+  text-align: center;
   font-size: 32rpx;
   color: #333;
   background: #FACE97;
   border-radius: 46rpx;
-  transform: translateX(-50%);
 }
 .calculate-image{
   text-align: center;

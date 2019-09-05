@@ -5,19 +5,14 @@ page {
 }
 
 .calculating-wrap {
-  width: 100vw;
-  height: 100vh;
+  padding:50rpx 30rpx;
 }
 
 .calculating-cont {
-  position: absolute;
-  width: calc(100vw - 60rpx);
-  height: calc(100vh - 100rpx);
+  position: relative;
+  min-height: 1100rpx;
   background: #fff;
   border-radius: 20rpx;
-  top: 50rpx;
-  left: 30rpx;
-  overflow: hidden;
 }
 
 .calculating-question {
@@ -62,14 +57,15 @@ page {
 
 
 .calculating-btns {
+  text-align: center;
   position: absolute;
   left: 0;
-  bottom: 50rpx;
-  width: calc(100% - 60rpx);
-  margin: 0 30rpx;
-  text-align: center;
+  bottom: 60rpx;
+  width: 100%;
 }
-
+.calculating-btns-con{
+  padding:0 30rpx;
+}
 .calculating-text-btn {
   display: inline-block;
   width: 100rpx;
@@ -79,12 +75,11 @@ page {
 }
 
 .calculating-comfirm-btn {
-  width: 100%;
+  width: calc(100%-60rpx);
   height: 82rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 6rpx;
+  text-align: center;
+  line-height: 82rpx;
   font-size: 30rpx;
   background: #FACE97;
 }
@@ -162,4 +157,8 @@ page {
 .calculating-result-img .img4{
   width: 590rpx;
   height: 342rpx;
+}
+.input-placeholder{
+  color:#999;
+  font-size:28rpx;
 }

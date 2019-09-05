@@ -5,6 +5,7 @@
   right: 12rpx;
   bottom: 250rpx;
   text-align: center;
+  z-index: 10;
 }
 
 .cooperation-meeting_img {

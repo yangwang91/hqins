@@ -23,23 +23,44 @@ page {
   padding:20rpx 0 30rpx;
 }
 .result_sum{
-  text-align: center;
-  margin:0 95rpx;
+  margin:auto 40rpx;
   border-bottom: 1px solid #ddd;
+  position: relative;
 }
 .sum_num{
   color:#FA7F49;
   font-size:36rpx;
   padding: 0 0 20rpx;
+  width: 80%;
+  word-wrap:break-word;
 }
 .sum_num text{
   font-size:24rpx;
 }
 .sum_wz{
-  text-align: center;
   font-size:28rpx;
   color:#666;
   padding: 20rpx 0;
+}
+.sum_scenes{
+  padding:30rpx 40rpx 20rpx;
+  font-size:28rpx;
+}
+.sum_scenes_tit{
+  color:#666;
+  padding-bottom: 20rpx;
+}
+.sum_scenes_desc{
+  color:#555;
+}
+.result_img{
+  position: absolute;
+  right: 0;
+  top:20rpx;
+}
+.result_img image{
+  width: 84rpx;
+  height: 79rpx;
 }
 .sum_fg{
   padding:0 17rpx;
@@ -90,6 +111,7 @@ page {
   margin:0 auto;
   border-bottom: 1px solid #eee;
   padding:20rpx 0 50rpx;
+  word-wrap:break-word;
 }
 .other_sum text{
   font-size: 28rpx;
