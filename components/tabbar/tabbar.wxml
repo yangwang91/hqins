@@ -1,13 +1,13 @@
-<view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}">
-  <block wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}">
-    <navigator wx:if="{{item.isSpecial}}" class="tabbar_nav" hover-class="none" url="{{item.pagePath}}" style="color:{{tabbar.selectedColor}}" open-type="navigate">
-      <view class='special-wrapper'><image class="tabbar_icon" src="{{item.iconPath}}"></image></view>
-      <image class='special-text-wrapper'></image>
-      <text>{{item.text}}</text>
-    </navigator>
-    <navigator wx:else class="tabbar_nav" hover-class="none" url="{{item.pagePath}}" style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}}" open-type="switchTab">
-      <image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></image>
-      <text>{{item.text}}</text>
-    </navigator>
-  </block>
-</view>
+<cover-view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}">
+  <!-- <block wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}"> -->
+    <!-- <button wx:if="{{item.isSpecial}}" class="tabbar_nav" hover-class="none" data-url="{{item.pagePath}}" style="color:{{tabbar.selectedColor}}" open-type="navigate" bindtap="navigateTo">
+      <cover-view class='special-wrapper'><cover-image class="tabbar_icon" src="{{item.iconPath}}"></cover-image></cover-view>
+      <cover-image class='special-text-wrapper'></cover-image>
+      <cover-view>{{item.text}}</cover-view>
+    </button> -->
+    <cover-view wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}" class="tabbar_nav" hover-class="none" data-url="{{item.pagePath}}" style="color:{{item.selected ? tabbar.selectedColor : tabbar.color}}" open-type="switchTab" bindtap="navigateTo">
+      <cover-image class="tabbar_icon" src="{{item.selected ? item.selectedIconPath : item.iconPath}}"></cover-image>
+      <cover-view>{{item.text}}</cover-view>
+    </cover-view>
+  <!-- </block> -->
+</cover-view>
