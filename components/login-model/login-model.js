@@ -68,6 +68,15 @@ Component({
           this.setData({
             userInfo: res.userInfo
           })
+          wx.setStorage({
+            key: 'wechatInfo',
+            data: res.userInfo,
+            success: (res) => {
+              this.intoApp(info.present)
+            },
+            fail: (res) => { },
+            complete: (res) => { },
+          })
           console.log(res.userInfo)
           this.login()
         }
