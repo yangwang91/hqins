@@ -1,0 +1,28 @@
+/* pages/dataReport/dataReport.wxss */
+
+page {
+  background: #f7f7f7;
+}
+
+.charts-con {
+  width: 100%;
+  height: 500rpx;
+}
+
+.data-report-wrap {
+  background: #fff;
+}
+
+.data-report-title {
+  font-size: 34rpx;
+  height: 112rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.pie-charts {
+  width: 100%;
+  height: 500rpx;
+}

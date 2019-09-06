@@ -15,7 +15,7 @@ Component({
   data: {
     topSales: [],
     czdjz: {},
-    dayScore: [],
+    monthScore: [],
     expensesHidden:true,
     interimHidden:false,// 期交保费
     singleHidden: true, // 趸交保费
@@ -77,7 +77,7 @@ Component({
       this.getSales();
       this.getAchievementTarget();
       this.getCzdjz();
-      this.getDayScore();
+      this.getMonthScore();
     }
   },
   /**
@@ -153,12 +153,19 @@ Component({
     },
 
     // 每日业绩
-    getDayScore: function() {
-      app.API.getDayScore().then(res => {
+    getMonthScore: function() {
+      app.API.getMonthScore().then(res => {
         console.log(res)
         if(res.code == 200) {
+          const _data = res.result[0] && res.result[0].code != 212 ? res.result : []
+          let oData = []
+          if(_data.length){
+            _data.forEach((item, index) => {
+              oData.push(item.value)
+            })
+          }
           this.setData({
-            dayScore: res.result[0] && res.result[0].code != 212 ? res.result : []
+            monthScore: oData
           })
         }
       })
@@ -266,6 +273,12 @@ Component({
     toBookPage: function() {
       wx.navigateTo({
         url: '../businessplan/businessplan'
+      })
+    },
+
+    toDataReport: function() {
+      wx.navigateTo({
+        url: '../dataReport/dataReport'
       })
     }
   }

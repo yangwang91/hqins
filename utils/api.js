@@ -30,7 +30,9 @@ const URL = {
   getCzdjz: BASE_URL + 'getCzdjz',
   zrAutoApproval: BASE_URL + 'zrAutoApproval',
   getDayScore: BASE_URL + 'getDayScore',
-  getCinfoAndKey: BASE_URL + 'getCinfoAndKey'
+  getCinfoAndKey: BASE_URL + 'getCinfoAndKey',
+  getMonthScore: BASE_URL + 'getMonthScore',
+  getUnderwriting: BASE_URL + 'getUnderwriting'
 }
 
 function getRequestData(data) {
@@ -167,6 +169,17 @@ function getCinfoAndKey(data) {
   data = getRequestData(data)
   return _request.send('GET', URL.getCinfoAndKey, data).then(res => res.data)
 }
+
+function getMonthScore(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getMonthScore, data).then(res => res.data)
+}
+
+function getUnderwriting(data) {
+  data = getRequestData(data)
+  return _request.send('GET', URL.getUnderwriting, data).then(res => res.data)
+}
+
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -193,5 +206,7 @@ module.exports = {
   getCzdjz: getCzdjz,
   zrAutoApproval: zrAutoApproval,
   getDayScore: getDayScore,
-  getCinfoAndKey: getCinfoAndKey
+  getCinfoAndKey: getCinfoAndKey,
+  getMonthScore: getMonthScore,
+  getUnderwriting: getUnderwriting
 }

@@ -1,0 +1,2 @@
+<!--pages/index/components/pie-chart/pie-chart.wxml-->
+  <canvas canvas-id="canvasColumn" id="canvasColumn" class="charts" bindtouchstart="touchColumn"></canvas>

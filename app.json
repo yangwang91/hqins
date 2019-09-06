@@ -24,7 +24,8 @@
     "pages/specialservice/specialservice",
     "pages/exhibitionindustry/exhibitionindustry",
     "pages/businessQuality/businessQuality",
-    "pages/calculateResult/calculateResult"
+    "pages/calculateResult/calculateResult",
+    "pages/dataReport/dataReport"
   ],
   "tabBar": {
     "color": "#7A7E83",

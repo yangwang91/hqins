@@ -59,13 +59,10 @@ Component({
           height
         });
 
-        chart.source(data, {
-          Number: {
-            tickCount: 5
-          }
-        });
+        chart.source(data);
 
         chart.legend(false);
+        // chart.line().size(10);
         // chart.axis('Number', false)
         chart.axis('Number', {
           line: null,

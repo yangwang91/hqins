@@ -396,7 +396,21 @@
   display: inline-block;
 }
 
-.canvas-con {
-  width: 100%;
-  height: 400rpx;
+.charts-con {
+  margin-top: 20rpx;
+  background: #fff;
+}
+
+.charts-con-title {
+  display: flex;
+  align-items: center;
+  height: 112rpx;
+  font-size: 30rpx;
+  padding: 0 30rpx;
+  color: #666;
+}
+.charts-con-title .main-title {
+  flex: 1;
+  font-size: 34rpx;
+  color: #000;
 }

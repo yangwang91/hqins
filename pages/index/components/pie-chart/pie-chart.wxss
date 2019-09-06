@@ -1,0 +1,7 @@
+/* pages/index/components/pie-chart/pie-chart.wxss */
+
+.charts {
+  width: 100%;
+  height: 500rpx;
+  background: #fff;
+}

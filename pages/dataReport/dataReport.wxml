@@ -1,0 +1,17 @@
+<!--pages/dataReport/dataReport.wxml-->
+
+<view>
+  <view class="data-report-wrap">
+  <view class="data-report-title">累计承保业绩</view>
+    <view class="charts-con">
+      <canvas canvas-id="pieChart" id="pieChart" bindtouchstart="touchPie" class="pie-charts"></canvas>
+    </view>
+  </view>
+
+  <view class="data-report-wrap">
+  <view class="data-report-title">昨日规模保费</view>
+    <view class="charts-con">
+      <bar-chart data="{{dayScore}}"></bar-chart>
+    </view>
+  </view>
+</view>

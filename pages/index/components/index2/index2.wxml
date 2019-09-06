@@ -201,12 +201,18 @@
     </view>
   </view>
 
-  <view class="canvas-con">
+  <!-- <view class="canvas-con">
     <bar-chart data="{{dayScore}}"></bar-chart>
-  </view>
+  </view> -->
 
-  <view class="canvas-con">
+  <!-- <view class="canvas-con">
     <pie-chart></pie-chart>
+  </view> -->
+
+  <!--  -->
+  <view class="charts-con">
+    <view class="charts-con-title"><text class="main-title">月度标保</text><text bindtap="toDataReport">更多</text> </view>
+    <pie-chart source="{{monthScore}}"></pie-chart>
   </view>
 
 
