@@ -47,7 +47,7 @@
 
   <view class="team-card-wrap">
     <view class="team-card-header">
-      <view class="team-card-header_title">投诉建议</view>
+      <view class="team-card-header_title">体验官反馈</view>
       <view wx:if="{{proposeList.length}}" class="team-card-header_sub">
         <view class="team-card-more" bindtap="toComplaintList">更多</view>
       </view>
@@ -55,8 +55,8 @@
     <view class="team-card-cont">
       <block wx:if="{{!proposeList.length}}">
         <view class="team-card-complaint-none">
-          <view class="team-card-complaint-none_text">当前无任何投诉</view>
-          <view class="team-card-complaint-none_btn" bindtap="toComplaint">添加投诉</view>
+          <view class="team-card-complaint-none_text">当前无任何反馈</view>
+          <view class="team-card-complaint-none_btn" bindtap="toComplaint">添加反馈</view>
         </view>
       </block>
       <block wx:else>
