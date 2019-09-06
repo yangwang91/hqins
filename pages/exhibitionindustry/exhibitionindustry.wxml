@@ -33,7 +33,7 @@
     <view class="exhi_img"><image src="../../assets/icons/exhibition3.png"></image></view>
     <view class="exhi_wz">
       <view class="exhi_wz_tit">共享云展业平台</view>
-      <view class="exhi_wz_desc">（哆来咪、电商对接、银保对接）</view>
+      <view class="exhi_wz_desc">（哆徕咪、电商对接、银保对接）</view>
     </view>
   </view>
   <view class="exhi_desc" hidden="{{sharedHidden}}">
