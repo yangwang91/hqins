@@ -14,7 +14,7 @@
       <view class="promotion-details-item_num">{{result.sysj}}人</view>
     </view>
     <view class="promotion-details-item">
-      <view class="promotion-details-item_name">高层交流：</view>
+      <view class="promotion-details-item_name">项目路演：</view>
       <view class="promotion-details-item_num">{{result.gcjl}}人</view>
     </view>
     <view class="promotion-details-item" bindtap="toContractDetails">

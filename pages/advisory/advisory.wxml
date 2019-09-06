@@ -22,7 +22,7 @@
           <view class="advisory-step-item_num_cont">
             <view class="advisory-step-item_num_line"></view>
             <view class="advisory-step-item_num">3</view>
-            <view class="advisory-step-item_text">高层交流</view>
+            <view class="advisory-step-item_text">项目路演</view>
           </view>
         </view>
         <view class="advisory-step-item {{step === 4 ? 'is-active' : ''}} {{step > 4 ? 'is-done' : ''}}">

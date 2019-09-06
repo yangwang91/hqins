@@ -176,15 +176,15 @@
     <view class="recruitment-title">如果您：</view>
     <view class="recruitment-list">
       <view class="recruitment-item">
+        <image src="../../../../assets/icons/recruitment_list_img_3.svg" mode="aspectFit"></image>
+        <view>有梦想</view>
+      </view>
+      <view class="recruitment-item">
         <image src="../../../../assets/icons/recruitment_list_img_1.svg" mode="aspectFit"></image>
         <view>有能力</view>
       </view>
       <view class="recruitment-item">
         <image src="../../../../assets/icons/recruitment_list_img_2.svg" mode="aspectFit"></image>
-        <view>有资源</view>
-      </view>
-      <view class="recruitment-item">
-        <image src="../../../../assets/icons/recruitment_list_img_3.svg" mode="aspectFit"></image>
         <view>有团队</view>
       </view>
     </view>
@@ -232,7 +232,7 @@
         <view class="jion-tips-item">
           <view class="jion-tips-item_title">
             <view class="jion-tips-item_dot"></view>第一步：合作洽谈</view>
-          <view class="jion-tips-item_desc">咨询互动后，留下您的联系方式，我们将第一时间安排专属人员跟您进行联系，进一步了解合作意向与解释合伙规则。</view>
+          <view class="jion-tips-item_desc">咨询互动后，留下您的联系方式，我们将安排专属人员跟您进行联系，进一步了解合作意向与解释合伙规则。</view>
         </view>
         <view class="jion-tips-item">
           <view class="jion-tips-item_title">
@@ -241,7 +241,7 @@
         </view>
         <view class="jion-tips-item">
           <view class="jion-tips-item_title">
-            <view class="jion-tips-item_dot"></view>第三步：高层交流</view>
+            <view class="jion-tips-item_dot"></view>第三步：项目路演</view>
           <view class="jion-tips-item_desc">根据商业模式，由专属人员安排您与公司高层进一步交流，并进行项目路演。</view>
         </view>
         <view class="jion-tips-item">

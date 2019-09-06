@@ -76,7 +76,7 @@
             </view>
             <view>这位客官</view>
             <view>您认真的吗</view>
-            <view>我们对合伙人是有期待的哦</view>
+            <view>我们对合伙人是有更高期待的哦</view>
           </block>
           <block wx:if="{{flag == 3}}">
             <view class="calculating-result-img">
