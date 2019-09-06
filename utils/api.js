@@ -166,7 +166,8 @@ function getDayScore(data) {
 }
 
 function getCinfoAndKey(data) {
-  data = getRequestData(data)
+  data = getRequestData(data);
+  data.uname = wx.getStorageSync('wechatInfo').nickName;
   return _request.send('GET', URL.getCinfoAndKey, data).then(res => res.data)
 }
 

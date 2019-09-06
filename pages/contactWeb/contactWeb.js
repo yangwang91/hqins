@@ -8,8 +8,7 @@ Page({
    */
   data: {
     cinfo:'',
-    key:'',
-    uname: wx.getStorageSync('wechatInfo').nickName
+    key:''
   },
 
   /**
