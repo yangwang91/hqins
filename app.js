@@ -40,6 +40,9 @@ App({
 
 
   editTabbar: function() {
+    wx.hideTabBar({
+      aniamtion: false
+    })
     console.log('---userInfo---', wx.getStorageSync('userInfo'))
     const present = wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2'
     // const present = '1'
