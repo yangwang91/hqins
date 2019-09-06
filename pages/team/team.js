@@ -19,11 +19,11 @@
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-      app.editTabbar()
+      // app.editTabbar()
 
-      this.getProposeList()
-      this.getZtList()
-      this.getPromotionPicturelist()
+      // this.getProposeList()
+      // this.getZtList()
+      // this.getPromotionPicturelist()
     },
 
     /**
