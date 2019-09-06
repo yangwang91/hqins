@@ -82,11 +82,19 @@ Page({
 
   getUnderwriting () {
     app.API.getUnderwriting().then(res => {
-      console.log(res)
       // this.setData({
       //   underwriting: res.result || []
       // })
-      this.showPie('pieChart', res.result || [])
+      var dataList = res.result || [];
+      if(dataList && dataList.length>0){
+        for(var i=0;i<dataList.length;i++){
+          var item = dataList[i]
+          if(item.name=='Sum'){
+            dataList.splice(i, 1);
+          }
+        }
+      }
+      this.showPie('pieChart', dataList)
     })
   },  
 
@@ -107,9 +115,11 @@ Page({
       dataLabel: true,
       extra: {
         pie: {
-          lableWidth: 15
+          lableWidth: 15,
+          border:true,
+          borderWidth:1
         }
-      },
+      }
     });
 
   },
