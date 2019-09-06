@@ -71,9 +71,7 @@ Component({
           wx.setStorage({
             key: 'wechatInfo',
             data: res.userInfo,
-            success: (res) => {
-              this.intoApp(info.present)
-            },
+            success: (res) => {},
             fail: (res) => { },
             complete: (res) => { },
           })
