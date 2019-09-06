@@ -26,7 +26,7 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 0,// 进度条总数
+      sum: 1,// 进度条总数
       goal: 0, // 进度条目标
       schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
@@ -36,7 +36,7 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 0,// 进度条总数
+      sum: 1,// 进度条总数
       goal: 0, // 进度条目标
       schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
@@ -46,7 +46,7 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 0,// 进度条总数
+      sum: 1,// 进度条总数
       goal: 0, // 进度条目标
       schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
@@ -56,7 +56,7 @@ Component({
       scheduleWidth: 0,//进度宽度，控制进度文字的位置
       goalLeft: 0,// 进度条目标位置，控制进度条目标小圆点的位置
       scheduleLeft: 0,// 进度条进度圆点位置，控制进度条长度及进度条圆点的位置
-      sum: 0,// 进度条总数
+      sum: 1,// 进度条总数
       goal: 0, // 进度条目标
       schedule: 0,// 当前已达成目标
       goalReached: false, // 是否达成目标
@@ -133,11 +133,11 @@ Component({
                 })
               }
             }
-            this.calculateSchedule('interim', 'interimGoal', 'interimSchedule');
-            this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
-            this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
-            this.calculateSchedule('single', 'singleGoal', 'singleSchedule');
           }
+          this.calculateSchedule('interim', 'interimGoal', 'interimSchedule');
+          this.calculateSchedule('accident', 'accidentGoal', 'accidentSchedule');
+          this.calculateSchedule('iHome', 'iHomeGoal', 'iHomeSchedule');
+          this.calculateSchedule('single', 'singleGoal', 'singleSchedule');
         }
       })
     },
@@ -212,7 +212,7 @@ Component({
         this.createSelectorQuery().select('#' + goalElementId).boundingClientRect((rect) => {
           // 按照算法，本应是width，但不知道为啥，width总少点，right反倒是正好得
           if (rect) {
-            var rpxWidth = rect.width * app.globalData.sysInfo.pixelRatio;
+            var rpxWidth = rect.right * app.globalData.sysInfo.pixelRatio;
             // // 690 是进度条总宽
             var goalWidth = rpxWidth / 2 + goalLeft * 690 / 100;
             if (goalWidth < rpxWidth) {
@@ -232,7 +232,7 @@ Component({
         this.createSelectorQuery().select('#' + scheduleElementId).boundingClientRect((rect) => {
           // 按照算法，本应是width，但不知道为啥，width总少点，right反倒是正好得
           if(rect){
-            var sWidth = rect.width * app.globalData.sysInfo.pixelRatio;
+            var sWidth = rect.right * app.globalData.sysInfo.pixelRatio;
             // // 690 是进度条总宽
             var scheduleWidth = sWidth / 2 + scheduleLeft * 690 / 100;
             if (scheduleWidth < sWidth) {
