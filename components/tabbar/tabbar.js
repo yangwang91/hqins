@@ -12,7 +12,7 @@ Component({
     tabbar: {
       type: Object,
       value: {
-        "backgroundColor": "#ffffff",
+        "backgroundColor": "#FAFAFA",
         "color": "#999",
         "selectedColor": "#D3A468",
         "list": [
