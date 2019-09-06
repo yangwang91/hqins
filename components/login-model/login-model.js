@@ -141,7 +141,9 @@ Component({
             info: info
           },
           success: (res) => {
-            this.intoApp(info.present)
+            if (info && info.present){
+              this.intoApp(info.present)
+            }
           },
           fail: (res) => {},
           complete: (res) => {},
