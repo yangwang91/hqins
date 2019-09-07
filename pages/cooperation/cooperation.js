@@ -179,8 +179,9 @@ Page({
           })
         }, 2000)
       } else {
+        var message = res.message ? res.message : '洽谈预约完成，我们将安排专属人员与您联系';
         wx.showToast({
-          title: res.message,
+          title: message,
           icon: 'none'
         })
       }
