@@ -1,4 +1,11 @@
 /* pages/jionus/jionus.wxss */
+page{
+  background: #433b38;
+}
 .jion-us-img {
+  width: 100%;
+  font-size:0;
+}
+.jion-us-img image{
   width: 100%;
 }
