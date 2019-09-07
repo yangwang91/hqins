@@ -58,5 +58,9 @@ Page({
       url: '../../../../calculating/calculating'
     })
   },
-
+  toCooperation:function() {
+    wx.navigateTo({
+      url: '../../pages/cooperation/cooperation',
+    })
+  }
 })

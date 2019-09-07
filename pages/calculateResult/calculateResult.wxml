@@ -32,7 +32,7 @@
       <view class="other_sum">{{result.fdXiaxian}} ~ {{result.fdShangxian}}<text>万元</text></view>
       <!-- 第三个结束 -->
       <view class="result_but">
-        <view wx:if="{{zrStatus === 0}}" class="but but1">留下联系方式</view>
+        <view wx:if="{{zrStatus === 0}}" class="but but1" bindtap="toCooperation">留下联系方式</view>
         <view class="but but2" bindtap="pevQuestion">返回重新测算</view>
         <view class="calculating-back-btn" bindtap="goBack">返回首页</view>
       </view>

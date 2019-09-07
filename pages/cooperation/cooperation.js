@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    timer: 60,
+    timer: 90,
     isGetCode: false,
     postData: {
       name: '',
@@ -78,7 +78,7 @@ Page({
   getCode: function () {
     this.setData({
       isGetCode: true,
-      timer: 60
+      timer: 90
     })
     let time = this.data.timer;
     let timer = setInterval(() => {
@@ -121,7 +121,7 @@ Page({
         })
         this.setData({
           isGetCode: false,
-          timer: 60
+          timer: 90
         })
       }
     })

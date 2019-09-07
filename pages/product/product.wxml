@@ -51,6 +51,6 @@
 
 
  <tabbar tabbar="{{tabbar}}"></tabbar>
-
+ <cooperation-meeting></cooperation-meeting>
 
 </view>
