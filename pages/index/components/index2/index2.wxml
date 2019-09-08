@@ -149,53 +149,53 @@
       <view class="created_sum">
         <text>总金额</text>
         <view>{{czdjz.Total}}
-          <text>元</text>
+          <text>万元</text>
         </view>
       </view>
       <view class="created_item">
         <text>保费创费</text>
         <view>{{czdjz.CreateIn}}
-          <text>元</text>
+          <text>万元</text>
         </view>
       </view>
       <view class="created_item created_item_bor {{expensesHidden?'':'created_item_bor_zk'}}" catchtap="showExpenses">
         <text>营业费用</text>
         <view>{{czdjz.TrafficCost}}
-          <text>元</text>
+          <text>万元</text>
         </view>
       </view>
       <view class="created_item_desc" hidden="{{expensesHidden}}">
         <view>
           <text>内勤人力费用</text>
-          <text>{{czdjz.InsideCost}} 元</text>
+          <text>{{czdjz.InsideCost}} 万元</text>
         </view>
         <view>
           <text>职场费用</text>
-          <text>{{czdjz.WorkplaceCost}} 元</text>
+          <text>{{czdjz.WorkplaceCost}} 万元</text>
         </view>
         <view>
           <text>手续费支出</text>
-          <text>{{czdjz.HandOutlay}} 元</text>
+          <text>{{czdjz.HandOutlay}} 万元</text>
         </view>
         <view>
           <text>佣金支出</text>
-          <text>{{czdjz.ComOutlay}} 元</text>
+          <text>{{czdjz.ComOutlay}} 万元</text>
         </view>
         <view>
           <text>业务费用</text>
-          <text>{{czdjz.BusinessCost}} 元</text>
+          <text>{{czdjz.BusinessCost}} 万元</text>
         </view>
         <view>
           <text>外勤人力费用</text>
-          <text>{{czdjz.OutsideCost}} 元</text>
+          <text>{{czdjz.OutsideCost}} 万元</text>
         </view>
         <view>
           <text>营业外支出</text>
-          <text>{{czdjz.TrafficOutlay}} 元</text>
+          <text>{{czdjz.TrafficOutlay}} 万元</text>
         </view>
         <view>
           <text>税金及附加</text>
-          <text>{{czdjz.TaxAttach}} 元</text>
+          <text>{{czdjz.TaxAttach}} 万元</text>
         </view>
       </view>
     </view>

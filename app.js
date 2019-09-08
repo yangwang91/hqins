@@ -1,6 +1,8 @@
 //app.js
 import API from './utils/api.js'
 import images from './utils/images.js'
+import gio from './utils/gio-minp/index.js'
+// var gio = require("./utils/gio-minp/index.js").default
 // import request from './utils/request.js'
 // const _request = new request
 
@@ -11,7 +13,13 @@ App({
 
     console.log(options)
  
-    wx.hideTabBar()
+    wx.hideTabBar({
+      fail: function () {
+        setTimeout(function () {
+          wx.hideTabBar()
+        }, 500)
+      }
+    })
     
     console.log('scene', decodeURIComponent(options.query.scene))
 
@@ -40,7 +48,13 @@ App({
 
 
   editTabbar: function() {
+    
     wx.hideTabBar({
+      fail: function () {
+        setTimeout(function () {
+          wx.hideTabBar()
+        }, 500)
+      },
       aniamtion: false
     })
     console.log('---userInfo---', wx.getStorageSync('userInfo'))

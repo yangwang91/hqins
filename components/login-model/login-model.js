@@ -1,5 +1,6 @@
 // components/login-model/login-model.js
 const app = getApp()
+import gio from '../../utils/gio-minp/index.js'
 Component({
   /**
    * 组件的属性列表
@@ -14,11 +15,15 @@ Component({
   data: {
     userInfo: null,
     hidden: true,
-    authFailureHidden:true
+    authFailureHidden:true,
+    session_key:'',
+    encryptedData:'',
+    iv:''
   },
 
   attached() {
-    this.getUserInfoAuth()
+    // this.getUserInfoAuth()
+    this.login()
   },
 
   /**
@@ -65,8 +70,27 @@ Component({
     fnGetUserInfo: function() {
       wx.getUserInfo({
         success: (res) => {
+          console.log(res,'----------getUserInfo---------------')
           this.setData({
-            userInfo: res.userInfo
+            userInfo: res.userInfo,
+            encryptedData: res.encryptedData,
+            iv: res.iv
+          })
+          var data = {
+            encryptedData: res.encryptedData,
+            iv: res.iv,
+            session_key: this.data.session_key,
+            token: wx.getStorageSync('token')
+          }
+          app.API.getUnionId(data).then(res => {
+            console.log(res, '------getUnionId-------');
+            if (res.code === '200') {
+              var unionId = res.unionid;
+              var openId = wx.getStorageSync('userInfo').openid
+              gio('identify', openid, unionid)
+            }
+          }).catch(err => {
+
           })
           wx.setStorage({
             key: 'wechatInfo',
@@ -75,8 +99,8 @@ Component({
             fail: (res) => { },
             complete: (res) => { },
           })
-          console.log(res.userInfo)
-          this.login()
+          gio('setVisitor', res.userInfo)
+          // this.login()
         }
       })
     },
@@ -130,8 +154,10 @@ Component({
         token: token,
         code: code
       }).then(res => {
-        console.log(res)
+        console.log(res,'---------open-------------')
         const info = res.result[0]
+        this.setData({session_key:res.session_key})
+        this.getUserInfoAuth()
         wx.setStorage({
           key: 'userInfo',
           data: {
@@ -146,7 +172,6 @@ Component({
           fail: (res) => {},
           complete: (res) => {},
         })
-
         this.bindSub(res.openid)
       })
     },
@@ -156,7 +181,13 @@ Component({
       wx.reLaunch({
         url: '../index/index',
         success: function (res) {
-          wx.hideTabBar()
+          wx.hideTabBar({
+            fail: function () {
+              setTimeout(function () {
+                wx.hideTabBar()
+              }, 500)
+            }
+          })
           wx.hideLoading()
         },
         fail: function (res) { },

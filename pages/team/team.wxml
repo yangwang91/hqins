@@ -34,7 +34,7 @@
 
   <view class="team-card-wrap">
     <view class="team-card-header">
-      <view class="team-card-header_title">我要推广</view>
+      <view class="team-card-header_title">推广分享</view>
       <view class="team-card-header_sub">
         <!-- <view class="team-card-num">洽谈数：05</view> -->
         <view class="team-card-more" bindtap="toPromotionDetails">推广详情</view>

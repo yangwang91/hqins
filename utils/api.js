@@ -32,7 +32,8 @@ const URL = {
   getDayScore: BASE_URL + 'getDayScore',
   getCinfoAndKey: BASE_URL + 'getCinfoAndKey',
   getMonthScore: BASE_URL + 'getMonthScore',
-  getUnderwriting: BASE_URL + 'getUnderwriting'
+  getUnderwriting: BASE_URL + 'getUnderwriting',
+  getUnionId: BASE_URL + 'getUnionId'
 }
 
 function getRequestData(data) {
@@ -181,6 +182,9 @@ function getUnderwriting(data) {
   return _request.send('GET', URL.getUnderwriting, data).then(res => res.data)
 }
 
+function getUnionId(data = getRequestData(data)) {
+  return _request.send('GET', URL.getUnionId, data).then(res => res.data)
+}
 module.exports = {
   getToken: getToken,
   getOpenId: getOpenId,
@@ -209,5 +213,6 @@ module.exports = {
   getDayScore: getDayScore,
   getCinfoAndKey: getCinfoAndKey,
   getMonthScore: getMonthScore,
-  getUnderwriting: getUnderwriting
+  getUnderwriting: getUnderwriting,
+  getUnionId: getUnionId
 }

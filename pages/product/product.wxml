@@ -51,6 +51,6 @@
 
 
  <tabbar tabbar="{{tabbar}}"></tabbar>
- <cooperation-meeting></cooperation-meeting>
+ <cooperation-meeting wx:if="{{present === '2'}}"></cooperation-meeting>
 
 </view>
