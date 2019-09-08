@@ -1,4 +1,5 @@
 // pages/cooperation/cooperation.js
+const Page = global.GioPage;
 const app = getApp()
 Page({
 
@@ -74,7 +75,6 @@ Page({
       [`postData.${key}`]: value
     })
   },
-
   getCode: function () {
     this.setData({
       isGetCode: true,

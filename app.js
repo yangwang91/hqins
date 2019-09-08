@@ -1,7 +1,8 @@
 //app.js
-import API from './utils/api.js'
-import images from './utils/images.js'
-import gio from './utils/gio-minp/index.js'
+import API from './utils/api.js';
+import images from './utils/images.js';
+var gio = require("./utils/gio-minp/index.js").default
+const App = global.GioApp
 // var gio = require("./utils/gio-minp/index.js").default
 // import request from './utils/request.js'
 // const _request = new request

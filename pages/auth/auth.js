@@ -1,4 +1,5 @@
 // pages/auth/auth.js
+const Page = global.GioPage;
 Page({
 
   /**

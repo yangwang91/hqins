@@ -1,4 +1,5 @@
 // pages/contractDetails/contractDetails.js
+const Page = global.GioPage;
 const app = getApp()
 Page({
 

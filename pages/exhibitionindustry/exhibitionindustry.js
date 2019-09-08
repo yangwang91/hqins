@@ -1,4 +1,5 @@
 // pages/exhibitionindustry/exhibitionindustry.js
+const Page = global.GioPage;
 Page({
 
   /**

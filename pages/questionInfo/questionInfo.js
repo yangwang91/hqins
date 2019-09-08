@@ -1,4 +1,5 @@
 // pages/questionInfo/questionInfo.js
+const Page = global.GioPage;
 Page({
 
   /**

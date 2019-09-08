@@ -1,4 +1,5 @@
  // pages/calculate/calculate.js
+const Page = global.GioPage;
 const app = getApp()
 Page({
 

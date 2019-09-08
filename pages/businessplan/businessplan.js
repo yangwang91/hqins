@@ -1,4 +1,5 @@
 // pages/businessplan/businessplan.js
+const Page = global.GioPage;
 const app = getApp()
 Page({
 

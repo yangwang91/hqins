@@ -1,4 +1,5 @@
 // pages/jionus/jionus.js
+const Page = global.GioPage;
 Page({
 
   /**

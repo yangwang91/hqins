@@ -1,4 +1,5 @@
 // pages/promotionDetails/promotionDetails.js
+const Page = global.GioPage;
 const app = getApp()
 Page({
 

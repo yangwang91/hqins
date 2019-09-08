@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+const Page = global.GioPage;
 const app = getApp()
 
 Page({

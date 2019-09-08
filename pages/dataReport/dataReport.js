@@ -1,8 +1,7 @@
 // pages/dataReport/dataReport.js
+const Page = global.GioPage;
 import uCharts from '../../utils/u-charts.js'
-
 var pieChart = null;
-
 const app = getApp()
 
 Page({

@@ -1,4 +1,5 @@
 // pages/platform/platform.js
+const Page = global.GioPage;
 Page({
 
   /**

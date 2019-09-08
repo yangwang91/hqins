@@ -9,7 +9,7 @@
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">预期经营地区：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入所在经营地区" data-key="area" bindinput="inputChange"></input>
+      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入预期经营地区,如:南京" data-key="area" bindinput="inputChange"></input>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">预期经营方式：</view>

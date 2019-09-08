@@ -1,4 +1,5 @@
 // pages/complaintList/complaintList.js
+const Page = global.GioPage;
 const app = getApp()
 Page({
 
