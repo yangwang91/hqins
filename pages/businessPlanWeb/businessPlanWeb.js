@@ -1,5 +1,5 @@
 // pages/businessPlan/businessPlan.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 Page({
 
   /**

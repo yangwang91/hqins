@@ -1,5 +1,5 @@
 // pages/contractDetails/contractDetails.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 const app = getApp()
 Page({
 
@@ -7,14 +7,38 @@ Page({
    * 页面的初始数据
    */
   data: {
-    result: []
+    result: [],
+    type:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    this.getTgQysum()
+    const type = options.type
+    this.setData({
+      type: type
+    })
+    if(type === '1'){
+      wx.setNavigationBarTitle({
+        title: '经营测算'
+      })
+    }
+    if (type === '2') {
+      wx.setNavigationBarTitle({
+        title: '商业设计'
+      })
+    }
+    if (type === '3') {
+      wx.setNavigationBarTitle({
+        title: '项目路演'
+      })
+    }
+    if (type === '4') {
+      wx.setNavigationBarTitle({
+        title: '合作签约'
+      })
+    }
   },
 
   /**
@@ -28,7 +52,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.getTgQysum()
   },
 
   /**
@@ -46,11 +70,11 @@ Page({
   },
 
   getTgQysum: function() {
-    app.API.getTgQysum().then(res => {
-      console.log(res)
+    const type = this.data.type;
+    app.API.getTgQysum(type).then(res => {
       if(res.code == 200) {
         this.setData({
-          result: res.result[0]
+          result: res.result
         })
       }
     })

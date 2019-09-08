@@ -1,5 +1,5 @@
 // pages/partnershipplatform/partnershipplatform.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 Page({
 
   /**

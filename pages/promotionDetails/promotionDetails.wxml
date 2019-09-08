@@ -4,20 +4,26 @@
     <image src="../../assets/images/promotion-details_img.png" mode="aspectFit"></image>
   </view>
 
-  <view class="promotion-details-list">
+  <view class="promotion-details-list" data-type="1" bindtap="toContractDetails">
     <view class="promotion-details-item">
       <view class="promotion-details-item_name">经营测算：</view>
-      <view class="promotion-details-item_num">{{result.cesuan}}人</view>
+      <view class="promotion-details-item_num">{{result.cesuan}}人
+        <image mode="aspectFit" src="../../assets/icons/right_allow_icon.svg"></image>
+      </view>
     </view>
-    <view class="promotion-details-item">
+    <view class="promotion-details-item" data-type="2" bindtap="toContractDetails">
       <view class="promotion-details-item_name">商业设计：</view>
-      <view class="promotion-details-item_num">{{result.sysj}}人</view>
+      <view class="promotion-details-item_num">{{result.sysj}}人
+        <image mode="aspectFit" src="../../assets/icons/right_allow_icon.svg"></image>
+      </view>
     </view>
-    <view class="promotion-details-item">
+    <view class="promotion-details-item" data-type="3" bindtap="toContractDetails">
       <view class="promotion-details-item_name">项目路演：</view>
-      <view class="promotion-details-item_num">{{result.gcjl}}人</view>
+      <view class="promotion-details-item_num">{{result.gcjl}}人
+        <image mode="aspectFit" src="../../assets/icons/right_allow_icon.svg"></image>
+      </view>
     </view>
-    <view class="promotion-details-item" bindtap="toContractDetails">
+    <view class="promotion-details-item" data-type="4" bindtap="toContractDetails">
       <view class="promotion-details-item_name">合作签约：</view>
       <view class="promotion-details-item_num">{{result.hzqy}}人
         <image mode="aspectFit" src="../../assets/icons/right_allow_icon.svg"></image>

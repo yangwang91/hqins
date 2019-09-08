@@ -1,5 +1,5 @@
 // pages/questionInfo/questionInfo.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 Page({
 
   /**
@@ -38,7 +38,6 @@ Page({
   },
   familyServiceShow:function(){
     var hiddenValue = !this.data.dailogFamilyHidden;
-    console.log(hiddenValue,'hhhhhhhhhhhhhhhhhhhhh')
     this.setData({ dailogFamilyHidden: hiddenValue });
   },
   personServiceShow: function () {

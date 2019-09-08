@@ -1,11 +1,11 @@
 // pages/jionus/jionus.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
+ data: {
     result: {},
     zrStatus: 0
   },

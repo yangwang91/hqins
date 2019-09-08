@@ -137,8 +137,10 @@ function getTgSuccess(data) {
   return _request.send('GET', URL.getTgSuccess, data).then(res => res.data)
 }
 
-function getTgQysum(data) {
-  data = getRequestData(data)
+function getTgQysum(type) {
+  const data = getRequestData(data);
+  data.type = type;
+  console.log(data,'------getTgQysum-------')
   return _request.send('GET', URL.getTgQysum, data).then(res => res.data)
 }
 

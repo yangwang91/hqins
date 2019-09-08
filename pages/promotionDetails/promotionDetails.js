@@ -1,5 +1,5 @@
 // pages/promotionDetails/promotionDetails.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 const app = getApp()
 Page({
 
@@ -56,9 +56,11 @@ Page({
     })
   },
 
-  toContractDetails: function() {
+  toContractDetails: function(e) {
+    const type = e.currentTarget.dataset.type
+    console.log(type,'type')
     wx.navigateTo({
-      url: '../contractDetails/contractDetails'
+      url: '../contractDetails/contractDetails?type='+type
     })
   }
 })

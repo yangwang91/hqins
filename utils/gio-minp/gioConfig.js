@@ -8,7 +8,7 @@ export default {
   debug: true,           //是否开启调试模式，可以看到采集的数据。默认 false
   forceLogin: true,      //是否强制要求用户登陆微信获取 openid。默认 true
   followShare: true,     //是否详细跟踪分享数据，开启后可使用分享分析功能。默认false
-  usePlugin: true,       //是否使用了第三方插件。默认false
+  usePlugin: false,       //是否使用了第三方插件。默认false
   getLocation: {          //是否自动获取用户的地理位置信息, 并设置获取方式
     autoGet: false,       //默认不自动获取
     type: 'wgs84'           //支持wgs84 | gcj02, 默认wgs84

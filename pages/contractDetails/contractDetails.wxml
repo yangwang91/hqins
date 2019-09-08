@@ -1,10 +1,10 @@
 <!--pages/contractDetails/contractDetails.wxml-->
 <view class="container">
   <view class="contract-details-list"> 
-    <view class="contract-details-item" wx:for="{{result}}" wx:key="{{index}}">
+    <view class="contract-details-item" wx:for="{{result}}" wx:key="{{index}}" wx:for-item="item">
       <image src="{{item.link}}" mode="aspectFill"></image>
       <view class="contract-details-item_name">{{item.name}}</view>
-      <view class="contract-details-item_time">
+      <view class="contract-details-item_time" wx:if="{{type==='4'}}">
         <view class="contract-details-item_time_date">{{item.time}}</view>
         <view>签约日期</view>
       </view>

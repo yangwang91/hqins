@@ -1,5 +1,5 @@
 // pages/advisory/advisory.js
-const Page = global.GioPage;
+// const Page = global.GioPage;
 const app = getApp()
 Page({
 
