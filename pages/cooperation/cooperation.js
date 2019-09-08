@@ -9,6 +9,8 @@ Page({
   data: {
     timer: 90,
     isGetCode: false,
+    businessHidden:true,
+    fdXscj:'',
     postData: {
       name: '',
       area: '',
@@ -16,7 +18,33 @@ Page({
       tjr: '',
       phone: '',
       code: ''
-    }
+    },
+    question1:[
+      {
+        value:'1',
+        name: '个人营销',
+        checked:false,
+      },
+      {
+        value: '2',
+        name: '银邮业务',
+        checked: false,
+      },
+      {
+        value:'3',
+        name: '经代业务',
+        checked: false,
+      },
+      {
+        value:'4',
+        name: '网络平台销售',
+        checked: false,
+      },
+      {
+        value:'5',
+        name: '多场景多渠道',
+        checked: false,
+      }]
   },
 
   /**
@@ -199,5 +227,26 @@ Page({
         code: ''
       }
     })
+  },
+  showBusinessMode:function(){
+    this.setData({ businessHidden:false})
+  },
+  hideBusinessMode:function(){
+    this.setData({ businessHidden: true })
+  },
+  radioChange: function (e) {
+    console.log(e)
+    this.setData({
+      fdXscj: e.detail.value
+    })
+    for (var i = 0; i < this.data.question1.length;i++){
+      var item = this.data.question1[i]
+      if (item.value == e.detail.value) {
+        this.setData({
+          'postData.jyms': item.name
+        })
+      }
+    }
+    this.hideBusinessMode()
   }
 })

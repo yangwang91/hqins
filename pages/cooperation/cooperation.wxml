@@ -13,7 +13,10 @@
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name is-required">预期经营方式：</view>
-      <input class="cooperation-form_item_input" placeholder-class="placeholderStyle" placeholder="请输入渠道/场景/销售方式" data-key="jyms" bindinput="inputChange"></input>
+      <view class="business-choose" bindtap="showBusinessMode">
+        <text wx:if="{{!postData.jyms}}">请选择预期经营方式</text>
+        <text wx:if="{{postData.jyms}}" class="business-text">{{postData.jyms}}</text>
+      </view>
     </view>
     <view class="cooperation-form_item">
       <view class="cooperation-form_item_name">推荐人：</view>
@@ -30,6 +33,19 @@
       <view wx:else class="get-code-btn" bindtap="getVcode">获取验证码</view>
     </view>
   </view>
-
   <view class="comfirm-btn" bindtap="submitForm">提交</view>
+  <view class="business-mode" hidden="{{businessHidden}}">
+    <view class="business-mode-bg" bindtap="hideBusinessMode"></view>
+    <view class="business-mode-con">
+      <view class="calculating-question-answer">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label wx:for="{{question1}}" class="radio" wx:key="{{index}}">
+              <radio value="{{item.value}}" class="{{item.checked || index === (fdXscj - 1) ? 'is-checked' : ''}}" checked="{{item.checked || index === (fdXscj - 1)}}" color="#D3A468">
+                <text>{{item.name}}</text>
+              </radio>
+            </label>
+          </radio-group>
+        </view>
+    </view>
+  </view>
 </view>
