@@ -58,7 +58,6 @@ Page({
 
   toContractDetails: function(e) {
     const type = e.currentTarget.dataset.type
-    console.log(type,'type')
     wx.navigateTo({
       url: '../contractDetails/contractDetails?type='+type
     })

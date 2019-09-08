@@ -19,22 +19,22 @@ Page({
     this.setData({
       type: type
     })
-    if(type === '1'){
+    if(type == '1'){
       wx.setNavigationBarTitle({
         title: '经营测算'
       })
     }
-    if (type === '2') {
+    if (type == '2') {
       wx.setNavigationBarTitle({
         title: '商业设计'
       })
     }
-    if (type === '3') {
+    if (type == '3') {
       wx.setNavigationBarTitle({
         title: '项目路演'
       })
     }
-    if (type === '4') {
+    if (type == '4') {
       wx.setNavigationBarTitle({
         title: '合作签约'
       })

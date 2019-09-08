@@ -4,8 +4,8 @@
     <image src="../../assets/images/promotion-details_img.png" mode="aspectFit"></image>
   </view>
 
-  <view class="promotion-details-list" data-type="1" bindtap="toContractDetails">
-    <view class="promotion-details-item">
+  <view class="promotion-details-list">
+    <view class="promotion-details-item" data-type="1" bindtap="toContractDetails">
       <view class="promotion-details-item_name">经营测算：</view>
       <view class="promotion-details-item_num">{{result.cesuan}}人
         <image mode="aspectFit" src="../../assets/icons/right_allow_icon.svg"></image>
