@@ -52,7 +52,8 @@ function getOpenId(data) {
 }
 
 function getZrStatus(data) {
-  data = getRequestData(data)
+  data = getRequestData(data);
+  data.type = '1'; // 这个参数需要加
   return _request.send('GET', URL.getZrStatus, data).then(res => res.data)
 }
 
