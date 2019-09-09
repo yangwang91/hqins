@@ -16,6 +16,7 @@ Component({
     topSales: [],
     czdjz: {},
     monthScore: [],
+    titDescHidden:true,
     expensesHidden:true,
     interimHidden:false,// 期交保费
     singleHidden: true, // 趸交保费
@@ -68,8 +69,8 @@ Component({
     {
       src: app.images.index2_banner_2,
       link: ''
-    }
-    ]
+    }],
+    zrMiddleStatus:{}
   },
 
   lifetimes: {
@@ -78,6 +79,7 @@ Component({
       this.getAchievementTarget();
       this.getCzdjz();
       this.getMonthScore();
+      this.getZrMiddleStatus()
     }
   },
   /**
@@ -269,7 +271,14 @@ Component({
       data[tab] = false;
       this.setData(data);
     },
-
+    getZrMiddleStatus: function () {
+      app.API.getZrMiddleStatus().then(res => {
+        console.log(res,'---------getZrMiddleStatus------------')
+        this.setData({
+          zrMiddleStatus: res.result && res.result[0] ? res.result[0] : {}
+        })
+      })
+    },
     toBookPage: function() {
       wx.navigateTo({
         url: '../businessplan/businessplan'
@@ -290,6 +299,23 @@ Component({
     toSpecialService: function () {
       wx.navigateTo({
         url: '../specialservice/specialservice'
+      })
+    },
+    toBook: function (e) {
+      const link = e.currentTarget.dataset.link
+      console.log(link,'------------link-----------')
+      wx.navigateTo({
+        url: '../businessPlanWeb/businessPlanWeb?link=' + encodeURIComponent(link)
+      })
+    },
+    showDesc: function(){
+      this.setData({
+        titDescHidden: false
+      })
+    },
+    hideDes:function(){
+      this.setData({
+        titDescHidden: true
       })
     }
   }

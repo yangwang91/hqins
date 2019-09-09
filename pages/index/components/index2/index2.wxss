@@ -2,6 +2,7 @@
 .index2_wrap{
   background: #F7F7F7;
    min-height: 100%;
+   position: relative;
 }
 .index2-banner-wrap{
   height: 320rpx;
@@ -121,17 +122,23 @@
   padding:30rpx 30rpx 10rpx 30rpx;
   background: #fff;
   margin: 20rpx 0;
+  position: relative;
 }
 .created_tit{
   display: flex;
   align-items: center;
 }
-.created_tit text:first-child{
+.created_tit view text{
   color:#000;
   font-size:34rpx;
   padding-right: 10rpx;
 }
-.created_tit text:last-child{
+.created_tit view image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.created_tit .created_tit_time{
+  padding-left: 10rpx;
   color:#999;
   font-size:26rpx;
 }
@@ -144,13 +151,17 @@
   border-bottom: 1px solid #eee;
   padding: 30rpx 0;
 }
-.created_sum view{
+.created_sum .created_sum_sj{
+  display: flex;
+  align-items: center;
+}
+.created_sum .created_sum_tot{
   font-size:44rpx;
   color:#F26540;
   font-weight: 500;
   padding-left: 80rpx;
 }
-.created_sum text,.created_sum view text{
+.created_sum text,.created_sum view .created_sum_dw{
   color:#333;
   font-size:30rpx;
 }
@@ -336,8 +347,8 @@
 .progress_label{
   position: absolute;
   z-index: 10;
-  width:14rpx;
-  height: 14rpx;
+  width:12rpx;
+  height: 12rpx;
   border-radius:100%;
   top:0;
   right: 0;
@@ -346,11 +357,11 @@
   width: 70%;
 }
 .progress_goal_label{
-  border:4rpx solid #c7c7c7;
+  border:5rpx solid #c7c7c7;
 }
 .progress_schedule_label{
   background: #F0992D;
-  border:4rpx solid #F0992D;
+  border:5rpx solid #F0992D;
 }
 .goal_ts{
   text-align: right;
@@ -413,4 +424,40 @@
   flex: 1;
   font-size: 34rpx;
   color: #000;
+}
+
+.created_tit_desc{
+  position: fixed;
+  height: 100%;
+  z-index: 10;
+  width: 100%;
+  top:0;
+  left: 0;
+  animation: fade_in 0.3s;
+}
+.created_tit_mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.created__tit_desc_con{
+  font-size:32rpx;
+  color:#333;
+  background: #fff;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 600rpx;
+  transform: translate(-50%, -50%);
+  padding:100rpx 0;
+  text-align: center;
+  border-radius: 12rpx;
+}
+@keyframes fade_in{
+  0%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 1;
+  }
 }

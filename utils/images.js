@@ -1,4 +1,5 @@
-const BASE_URL = 'http://112.74.228.70:8080/hqins/imax/image/'
+import urls from './urls.js'
+const BASE_URL = urls.imagesUrl
 
 const images = {
   index1_banner: BASE_URL + 'index1_banner.jpg',
