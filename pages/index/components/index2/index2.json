@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "pie-chart": "../components/pie-chart/pie-chart",
-    "bar-chart": "../../../components/bar-chart/bar-chart"
+    "bar-chart": "../../../components/bar-chart/bar-chart",
+    "contact": "../../components/contact/contact"
     }
 }
