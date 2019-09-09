@@ -80,8 +80,8 @@
     </view>
     <view class="team-funeng-list">
       <view class="team-funeng-item">
-        <view class="team-funeng-item_header">属地服务人员
-          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" data-index="1" bindtap="openTeamModle"></image>
+        <view class="team-funeng-item_header" data-index="1" bindtap="openTeamModle">属地服务人员
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" ></image>
         </view>
         <view class="team-funeng-item_name">{{ztList[0].name}}</view>
         <view class="team-funeng-item_mobile" data-phone="{{ztList[0].phone}}" bindtap="phoneCall">
@@ -108,7 +108,7 @@
       </view>
       <view class="team-funeng-item">
         <view class="team-funeng-item_header">产品供应
-          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image>
+          <!-- <image src="../../assets/images/wenhao_img.png" mode="aspectFit" bindtap="openTeamModle"></image> -->
         </view>
         <view class="team-funeng-item_name">{{ztList[2].name}}</view>
         <view class="team-funeng-item_mobile" data-phone="{{ztList[2].phone}}" bindtap="phoneCall">
@@ -147,8 +147,8 @@
         </view>
       </view>
       <view class="team-funeng-item">
-        <view class="team-funeng-item_header">企划咨询
-          <image src="../../assets/images/wenhao_img.png" mode="aspectFit" data-index="2" bindtap="openTeamModle"></image>
+        <view class="team-funeng-item_header" data-index="2" bindtap="openTeamModle">企划咨询
+          <image src="../../assets/images/wenhao_img.png" mode="aspectFit"></image>
         </view>
         <view class="team-funeng-item_name">{{ztList[5].name}}</view>
         <view class="team-funeng-item_mobile" data-phone="{{ztList[5].phone}}" bindtap="phoneCall">

@@ -152,7 +152,14 @@
     copyText: function(e) {
       const text = e.currentTarget.dataset.text
       wx.setClipboardData({
-        data: text
+        data: text,
+        success:function(){
+          wx.showToast({
+            title: '内容已复制，可登录量子平台通过IM工具进行互动',
+            icon: 'none',
+            duration: 3000
+          })
+        }
       })
     },
 
