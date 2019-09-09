@@ -54,7 +54,6 @@ function getOpenId(data) {
 
 function getZrStatus(data) {
   data = getRequestData(data);
-  data.type = '1'; // 这个参数需要加
   return _request.send('GET', URL.getZrStatus, data).then(res => res.data)
 }
 
@@ -140,8 +139,6 @@ function getTgSuccess(data) {
 
 function getTgQysum(type) {
   const data = getRequestData(data);
-  data.type = type;
-  console.log(data,'------getTgQysum-------')
   return _request.send('GET', URL.getTgQysum, data).then(res => res.data)
 }
 
@@ -172,7 +169,6 @@ function getDayScore(data) {
 
 function getCinfoAndKey(data) {
   data = getRequestData(data);
-  data.uname = wx.getStorageSync('wechatInfo').nickName;
   return _request.send('GET', URL.getCinfoAndKey, data).then(res => res.data)
 }
 

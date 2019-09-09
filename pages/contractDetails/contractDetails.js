@@ -70,8 +70,8 @@ Page({
   },
 
   getTgQysum: function() {
-    const type = this.data.type;
-    app.API.getTgQysum(type).then(res => {
+    const data = { type: this.data.type }
+    app.API.getTgQysum(data).then(res => {
       if(res.code == 200) {
         this.setData({
           result: res.result

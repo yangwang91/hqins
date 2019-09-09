@@ -86,7 +86,8 @@ Page({
   },
 
   getZrStatus: function () {
-    app.API.getZrStatus().then(res => {
+    var data = { type : '1' };
+    app.API.getZrStatus(data).then(res => {
       console.log(res,'---------getZrStatus-----------------')
       this.setData({
         zrStatus: res.status || 0

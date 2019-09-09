@@ -47,7 +47,8 @@ Page({
 
   },
   getCinfoAndKey: function(){
-    app.API.getCinfoAndKey().then(res => {
+    const data = { uname: wx.getStorageSync('wechatInfo').nickName }
+    app.API.getCinfoAndKey(data).then(res => {
       if (res.code === '200') {
         this.setData({
           cinfo: res.cinfo,
