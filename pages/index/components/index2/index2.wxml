@@ -219,14 +219,14 @@
   <view class="common_con">
     <view class="common_tit">运营服务</view>
     <view class="service_big_box">
-      <view class="service_left">
+      <view class="service_left" data-type="1" bindtap="toBusinessQuality">
         <image src="../../../../assets/images/index2_yunying_img1.png"></image>
       </view>
       <view class="service_right">
-        <view class="service_right_1">
+        <view class="service_right_1"  bindtap="toSpecialService">
           <image src="../../../../assets/images/index2_yunying_img2.png"></image>
         </view>
-        <view class="service_right_2">
+        <view class="service_right_2" data-type="2" bindtap="toBusinessQuality">
           <image src="../../../../assets/images/index2_yunying_img3.png"></image>
         </view>
       </view>

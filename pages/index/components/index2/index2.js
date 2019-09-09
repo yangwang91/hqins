@@ -280,6 +280,17 @@ Component({
       wx.navigateTo({
         url: '../dataReport/dataReport'
       })
+    },
+    toBusinessQuality: function(e) {
+      var type = e.currentTarget.dataset.type
+      wx.navigateTo({
+        url: '../businessQuality/businessQuality?type=' + type
+      })
+    },
+    toSpecialService: function () {
+      wx.navigateTo({
+        url: '../specialservice/specialservice'
+      })
     }
   }
 })

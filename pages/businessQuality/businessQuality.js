@@ -13,6 +13,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var type = options.type;
+    if(type='1'){
+      wx.setNavigationBarTitle({
+        title: '业务品质'
+      })
+    }
+    if (type = '2') {
+      wx.setNavigationBarTitle({
+        title: '保单服务'
+      })
+    }
 
   },
 
