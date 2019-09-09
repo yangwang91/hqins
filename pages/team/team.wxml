@@ -19,13 +19,13 @@
         <swiper-item>
           <view class="team-slogon-item">
             <view class="team-slogon-item_title">横琴顶尖团队</view>
-            <view class="team-slogon-item_desc">“用心经营过程，结果自然产生”</view>
+            <view class="team-slogon-item_desc">{{soulStr1}}</view>
           </view>
         </swiper-item>
         <swiper-item>
           <view class="team-slogon-item">
-            <view class="team-slogon-item_title">2横琴顶尖团队</view>
-            <view class="team-slogon-item_desc">“2用心经营过程，结果自然产生”</view>
+            <view class="team-slogon-item_title">横琴顶尖团队</view>
+            <view class="team-slogon-item_desc">{{soulStr2}}</view>
           </view>
         </swiper-item>
       </swiper>

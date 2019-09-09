@@ -13,7 +13,10 @@
       teamModle2: false,
       proposeList: [],
       ztList: [],
-      postImg: ''
+      postImg: '',
+      soulList: ['不求与人攀比，但求超越自己', '只有不断的学习，才能看到遥远的未来', '亲兄弟，明算账，拒绝大锅饭','人在一起叫聚会，心在一起叫团队'],
+      soulStr1:'',
+      soulStr2:''
     },
 
     /**
@@ -39,7 +42,7 @@
      */
     onShow: function() {
       app.editTabbar()
-
+      this.randomList()
       this.getProposeList()
       this.getZtList()
       this.getPromotionPicturelist()
@@ -181,6 +184,21 @@
         teamModle1: false,
         teamModle2: false
       })
-    }
+    },
 
+    randomList: function(){
+      var num1 = this.getRandomNum(0,3);
+      var str1 = this.data.soulList[num1];
+      this.setData({ soulStr1: str1});
+      var soulList2 = Object.assign(this.data.soulList);
+      soulList2.splice(num1, 1); 
+      var num2 = this.getRandomNum(0,2);
+      var str2 = soulList2[num2];
+      this.setData({ soulStr2: str2});
+    },
+    getRandomNum:function(Min, Max) {
+      var Range = Max - Min;
+      var Rand = Math.random();
+      return (Min + Math.round(Rand * Range));
+    }  
   })
