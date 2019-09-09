@@ -235,13 +235,14 @@ Page({
     this.setData({ businessHidden: true })
   },
   radioChange: function (e) {
-    console.log(e)
+    var value = e.currentTarget.dataset.value
+    // var value = e.detail.value
     this.setData({
-      fdXscj: e.detail.value
+      fdXscj: value
     })
     for (var i = 0; i < this.data.question1.length;i++){
       var item = this.data.question1[i]
-      if (item.value == e.detail.value) {
+      if (item.value == value) {
         this.setData({
           'postData.jyms': item.name
         })

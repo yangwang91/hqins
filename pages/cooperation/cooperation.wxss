@@ -117,7 +117,25 @@
   color: #333;
   border-bottom: 1rpx solid #eee;
 }
-
+.calculating-question-answer view{
+  font-size: 30rpx;
+  color: #333;
+  border-bottom: 1px solid #EEE;
+  height: 110rpx;
+  line-height: 110rpx;
+  position: relative;
+  padding-left: 50rpx;
+}
+.calculating-question-answer view::before{
+  position: absolute;
+  width: 30rpx;
+  height: 30rpx;
+  content: " ";
+  border:1px solid #eee;
+  border-radius: 100%;
+  left: 0;
+  top:38rpx;
+}
 .radio .wx-radio-input {
   width: 30rpx;
   height: 30rpx;

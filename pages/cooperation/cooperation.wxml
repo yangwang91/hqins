@@ -38,13 +38,14 @@
     <view class="business-mode-bg" bindtap="hideBusinessMode"></view>
     <view class="business-mode-con">
       <view class="calculating-question-answer">
-          <radio-group class="radio-group" bindchange="radioChange">
+        <view wx:for="{{question1}}" data-value="{{item.value}}"  bindtap="radioChange">{{item.name}}</view>
+          <!-- <radio-group class="radio-group" bindchange="radioChange">
             <label wx:for="{{question1}}" class="radio" wx:key="{{index}}">
               <radio value="{{item.value}}" class="{{item.checked || index === (fdXscj - 1) ? 'is-checked' : ''}}" checked="{{item.checked || index === (fdXscj - 1)}}" color="#D3A468">
                 <text>{{item.name}}</text>
               </radio>
             </label>
-          </radio-group>
+          </radio-group> -->
         </view>
     </view>
   </view>
