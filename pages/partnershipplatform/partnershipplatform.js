@@ -50,7 +50,7 @@ Page({
   showPage:function(page){
     if (page == '1') {
       wx.setNavigationBarTitle({
-        title: '深圳中小银行'
+        title: '深耕中小银行'
       })
       this.setData({ szBankHidden:false})
     }
