@@ -126,7 +126,7 @@
   position: relative;
   padding-left: 50rpx;
 }
-.calculating-question-answer view::before{
+/* .calculating-question-answer view::before{
   position: absolute;
   width: 30rpx;
   height: 30rpx;
@@ -135,7 +135,7 @@
   border-radius: 100%;
   left: 0;
   top:38rpx;
-}
+} */
 .radio .wx-radio-input {
   width: 30rpx;
   height: 30rpx;

@@ -17,7 +17,7 @@
         </view>
         <view class="calculating-btns">
           <view class="calculating-btns-con">
-            <view class="calculating-comfirm-btn" bindtap="nextQuestion">下一题</view>
+            <view class="calculating-comfirm-btn" bindtap="nextQuestion">下一步</view>
           </view>
         </view>
       </view>
@@ -62,7 +62,7 @@
         </view>
         <view class="calculating-btns">
           <view class="calculating-btns-con">
-            <text class="calculating-text-btn" bindtap="pevQuestion">上一题</text>
+            <text class="calculating-text-btn" bindtap="pevQuestion">上一步</text>
             <view class="calculating-comfirm-btn" bindtap="comfirmForm">下一步</view>
           </view>
         </view>

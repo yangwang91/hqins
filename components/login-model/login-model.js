@@ -156,6 +156,7 @@ Component({
         token: token,
         code: code
       }).then(res => {
+        console.log(res,'---------getOpenId----------')
         const info = res.result[0]
         this.setData({session_key:res.session_key})
         this.getUserInfoAuth()

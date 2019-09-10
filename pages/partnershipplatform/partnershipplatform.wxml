@@ -9,10 +9,9 @@
     </view> 
     <!-- 伟逸盛邦 -->
     <view class="case_con">
-      <view class="company" bindtap="changeShow" data-tab="wysbHidden">
+      <view class="company">
         <view class="left"><image src="{{partnership_img2}}"></image></view>
         <view class="right">
-          <view class="company_icon {{wysbHidden?'company_icon_r2':'company_icon_r1'}}"><image src="../../assets/icons/arrow_partnership.svg"></image></view>
           <view class="company_tit">伟逸盛邦</view>
           <text class="text">15年保险培训专业团队\n股权合伙模式</text>
         </view>

@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    agentHidden:true, // 控制代理人综合展业平台
+    agentHidden:false, // 控制代理人综合展业平台
     microShopHidden:true, // 控制代理人保险微店
     sharedHidden:true, // 共享云展业平台
     platformHidden:true,// 商户开放平台

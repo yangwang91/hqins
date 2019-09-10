@@ -10,6 +10,7 @@ Page({
     timer: 90,
     isGetCode: false,
     businessHidden:true,
+    formCanSubmit:true, // 防止多次点击重复提交
     fdXscj:'',
     postData: {
       name: '',
@@ -198,28 +199,31 @@ Page({
       })
       return
     }
-
-    app.API.addCooperation(data).then(res => {
-      console.log(res)
-      if(res.code == 200) {
-        wx.showToast({
-          title: res.message,
-          icon: 'none'
-        })
-        this.resetForm()
-        setTimeout(() => {
-          wx.navigateBack({
-            delta: -1,
+    if (this.data.formCanSubmit){
+      this.setData({ formCanSubmit:false});
+      app.API.addCooperation(data).then(res => {
+        this.setData({ formCanSubmit: true });
+        console.log(res)
+        if (res.code == 200) {
+          wx.showToast({
+            title: res.message,
+            icon: 'none'
           })
-        }, 2000)
-      } else {
-        var message = res.message ? res.message : '洽谈预约完成，我们将安排专属人员与您联系';
-        wx.showToast({
-          title: message,
-          icon: 'none'
-        })
-      }
-    })
+          this.resetForm()
+          setTimeout(() => {
+            wx.navigateBack({
+              delta: -1,
+            })
+          }, 2000)
+        } else {
+          var message = res.message ? res.message : '洽谈预约完成，我们将安排专属人员与您联系';
+          wx.showToast({
+            title: message,
+            icon: 'none'
+          })
+        }
+      })
+    }
   },
 
   resetForm:function() {
