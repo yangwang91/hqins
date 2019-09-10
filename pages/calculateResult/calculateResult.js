@@ -1,14 +1,17 @@
 // pages/jionus/jionus.js
 // const Page = global.GioPage;
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
  data: {
-    result: {},
-    zrStatus: 0
-  },
+  result: {},
+  zrStatus: 0,
+  calculate_result_icon: app.images.calculate_result_icon,
+  calculateResult: app.images.calculateResult
+ },
 
   /**
    * 生命周期函数--监听页面加载

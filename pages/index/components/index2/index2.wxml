@@ -144,7 +144,7 @@
     <view class="created_tit">
       <view bindtap="showDesc">
         <text>创造的价值</text>
-        <image src="../../../../assets/images/wenhao_img.png"></image>
+        <image src="{{wenhao_img}}"></image>
       </view>
       <text class="created_tit_time">（统计截止到:{{czdjz.Date}}）</text>
     </view>
@@ -224,14 +224,14 @@
     <view class="common_tit">运营服务</view>
     <view class="service_big_box">
       <view class="service_left" data-type="1" bindtap="toBusinessQuality">
-        <image src="../../../../assets/images/index2_yunying_img1.png"></image>
+        <image src="{{index2_yunying_img1}}"></image>
       </view>
       <view class="service_right">
         <view class="service_right_1"  bindtap="toSpecialService">
-          <image src="../../../../assets/images/index2_yunying_img2.png"></image>
+          <image src="{{index2_yunying_img2}}"></image>
         </view>
         <view class="service_right_2" data-type="2" bindtap="toBusinessQuality">
-          <image src="../../../../assets/images/index2_yunying_img3.png"></image>
+          <image src="{{index2_yunying_img3}}"></image>
         </view>
       </view>
     </view>

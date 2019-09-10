@@ -1,12 +1,13 @@
 // pages/jionus/jionus.js
 // const Page = global.GioPage;
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    businessQuality: app.images.businessQuality
   },
 
   /**

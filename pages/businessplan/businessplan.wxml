@@ -1,6 +1,6 @@
 <view class="plan-con">
   <view class="plan-top">
-    <image src="../../assets/images/plan_img.png"></image>
+    <image src="{{plan_img}}"></image>
   </view>
   <view class="plan_detail">
     <view class="plan_detail_tit">尊敬的「{{zrMiddleStatus.person}}」</view>

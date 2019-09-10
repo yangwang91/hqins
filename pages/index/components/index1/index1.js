@@ -14,7 +14,15 @@ Component({
   data: {
     banner_img: app.images.index1_banner,
     hiddenVideo:false,
-    videoCover: app.images.video_cover
+    videoCover: app.images.video_cover,
+    index1_img1: app.images.index1_img1,
+    index1_img2: app.images.index1_img2,
+    index1_img3: app.images.index1_img3,
+    index1_img4: app.images.index1_img4,
+    index1_img5: app.images.index1_img5,
+    jionus_img: app.images.jionus_img,
+    partner_arrow_img: app.images.partner_arrow_img,
+    recruitment_back_img: app.images.recruitment_back_img
   },
   ready: function () {
     this.videoContext = wx.createVideoContext('myVideo', this)

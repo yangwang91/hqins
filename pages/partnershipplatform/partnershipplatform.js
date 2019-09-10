@@ -1,5 +1,6 @@
 // pages/partnershipplatform/partnershipplatform.js
 // const Page = global.GioPage;
+const app = getApp()
 Page({
 
   /**
@@ -12,7 +13,17 @@ Page({
     szBankHidden:true,
     smallTeamHidden:true,
     zjHidden:true,
-    cxfzHidden:true
+    cxfzHidden:true,
+    partnership_img1: app.images.partnership_img1,
+    partnership_img2: app.images.partnership_img2,
+    partnership_img3: app.images.partnership_img3,
+    partnership_img4: app.images.partnership_img4,
+    partnership_img5: app.images.partnership_img5,
+    partnership_img6: app.images.partnership_img6,
+    partnership_img7: app.images.partnership_img7,
+    partnership_img8: app.images.partnership_img8,
+    partnership_img9: app.images.partnership_img9,
+    partnership_img10: app.images.partnership_img10
   },
 
   /**

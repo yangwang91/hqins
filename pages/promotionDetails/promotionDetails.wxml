@@ -1,7 +1,7 @@
 <!--pages/promotionDetails/promotionDetails.wxml-->
 <view class="container">
   <view class="promotion-details-header">
-    <image src="../../assets/images/promotion-details_img.png" mode="aspectFit"></image>
+    <image src="{{promotion_details_img}}" mode="aspectFit"></image>
   </view>
 
   <view class="promotion-details-list">

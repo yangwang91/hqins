@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    book_img: app.images.book_img,
     tabbar: {},
     step: 0,
     questions: [],

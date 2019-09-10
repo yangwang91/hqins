@@ -1,5 +1,6 @@
 // pages/questionInfo/questionInfo.js
 // const Page = global.GioPage;
+const app = getApp()
 Page({
 
   /**
@@ -13,7 +14,9 @@ Page({
     claimHidden:true, // 理赔特色
     advisoryHidden:true, // 咨询特色
     dailogFamilyHidden:true, // 控制dialog显示
-    dailogServiceHidden:true // 控制特色服务dialog显示
+    dailogServiceHidden:true, // 控制特色服务dialog显示
+    special_img: app.images.special_img,
+    special_service_tab: app.images.special_service_tab
   },
   /**
    * 组件的方法列表

@@ -7,6 +7,10 @@
      * 页面的初始数据
      */
     data: {
+      kk_img: app.images.kk_img,
+      phone_img: app.images.phone_img,
+      team_member_img: app.images.team_member_img,
+      wenhao_img: app.images.wenhao_img,
       tabbar: {},
       showPoster: false,
       teamModle1: false,

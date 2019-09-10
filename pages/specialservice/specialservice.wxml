@@ -1,7 +1,7 @@
 <view class="special-containter">
   <scroll-view scroll-y style="height: 100%;">
     <view class="special-top">
-      <image src="../../assets/images/special_img.png"></image>
+      <image src="{{special_img}}"></image>
     </view>
     <view class="special-big-con">
       <view class="special-con-tit">
@@ -194,7 +194,7 @@
       <view class="special-table-tit">家庭专属服务</view>
       <scroll-view scroll-y style="height:600rpx;">
         <view class="special-table-img">
-          <image src="../../assets/images/special-service-tab.png"></image> 
+          <image src="{{special_service_tab}}"></image> 
         </view>
       </scroll-view>
     </view>
@@ -205,7 +205,7 @@
       <view class="special-table-tit">个人专属服务</view>
       <scroll-view scroll-y style="height:600rpx;">
         <view class="special-table-img">
-          <image src="../../assets/images/special-service-tab.png"></image> 
+          <image src="{{special_service_tab}}"></image> 
         </view>
       </scroll-view>
     </view>

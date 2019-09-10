@@ -1,4 +1,4 @@
 <!--pages/jionus/jionus.wxml-->
 <view class="jion-us-wrap">
-  <image class="jion-us-img" src="../../assets/images/jion-us-img.png" mode="widthFix"></image>
+  <image class="jion-us-img" src="{{jion_us}}" mode="widthFix"></image>
 </view>

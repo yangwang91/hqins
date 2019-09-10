@@ -13,6 +13,8 @@ Component({
    * 组件的初始数据
    */
   data: {
+    auth1: app.images.auth1,
+    auth2: app.images.auth2,
     userInfo: null,
     hidden: true,
     authFailureHidden:true,

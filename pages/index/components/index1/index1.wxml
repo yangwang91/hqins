@@ -6,7 +6,7 @@
 
   <!-- jion us -->
   <view class="jion-us-wrap">
-    <image src="../../../../assets/images/jionus_img.png" mode="aspectFit"></image>
+    <image src="{{jionus_img}}" mode="aspectFit"></image>
     <swiper vertical autoplay circular interval="1500">
       <swiper-item>
         <view class="jion-us-text">
@@ -113,7 +113,7 @@
     <view class="partner-title">合伙人案例</view>
     <view class="partner-list">
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="1">
-        <image class="partner-item-img" src="../../../../assets/images/index1_img1.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="{{index1_img1}}" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">深耕中小银行</view>
           <view class="partner-item_center_tags">
@@ -121,10 +121,10 @@
             <view class="partner-item_center_tag">30天平台上量</view>
           </view>
         </view>
-        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+        <image class="partner-item_arrow" src="{{partner_arrow_img}}"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="2">
-        <image class="partner-item-img" src="../../../../assets/images/index1_img2.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="{{index1_img2}}" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">小团队多场景</view>
           <view class="partner-item_center_tags">
@@ -132,10 +132,10 @@
             <view class="partner-item_center_tag">线上线下融合</view>
           </view>
         </view>
-        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+        <image class="partner-item_arrow" src="{{partner_arrow_img}}"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="3">
-        <image class="partner-item-img" src="../../../../assets/images/index1_img3.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="{{index1_img3}}" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">中介服务为王</view>
           <view class="partner-item_center_tags">
@@ -143,10 +143,10 @@
             <view class="partner-item_center_tag">专属产品支持</view>
           </view>
         </view>
-        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+        <image class="partner-item_arrow" src="{{partner_arrow_img}}"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="4">
-        <image class="partner-item-img" src="../../../../assets/images/index1_img4.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="{{index1_img4.png}}" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">持续组织发展</view>
           <view class="partner-item_center_tags">
@@ -154,10 +154,10 @@
             <view class="partner-item_center_tag">月入超20万</view>
           </view>
         </view>
-        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+        <image class="partner-item_arrow" src="{{partner_arrow_img}}"></image>
       </view>
       <view class="partner-item"  bindtap="toPartnershipplatform" data-page="5">
-        <image class="partner-item-img" src="../../../../assets/images/index1_img5.png" mode="aspectFill"></image>
+        <image class="partner-item-img" src="{{index1_img5}}" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">股权合伙平台</view>
           <view class="partner-item_center_tags">
@@ -165,14 +165,14 @@
             <view class="partner-item_center_tag">联手打造品牌</view>
           </view>
         </view>
-        <image class="partner-item_arrow" src="../../../../assets/images/partner_arrow_img.png"></image>
+        <image class="partner-item_arrow" src="{{partner_arrow_img}}"></image>
       </view>
     </view>
   </view>
 
   <!-- Recruitment -->
   <view class="recruitment-wrap">
-    <!-- <image class="recruitment-back-img" src="../../../../assets/images/recruitment_back_img.png" mode="aspectFit"></image> -->
+    <!-- <image class="recruitment-back-img" src="{{recruitment_back_img}}" mode="aspectFit"></image> -->
     <view class="recruitment-title">如果您：</view>
     <view class="recruitment-list">
       <view class="recruitment-item">

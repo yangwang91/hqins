@@ -8,7 +8,8 @@ Page({
    */
   data: {
     confirm: false,
-    zrMiddleStatus: {}
+    zrMiddleStatus: {},
+    plan_img: app.images.plan_img
   },
 
   /**

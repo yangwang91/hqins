@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    result: {}
+    result: {},
+    promotion_details_img: app.images.promotion_details_img
   },
 
   /**

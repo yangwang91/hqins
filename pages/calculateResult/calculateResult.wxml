@@ -1,13 +1,13 @@
 <view class="result_wrap">
   <view class="result_top">
-    <image src="../../assets/images/calculateResult.png"></image>
+    <image src="{{calculateResult}}"></image>
   </view>
   <view class="result_con">
     <view class="result_sj">
       <view class="result_sum">
         <view class="sum_wz">您团队的保费：</view>
         <view class="sum_num">{{result.fdXscjName === '多场景多渠道' ? result.fdSumPremium : result.fdPremium}}<text>万元</text></view>
-        <view class="result_img"><image src="../../assets/images/calculate_result_icon.png"></image></view>
+        <view class="result_img"><image src="{{calculate_result_icon}}"></image></view>
       </view>
       <view class="sum_scenes">
         <view class="sum_scenes_tit">您团队的销售场景：</view>

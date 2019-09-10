@@ -13,6 +13,10 @@ Component({
    * 组件的初始数据
    */
   data: {
+    index2_yunying_img1: app.images.index2_yunying_img1,
+    index2_yunying_img2: app.images.index2_yunying_img2,
+    index2_yunying_img3: app.images.index2_yunying_img3,
+    wenhao_img: app.images.wenhao_img,
     topSales: [],
     czdjz: {},
     monthScore: [],
