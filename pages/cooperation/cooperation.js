@@ -132,9 +132,15 @@ Page({
       })
       return
     }
-
+    var reg = /^1[0-9]{10}$/;
+    if (!reg.test(data.phone)) {
+      wx.showToast({
+        title: '手机号输入有误',
+        icon: 'none'
+      })
+      return
+    }
     this.getCode()
-
     app.API.getMessage({ phone: data.phone}).then(res => {
       console.log(res)
       if(res.code === '200') {
@@ -166,14 +172,14 @@ Page({
     }
     if(!data.area) {
       wx.showToast({
-        title: '请输入所在城市',
+        title: '请输入预期经营地区',
         icon: 'none'
       })
       return
     }
     if(!data.jyms) {
       wx.showToast({
-        title: '请输入渠道/场景/销售方式',
+        title: '请选择预期经营方式',
         icon: 'none'
       })
       return
