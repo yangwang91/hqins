@@ -17,7 +17,9 @@
   </view>
 
   <view wx:if="{{present == 2}}" class="tech-platform-wrap" bindtap="toPage">
-    <view class="tag">展业赋能</view>
+    <view class="tag">
+      <image src="../../assets/icons/product_img_zy.png"></image>
+    </view>
     <swiper vertical autoplay circular interval="1500">
       <swiper-item>
         <view class="text">支撑全场景形态下的高效展业</view>

@@ -51,12 +51,13 @@ page {
   height: 38rpx;
 }
 .tech-platform-wrap .tag {
-  width: 66rpx;
-  font-size: 32rpx;
-  line-height: 42rpx;
+  font-size: 0;
   margin-right: 38rpx;
-  font-weight: 500;
   color: #E69B24;
+}
+.tech-platform-wrap .tag image{
+  width: 58rpx;
+  height: 65rpx;
 }
 .tech-platform-wrap swiper {
   flex: 1;

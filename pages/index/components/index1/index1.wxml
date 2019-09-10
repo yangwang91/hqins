@@ -83,10 +83,13 @@
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../../../assets/icons/support_icon_4.svg" mode="aspectFit"></image>
+          <image src="../../../../assets/icons/support_icon_6.svg" mode="aspectFit"></image>
         </view>
-        <view class="support-item_title">资本支持</view>
-        <view class="support-item_desc">股权合伙专属经营</view>
+        <view class="support-item_title">总部服务</view>
+        <view class="support-item_desc">
+          <view>直接签约总部</view>
+          <view>快速响应</view>
+        </view>
       </view>
       <view class="support-item">
         <view class="support-item_img">
@@ -97,13 +100,10 @@
       </view>
       <view class="support-item">
         <view class="support-item_img">
-          <image src="../../../../assets/icons/support_icon_6.svg" mode="aspectFit"></image>
+          <image src="../../../../assets/icons/support_icon_4.svg" mode="aspectFit"></image>
         </view>
-        <view class="support-item_title">总部服务</view>
-        <view class="support-item_desc">
-          <view>直接签约总部</view>
-          <view>快速响应</view>
-        </view>
+        <view class="support-item_title">资本支持</view>
+        <view class="support-item_desc">股权合伙专属经营</view>
       </view>
     </view>
   </view>
