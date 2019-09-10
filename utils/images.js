@@ -41,6 +41,8 @@ const images = {
   partnership_img8: BASE_URL + 'partnership_img8.png',
   partnership_img9: BASE_URL + 'partnership_img9.png',
   partnership_img10: BASE_URL + 'partnership_img10.png',
+  partnership_img11: BASE_URL + 'partnership_img11.png',
+  partnership_img12: BASE_URL + 'partnership_img12.png',
   phone_img: BASE_URL + 'phone_img.png',
   plan_img: BASE_URL + 'plan_img.png',
   promotion_details_img: BASE_URL + 'promotion-details_img.png',

@@ -146,7 +146,7 @@
         <image class="partner-item_arrow" src="{{partner_arrow_img}}"></image>
       </view>
       <view class="partner-item" bindtap="toPartnershipplatform" data-page="4">
-        <image class="partner-item-img" src="{{index1_img4.png}}" mode="aspectFill"></image>
+        <image class="partner-item-img" src="{{index1_img4}}" mode="aspectFill"></image>
         <view class="partner-item_center">
           <view class="partner-item_center_title">持续组织发展</view>
           <view class="partner-item_center_tags">

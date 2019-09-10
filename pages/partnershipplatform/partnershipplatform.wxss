@@ -49,6 +49,7 @@ page{
   width: 280rpx;
   height: 180rpx;
   border-radius: 6rpx;
+  font-size:0;
 }
 .company .left image{
   width: 100%;

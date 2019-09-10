@@ -23,7 +23,9 @@ Page({
     partnership_img7: app.images.partnership_img7,
     partnership_img8: app.images.partnership_img8,
     partnership_img9: app.images.partnership_img9,
-    partnership_img10: app.images.partnership_img10
+    partnership_img10: app.images.partnership_img10,
+    partnership_img11: app.images.partnership_img11,
+    partnership_img12: app.images.partnership_img12
   },
 
   /**

@@ -36,35 +36,6 @@
         </view>
       </view>
     </view>
-    <!-- 路通集团 -->
-    <view class="case_con">
-      <view class="company" bindtap="changeShow" data-tab="ltHidden">
-        <view class="left"><image src="{{partnership_img4}}"></image></view>
-        <view class="right">
-        <view class="company_icon {{ltHidden?'company_icon_r2':'company_icon_r1'}}"><image src="../../assets/icons/arrow_partnership.svg"></image></view>
-          <view class="company_tit">路通集团</view>
-          <text class="text">15年保险培训专业团队\n股权合伙模式</text>
-        </view>
-      </view>
-      <view hidden="{{ltHidden}}">
-        <view class="case_tit feature_tit">
-          股权合伙特点
-        </view>
-        <view class="company_jy">
-          <view class="company_jy_tit">广州朴智：</view>
-          <view class="company_desc">资本投入（持股65%）、培训管理输出、专属经营</view>
-          <view class="company_jy_tit">横琴人寿：</view>
-          <view class="company_desc">资本投入（持股35%）、产品供应、科技平台赋能</view>
-        </view>
-        <view class="case_tit">
-          案例详情
-        </view>
-        <view class="company_detail">
-          <view class="company_detail_img"><image src="{{partnership_img3}}"></image></view>
-          <text>公司携手广州朴智企业管理咨询公司（拥有近50名来自保险和银行行业的丰富经验咨询培训讲师，近8年先后服务为180多家企业提供咨询培训服务），共同入股广州伟逸盛邦保险代理有限公司。伟逸盛邦以“家庭账户、科技驱动、混合前端”为核心，集合科技、培训、社会、健康管理等各领域资源，打造满足家庭综合需求生态链一站式闭环服务，为家庭提供一整套系统化风险解决方案，并将秉承“专业创造价值”的原则，通过行业创新的“众创计划”虚拟股权激励来为员工和合作伙伴建造长期稳定的工作平台，抢占在产销分离趋势的保险中介3.0时代的发展新格局机遇。</text>
-        </view>
-      </view>
-    </view>
   </view>
   <!-- 股权合伙平台end -->
   <!-- 深耕中小银行 -->
@@ -92,13 +63,15 @@
   <!-- 小团队多场景 -->
   <view hidden="{{smallTeamHidden}}">
     <view class="partership_top">
-      <image src="{{partnership_img6}}"></image>
+      <image src="{{partnership_img11}}"></image>
     </view>
     <view class="case_tit">
       案例代表
     </view>
     <view class="company case_2">
-      <view class="left"><image src="{{partnership_img6}}"></image></view>
+      <view class="left">
+        <image src="{{partnership_img12}}"></image>
+      </view>
       <view class="right">
         <view class="company_tit">赵黎明团队</view>
         <text class="text">互联网数字化运营专家</text>
