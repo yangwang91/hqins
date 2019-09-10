@@ -137,8 +137,8 @@ function getTgSuccess(data) {
   return _request.send('GET', URL.getTgSuccess, data).then(res => res.data)
 }
 
-function getTgQysum(type) {
-  const data = getRequestData(data);
+function getTgQysum(data) {
+  data = getRequestData(data);
   return _request.send('GET', URL.getTgQysum, data).then(res => res.data)
 }
 
@@ -182,7 +182,8 @@ function getUnderwriting(data) {
   return _request.send('GET', URL.getUnderwriting, data).then(res => res.data)
 }
 
-function getUnionId(data = getRequestData(data)) {
+function getUnionId(data) {
+  data = getRequestData(data)
   return _request.send('GET', URL.getUnionId, data).then(res => res.data)
 }
 module.exports = {
