@@ -26,9 +26,12 @@ Component({
    * 组件的初始数据
    */
   data: {
-    isIphoneX: (sysInfo.screenHeight - sysInfo.windowHeight) > 72 ? true : false,
+    // isIphoneX: (sysInfo.screenHeight - sysInfo.windowHeight) > 72 ? true : false,
+    isIphoneX:false
   },
-
+  attached() {
+    this.isIphoneX()
+  },
   /**
    * 组件的方法列表
    */
@@ -37,6 +40,24 @@ Component({
       console.log(e)
       wx.switchTab({
         url: e.currentTarget.dataset.url
+      })
+    },
+    isIphoneX(){
+      wx.getSystemInfo({
+        success: (res) => {
+          //model中包含着设备信息
+          console.log(res.model,'-----------res.model-------------')
+          var model = res.model
+          if (model.search('iPhone X') != -1) {
+            this.setData({
+              isIphoneX:true
+            })
+          } else {
+            this.setData({
+              isIphoneX: false
+            })
+          }
+        }
       })
     }
   }
