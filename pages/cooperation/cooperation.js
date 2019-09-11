@@ -141,6 +141,9 @@ Page({
       })
       return
     }
+    this.setData({
+      'postData.code': ''
+    })
     this.getCode()
     app.API.getMessage({ phone: data.phone}).then(res => {
       console.log(res)
@@ -206,7 +209,7 @@ Page({
         console.log(res)
         if (res.code == 200) {
           wx.showToast({
-            title: res.message,
+            title: res.message ? res.message : '洽谈预约完成，我们将安排专属人员与您联系',
             icon: 'none'
           })
           this.resetForm()
@@ -216,9 +219,13 @@ Page({
             })
           }, 2000)
         } else {
-          var message = res.message ? res.message : '洽谈预约完成，我们将安排专属人员与您联系';
+          if (res.code == 409) {
+            this.setData({
+              'postData.code':''
+            })
+          }
           wx.showToast({
-            title: message,
+            title: res.message,
             icon: 'none'
           })
         }
