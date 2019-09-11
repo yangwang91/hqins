@@ -4,7 +4,8 @@
   <view class="data-report-wrap">
   <view class="data-report-title">累计承保业绩</view>
     <view class="charts-con">
-      <canvas canvas-id="pieChart" id="pieChart" bindtouchstart="touchPie" class="pie-charts"></canvas>
+      <!-- <canvas canvas-id="pieChart" id="pieChart" bindtouchstart="touchPie" class="pie-charts"></canvas> -->
+      <per-chart data="{{underwriting}}"></per-chart>
     </view>
   </view>
 

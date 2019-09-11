@@ -82,7 +82,7 @@ Page({
     app.API.getZrMiddleStatus().then(res => {
       console.log(res,'------------getZrMiddleStatus---------------')
       this.setData({
-        zrMiddleStatus: res.result ? res.result[0] : {}
+        zrMiddleStatus: res.result && res.result[0] ? res.result[0] : {}
       })
     })
   },

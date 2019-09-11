@@ -61,22 +61,11 @@ Page({
 
   getUnderwriting () {
     app.API.getUnderwriting().then(res => {
-      // this.setData({
-      //   underwriting: res.result || []
-      // })
       var dataList = res.result || [];
-      if(dataList && dataList.length>0){
-        for(var i=0;i<dataList.length;i++){
-          var item = dataList[i]
-          if(item.name=='Sum'){
-            dataList.splice(i, 1);
-          }
-        }
-      }
-      this.showPie('pieChart', dataList)
+      this.setData({ underwriting: dataList})
+      // this.showPie('pieChart', dataList)
     })
   },  
-
   showPie(canvasId, series = []) {
     const _self = this
     pieChart = new uCharts({

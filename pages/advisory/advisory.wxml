@@ -36,7 +36,7 @@
       </view>
     </view>
 
-    <view wx:if="{{zrMiddleStatus.middleflag !== ''}}" class="advisory-business-plan-wrap">
+    <view wx:if="{{zrMiddleStatus.middleflag&&zrMiddleStatus.xianshi==='true'}}" class="advisory-business-plan-wrap">
       <image src="{{book_img}}" mode="widthFix"></image>
       <view class="advisory-business-plan-cont">
         <block wx:if="{{zrMiddleStatus.approvalflag === 'true'}}">

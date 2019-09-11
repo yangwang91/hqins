@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "报表",
   "usingComponents": {
-    "bar-chart": "../../components/bar-chart/bar-chart"
+    "bar-chart": "../../components/bar-chart/bar-chart",
+    "per-chart": "../../components/per-chart/per-chart"
   }
 }

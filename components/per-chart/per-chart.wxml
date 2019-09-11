@@ -1,0 +1,2 @@
+<!--components/bar-chart/bar-chart.wxml-->
+<ff-canvas class="ff-canvas" id="per-dom" canvas-id="per" opts="{{ opts }}"></ff-canvas>
