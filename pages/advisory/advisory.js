@@ -70,9 +70,8 @@ Page({
   },
 
   getZrStatus: function () {
-    var data = { type: '1'};
-    app.API.getZrStatus(data).then(res => {
-      console.log(res)
+    app.API.getZrStatus().then(res => {
+      console.log(res,'--------getZrStatus-----------')
       this.setData({
         step: res.status || 0
       })
@@ -81,7 +80,7 @@ Page({
 
   getZrMiddleStatus: function () {
     app.API.getZrMiddleStatus().then(res => {
-      console.log(res)
+      console.log(res,'------------getZrMiddleStatus---------------')
       this.setData({
         zrMiddleStatus: res.result ? res.result[0] : {}
       })
