@@ -36,7 +36,7 @@
       </view>
     </view>
 
-    <view wx:if="{{zrMiddleStatus.middleflag === 'true' || zrMiddleStatus.middleflag === 'chehui'}}" class="advisory-business-plan-wrap">
+    <view wx:if="{{zrMiddleStatus.middleflag !== ''}}" class="advisory-business-plan-wrap">
       <image src="{{book_img}}" mode="widthFix"></image>
       <view class="advisory-business-plan-cont">
         <block wx:if="{{zrMiddleStatus.approvalflag === 'true'}}">
@@ -49,7 +49,7 @@
             <text  wx:if="{{zrMiddleStatus.middleflag === 'chehui'}}">您的商业计划书正在更新中，请待我们短信通知后再次确认。</text>
           </view>
           <view wx:if="{{zrMiddleStatus.middleflag !== 'chehui'}}" class="advisory-business-plan-book" data-link="{{zrMiddleStatus.link}}" bindtap="toBook">查看商业计划书</view>
-          <view wx:if="{{ zrMiddleStatus.middleflag !== 'chehui'}}" class="advisory-business-plan-check">
+          <view wx:if="{{ zrMiddleStatus.middleflag !== 'chehui' || zrMiddleStatus.middleflag==='true'}}" class="advisory-business-plan-check">
             <checkbox-group bindchange="checkChane">
               <checkbox value="bookCheck" color="#333"></checkbox>
             </checkbox-group>
