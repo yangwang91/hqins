@@ -214,10 +214,13 @@ Page({
           })
           this.resetForm()
           setTimeout(() => {
-            wx.navigateBack({
-              delta: -1,
+            // wx.navigateBack({
+            //   delta: -1,
+            // })
+            wx.switchTab({
+              url: '../advisory/advisory'
             })
-          }, 2000)
+          }, 1500)
         } else {
           if (res.code == 409) {
             this.setData({
