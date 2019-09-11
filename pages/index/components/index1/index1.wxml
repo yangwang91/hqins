@@ -39,7 +39,7 @@
   <!-- video -->
   <view class="index-video-wrap">
     <view class="index-video-con">
-       <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/prd_movie.mp4"  object-fit="cover" controls="true" poster="{{videoCover}}" bindpause="bindpause">
+       <video id="myVideo" src="https://hq-prd-e-zine.oss-cn-szfinance.aliyuncs.com/prd_movie.mp4"  object-fit="cover" controls="{{controls}}" poster="{{videoCover}}" bindpause="bindpause" bindended="bindended">
       </video>
       <view bindtap="playViedo" hidden="{{hiddenVideo}}" class="cover">
         <image mode="widthFix" src='{{videoCover}}'></image>  

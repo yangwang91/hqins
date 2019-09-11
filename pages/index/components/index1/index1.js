@@ -14,6 +14,7 @@ Component({
   data: {
     banner_img: app.images.index1_banner,
     hiddenVideo:false,
+    controls:false,
     videoCover: app.images.video_cover,
     index1_img1: app.images.index1_img1,
     index1_img2: app.images.index1_img2,
@@ -43,11 +44,15 @@ Component({
       })
     },
     playViedo: function () {
-      this.setData({ hiddenVideo: true });
+      this.setData({ hiddenVideo: true, controls:true});
       this.videoContext.play();
     },
     bindpause:function(){
       this.setData({ hiddenVideo: false });
+    },
+    bindended:function(){
+      this.setData({ controls: false });
+      this.videoContext.seek(0)
     }
   }
 })
