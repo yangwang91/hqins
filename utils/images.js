@@ -49,8 +49,10 @@ const images = {
   recruitment_back_img: BASE_URL + 'recruitment_back_img.png',
   special_img: BASE_URL + 'special_img.png',
   special_service_tab: BASE_URL + 'special-service-tab.png',
+  special_service_tab1: BASE_URL + 'special-service-tab1.png',
   team_member_img: BASE_URL + 'team_member_img.png',
-  wenhao_img: BASE_URL + 'wenhao_img.png'
+  wenhao_img: BASE_URL + 'wenhao_img.png',
+  value_created: BASE_URL + 'value-created.png'
 }
 
 export default images

@@ -17,6 +17,7 @@ Component({
     index2_yunying_img2: app.images.index2_yunying_img2,
     index2_yunying_img3: app.images.index2_yunying_img3,
     wenhao_img: app.images.wenhao_img,
+    value_created: app.images.value_created,
     topSales: [],
     czdjz: {},
     monthScore: [],

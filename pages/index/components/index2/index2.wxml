@@ -253,7 +253,13 @@
   </view>
   <view class="created_tit_desc" hidden="{{titDescHidden}}">
    <view class="created_tit_mask" bindtap="hideDes"></view>
-   <view class="created__tit_desc_con">创造的价值=保费创费-营业费用</view>
+   <view class="created__tit_desc_con">
+    <view class="created__desc_img">
+      <image src="{{value_created}}"></image>
+    </view>
+    <view class="created__tit_wz">创造的价值=保费创费-营业费用</view>
+   </view>
+
   </view>
   <contact></contact>
 </view>

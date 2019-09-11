@@ -429,7 +429,7 @@
 .created_tit_desc{
   position: fixed;
   height: 100%;
-  z-index: 10;
+  z-index: 1000;
   width: 100%;
   top:0;
   left: 0;
@@ -441,17 +441,32 @@
   background: rgba(0, 0, 0, 0.3);
 }
 .created__tit_desc_con{
-  font-size:32rpx;
-  color:#333;
-  background: #fff;
   position: absolute;
-  top:50%;
-  left: 50%;
-  width: 600rpx;
-  transform: translate(-50%, -50%);
-  padding:100rpx 0;
+  top:30%;
+  left: 130rpx;
+  width: 490rpx;
   text-align: center;
   border-radius: 12rpx;
+  background: #fffdfb;
+  padding-top:100rpx;
+}
+.created__desc_img{
+  padding-bottom: 40rpx;
+  font-size:0;
+  text-align: center;
+}
+.created__desc_img image{
+  width: 418rpx;
+  height: 276rpx;
+}
+.created__tit_wz{
+  height: 140rpx;
+  line-height: 140rpx;
+  text-align: center;
+  font-size:28rpx;
+  color:#fff;
+  background: #dfbc90;
+  border-radius: 0 0 12rpx 12rpx;
 }
 @keyframes fade_in{
   0%{

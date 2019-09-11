@@ -16,7 +16,8 @@ Page({
     dailogFamilyHidden:true, // 控制dialog显示
     dailogServiceHidden:true, // 控制特色服务dialog显示
     special_img: app.images.special_img,
-    special_service_tab: app.images.special_service_tab
+    special_service_tab: app.images.special_service_tab,
+    special_service_tab1: app.images.special_service_tab1,
   },
   /**
    * 组件的方法列表
