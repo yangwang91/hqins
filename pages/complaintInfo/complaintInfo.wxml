@@ -4,7 +4,7 @@
     <view class="complaint-info-desc_title">反馈详情</view>
     <view class="complaint-info-desc_text">{{propose.propose}}</view>
     <view wx:if="{{propose.feedback}}" class="complaint-info-desc_feedback">
-      <view class="complaint-info-desc_feedback_title">投诉反馈：</view>
+      <view class="complaint-info-desc_feedback_title">反馈：</view>
       <view>{{propose.feedback}}</view>
     </view>
   </view>

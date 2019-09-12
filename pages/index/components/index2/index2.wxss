@@ -259,8 +259,10 @@
   padding:30rpx 30rpx;
 }
 .key_goal_tab view{
-  padding:0 22rpx;
+  /* padding:0 22rpx; */
   position: relative;
+  width:33.3%;
+  text-align: center
 }
 .key_goal_tab text{
   position: relative;

@@ -135,9 +135,9 @@
       <view catchtap="changeTab" data-tab="accidentHidden">
         <text class="{{accidentHidden?'':'now'}}">意外险保费</text>
       </view>
-      <view catchtap="changeTab" data-tab="iHomeHidden">
+      <!-- <view catchtap="changeTab" data-tab="iHomeHidden">
         <text class="{{iHomeHidden?'':'now'}}">家庭账户</text>
-      </view>
+      </view> -->
     </view>
   </view>
   <view class="created_con">
@@ -251,15 +251,14 @@
       </view>
     </view>
   </view>
-  <view class="created_tit_desc" hidden="{{titDescHidden}}">
-   <view class="created_tit_mask" bindtap="hideDes"></view>
-   <view class="created__tit_desc_con">
-    <view class="created__desc_img">
-      <image src="{{value_created}}"></image>
-    </view>
-    <view class="created__tit_wz">创造的价值=保费创费-营业费用</view>
-   </view>
-
-  </view>
+  <cover-view class="created_tit_desc" hidden="{{titDescHidden}}">
+   <cover-view class="created_tit_mask" bindtap="hideDes"></cover-view>
+   <cover-view class="created__tit_desc_con">
+    <cover-view class="created__desc_img">
+      <cover-image src="{{value_created}}"></cover-image>
+    </cover-view>
+    <cover-view class="created__tit_wz">创造的价值=保费创费-营业费用</cover-view>
+   </cover-view>
+  </cover-view>
   <contact></contact>
 </view>
