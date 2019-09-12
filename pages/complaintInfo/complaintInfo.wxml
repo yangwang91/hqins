@@ -1,7 +1,7 @@
 <!--pages/complaintInfo/complaintInfo.wxml-->
 <view class="container">
   <view class="complaint-info-desc">
-    <view class="complaint-info-desc_title">投诉详情</view>
+    <view class="complaint-info-desc_title">反馈详情</view>
     <view class="complaint-info-desc_text">{{propose.propose}}</view>
     <view wx:if="{{propose.feedback}}" class="complaint-info-desc_feedback">
       <view class="complaint-info-desc_feedback_title">投诉反馈：</view>
