@@ -13,7 +13,7 @@
   </view>
 
   <view class="team-slogon-wrap">
-    <image src="../../assets/icons/question_icon.svg" mode="aspectFit"></image>
+    <image src="../../assets/icons/team_icon.png" mode="aspectFit"></image>
     <view class="team-slogon-list">
       <swiper vertical autoplay circular>
         <swiper-item>
