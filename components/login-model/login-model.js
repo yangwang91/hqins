@@ -1,4 +1,4 @@
-// components/login-model/login-model.js
+ // components/login-model/login-model.js
 const app = getApp()
 import gio from '../../utils/gio-minp/index.js'
 Component({
@@ -24,8 +24,8 @@ Component({
   },
 
   attached() {
-    // this.getUserInfoAuth()
-    this.login()
+    this.getUserInfoAuth()
+    // this.login()
   },
 
   /**
@@ -73,27 +73,27 @@ Component({
       wx.getUserInfo({
         success: (res) => {
           console.log(res,'----------getUserInfo---------------')
-          this.setData({
-            userInfo: res.userInfo,
-            encryptedData: res.encryptedData,
-            iv: res.iv
-          })
-          var data = {
-            encryptedData: res.encryptedData,
-            iv: res.iv,
-            session_key: this.data.session_key,
-            token: wx.getStorageSync('token')
-          }
-          app.API.getUnionId(data).then(res => {
-            console.log(res, '------getUnionId-------');
-            if (res.code === '200') {
-              var unionId = res.unionid;
-              var openId = wx.getStorageSync('userInfo').openid
-              gio('identify', openid, unionid)
-            }
-          }).catch(err => {
+          // this.setData({
+          //   userInfo: res.userInfo,
+          //   encryptedData: res.encryptedData,
+          //   iv: res.iv
+          // })
+          // var data = {
+          //   encryptedData: res.encryptedData,
+          //   iv: res.iv,
+          //   session_key: this.data.session_key,
+          //   token: wx.getStorageSync('token')
+          // }
+          // app.API.getUnionId(data).then(res => {
+          //   console.log(res, '------getUnionId-------');
+          //   if (res.code === '200') {
+          //     var unionId = res.unionid;
+          //     var openId = wx.getStorageSync('userInfo').openid
+          //     gio('identify', openid, unionid)
+          //   }
+          // }).catch(err => {
 
-          })
+          // })
           wx.setStorage({
             key: 'wechatInfo',
             data: res.userInfo,
@@ -102,7 +102,7 @@ Component({
             complete: (res) => { },
           })
           gio('setVisitor', res.userInfo)
-          // this.login()
+          this.login()
         }
       })
     },
@@ -159,7 +159,10 @@ Component({
         console.log(res,'---------getOpenId----------')
         const info = res.result[0]
         this.setData({session_key:res.session_key})
-        this.getUserInfoAuth()
+        var openid = res.openid;
+        var unionid = res.unionid;
+        gio('identify', openid, unionid)
+        // this.getUserInfoAuth()
         wx.setStorage({
           key: 'userInfo',
           data: {
