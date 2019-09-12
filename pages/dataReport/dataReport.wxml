@@ -12,7 +12,8 @@
   <view class="data-report-wrap">
   <view class="data-report-title">昨日规模保费</view>
     <view class="charts-con">
-      <bar-chart data="{{dayScore}}"></bar-chart>
+      <bar-chart wx:if="{{dayScore.length>0}}" data="{{dayScore}}"></bar-chart>
+      <view class="charts-wsj" wx:if="{{dayScore.length==0}}">暂无数据</view>
     </view>
   </view>
 </view>

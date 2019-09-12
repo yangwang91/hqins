@@ -52,7 +52,7 @@ Page({
 
   getDayScore () {
     app.API.getDayScore().then(res => {
-      console.log(res)
+      console.log(res,'-------getDayScore--------')
       this.setData({
         dayScore: res.result || []
       })
@@ -62,6 +62,7 @@ Page({
   getUnderwriting () {
     app.API.getUnderwriting().then(res => {
       var dataList = res.result || [];
+      console.log(dataList,'--------getUnderwriting----------')
       this.setData({ underwriting: dataList})
       // this.showPie('pieChart', dataList)
     })

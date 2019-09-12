@@ -26,3 +26,10 @@ page {
   width: 100%;
   height: 500rpx;
 }
+
+.charts-wsj{
+  padding-top:150rpx;
+  text-align: center;
+  color:#999;
+  font-size:28rpx;
+}
