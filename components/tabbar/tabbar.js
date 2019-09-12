@@ -27,7 +27,8 @@ Component({
    */
   data: {
     // isIphoneX: (sysInfo.screenHeight - sysInfo.windowHeight) > 72 ? true : false,
-    isIphoneX:false
+    isIphoneX:false,
+    present: wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2'
   },
   attached() {
     this.isIphoneX()
