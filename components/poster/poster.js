@@ -68,11 +68,11 @@ Component({
         ctx.drawImage(res[1], 50, 762, 165, 165)
         ctx.setFillStyle('#333333')
         ctx.setFontSize(30)
-        ctx.fillText('定制产品，更有市场！', 245, 812)
+        ctx.fillText('全产品供应闯市场！', 245, 812)
         ctx.setFillStyle('#666666')
         ctx.setFontSize(26)
-        ctx.fillText('扫码变身合伙人，定制产品闯', 245, 865)
-        ctx.fillText('市场！转发寻找你的合伙人！', 245, 900)
+        ctx.fillText('扫码变身！', 245, 865)
+        ctx.fillText('转发寻找你的合伙人！', 245, 900)
         ctx.draw(false, () => {
           this.fnCanvasToTempFilePath()
           this.setData({
