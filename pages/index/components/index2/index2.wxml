@@ -146,7 +146,7 @@
         <text>创造的价值</text>
         <image src="{{wenhao_img}}"></image>
       </view>
-      <text class="created_tit_time">（统计截止到:{{czdjz.Date}}）</text>
+      <text class="created_tit_time">（当前统计截止到:{{czdjz.Date}}）</text>
     </view>
     <view class="created_desc">
       <view class="created_sum">
