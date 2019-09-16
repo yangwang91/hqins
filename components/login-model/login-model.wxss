@@ -1,5 +1,7 @@
 /* components/login-model/login-model.wxss */
-
+page{
+  border-top:1px solid #eeeeee;
+}
 .login-model {
   position: fixed;
   top: 0;
@@ -129,4 +131,54 @@
 }
 .auth_but::after{
   border: none;
+}
+
+.login-con{
+  background: #fff;
+}
+.login-img{
+ text-align: center;
+ padding-top:100rpx;
+ font-size:0;
+}
+.login-img image{
+  width: 189rpx;
+  height: 188rpx;
+}
+.login-txt{
+  text-align: center;
+  padding-top:40rpx;
+}
+.login-tit{
+  color:#9e7034;
+  font-size:34rpx;
+}
+.login-desc{
+  color:#c68939;
+  font-size:30rpx;
+  padding-top:20rpx;
+}
+.login-desc text{
+  padding-right: 40rpx;
+}
+.login-desc text:last-child{
+  padding:0;
+}
+.login-but-con{
+  text-align: center;
+  padding:215rpx 0 30rpx 0;
+}
+.login-button{
+  background: #e0c096;
+  color:#4c4643;
+  font-size: 30rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  border-radius: 44rpx;
+  width: 456rpx;
+  border:none;
+}
+.login-button::after{
+  content: "";
+  border:none;
 }
