@@ -1,2 +1,2 @@
  <!--pages/contactWeb/contactWeb.wxml-->
-<web-view src="https://1TfJ29Y.cschat-ccs.aliyun.com/index.htm?tntInstId=_1TfJ29Y&scene=SCE00005179&cinfo={{cinfo}}&key={{key}}"></web-view>
+<web-view src="https://1tfj29y.cschat-ccs.aliyun.com/index.htm?tntInstId=_1TfJ29Y&scene=SCE00005179&cinfo={{cinfo}}&key={{key}}"></web-view>
