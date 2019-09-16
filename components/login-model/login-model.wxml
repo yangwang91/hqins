@@ -1,5 +1,5 @@
  <!--components/login-model/login-model.wxml-->
-<view class="login-con">
+<view class="login-con" hidden="{{hidden}}">
   <view class="login-img">
     <image src="../../assets/icons/logo.png"></image>
   </view>

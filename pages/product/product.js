@@ -15,7 +15,7 @@ Page({
     categoryList: [],
     fdSceneId: '',
     productList: [],
-    imgUrls: wx.getStorageSync('userInfo') && wx.getStorageSync('userInfo').info.present === '2' ? [{
+    imgUrls: wx.getStorageSync('userInfo') && wx.getStorageSync('userInfo').info.present == '2' ? [{
         src: app.images.product1_banner_1,
         link: 'miniApp'
       },
