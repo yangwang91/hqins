@@ -451,15 +451,17 @@
   border-radius: 12rpx;
   background: #fffdfb;
   padding-top:100rpx;
+  
 }
 .created__desc_img{
-  padding-bottom: 40rpx;
+  padding-bottom: 45rpx;
   font-size:0;
   text-align: center;
 }
-.created__desc_img image{
+.created__desc_img cover-image{
   width: 418rpx;
   height: 276rpx;
+  display: inline-block;
 }
 .created__tit_wz{
   height: 140rpx;
