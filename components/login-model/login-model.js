@@ -59,14 +59,15 @@ Component({
         this.fnGetUserInfo()
       } else {
         this.setData({
-          hidden: true,
+          hidden: false,
           authFailureHidden: false
         })
       }
     },
 
     exitAuth(e){
-      this.setData({ hidden: true, authFailureHidden: false})
+      // this.setData({ hidden: true, authFailureHidden: false})
+      this.setData({ hidden: false })
     },
 
     fnGetUserInfo: function() {
