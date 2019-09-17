@@ -86,17 +86,53 @@ Component({
         const shapes = {};
         data.map(obj => {
           const point = chart.getPosition(obj);
-          const text = group.addShape('text', {
-            attrs: {
-              x: point.x + 5,
-              y: point.y + 7,
-              text: obj.Number,
-              textAlign: 'start',
-              textBaseline: 'bottom',
-              fill: '#808080'
-            }
-          });
-
+          let text;
+          if(point.x<160){
+            text = group.addShape('text', {
+              attrs: {
+                x: point.x,
+                y: point.y - 15,
+                text: obj.Number,
+                textAlign: 'start',
+                textBaseline: 'bottom',
+                fill: '#808080'
+              }
+            });
+          }else{
+            text = group.addShape('text', {
+              attrs: {
+                x: point.x/2,
+                y: point.y - 15,
+                text: obj.Number,
+                textAlign: 'start',
+                textBaseline: 'bottom',
+                fill: '#808080'
+              }
+            });
+          }
+          // if (point.x < 160) {
+          //   text = group.addShape('text', {
+          //     attrs: {
+          //       x: point.x+5,
+          //       y: point.y+5,
+          //       text: obj.Number,
+          //       textAlign: 'start',
+          //       textBaseline: 'bottom',
+          //       fill: '#808080'
+          //     }
+          //   });
+          // } else {
+          //   text = group.addShape('text', {
+          //     attrs: {
+          //       x: point.x / 2,
+          //       y: point.y+7,
+          //       text: obj.Number,
+          //       textAlign: 'start',
+          //       textBaseline: 'bottom',
+          //       fill: '#fff'
+          //     }
+          //   });
+          // }
           shapes[obj.ProductName] = text; // 缓存该 shape, 便于后续查找
         });
 
