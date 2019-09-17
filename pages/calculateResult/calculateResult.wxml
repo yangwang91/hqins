@@ -30,6 +30,7 @@
       <!--第三个-->
       <view class="other_tit">您团队可分配的价值盈余预计</view>
       <view class="other_sum">{{result.fdXiaxian}} ~ {{result.fdShangxian}}<text>万元</text></view>
+      <view class="other_desc other_desc_result">以上测算基于多项因素的常规假设，结果仅供参考</view>
       <!-- 第三个结束 -->
       <view class="result_but">
         <view wx:if="{{zrStatus === 0}}" class="but but1" bindtap="toCooperation">留下联系方式</view>

@@ -117,7 +117,7 @@ page {
   font-size: 28rpx;
 }
 .result_but{
-  padding: 80rpx 30rpx 20rpx;
+  padding: 40rpx 30rpx 20rpx;
 }
 .result_but .but{
   text-align: center;
@@ -142,4 +142,7 @@ page {
   color: #666;
   margin-top: 30rpx;
   text-align: center;
+}
+.other_desc_result{
+  padding-top:40rpx;
 }
