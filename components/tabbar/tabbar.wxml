@@ -1,6 +1,6 @@
  <!-- 招募平台需要用view，因为视频全屏时，某些机型下会盖住视频；
  经营平台需要用cover-view,因为某些机型下，canvas透出了底部 -->
- <view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}" wx:if="{{present=='2'}}">
+ <view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}" wx:if="{{tabbar.present=='2'}}">
   <!-- <block wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}"> -->
     <!-- <button wx:if="{{item.isSpecial}}" class="tabbar_nav" hover-class="none" data-url="{{item.pagePath}}" style="color:{{tabbar.selectedColor}}" open-type="navigate" bindtap="navigateTo">
       <cover-view class='special-wrapper'><cover-image class="tabbar_icon" src="{{item.iconPath}}"></cover-image></cover-view>
@@ -14,7 +14,7 @@
   <!-- </block> -->
 </view>
 
-<cover-view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}" wx:if="{{present=='1'}}">
+<cover-view class="tabbar_box {{isIphoneX?'iphoneX-height':''}}" style="background-color:{{tabbar.backgroundColor}}" wx:if="{{tabbar.present=='1'}}">
   <!-- <block wx:for="{{tabbar.list}}" wx:key="{{item.pagePath}}"> -->
     <!-- <button wx:if="{{item.isSpecial}}" class="tabbar_nav" hover-class="none" data-url="{{item.pagePath}}" style="color:{{tabbar.selectedColor}}" open-type="navigate" bindtap="navigateTo">
       <cover-view class='special-wrapper'><cover-image class="tabbar_icon" src="{{item.iconPath}}"></cover-image></cover-view>

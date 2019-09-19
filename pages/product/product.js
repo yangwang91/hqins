@@ -11,26 +11,12 @@ Page({
   data: {
     tabbar: {},
     bannerIndex: 0,
-    present: wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2',
+    present: '',
     categoryList: [],
     fdSceneId: '',
     productList: [],
-    imgUrls: wx.getStorageSync('userInfo') && wx.getStorageSync('userInfo').info.present == '2' ? [{
-        src: app.images.product1_banner_1,
-        link: 'miniApp'
-      },
-      {
-        src: app.images.product1_banner_2,
-        link: ''
-      }
-    ] : [{
-        src: app.images.product1_banner_3,
-        link: ''
-      },
-      {
-      src: app.images.product1_banner_2,
-      link: ''
-    }],
+    isAuth: false,
+    imgUrls: [],
     curTab: 0,
     tabName: '明星产品'
   },
@@ -41,6 +27,33 @@ Page({
   onLoad: function(options) {
     app.editTabbar()
     this.getCategorylist()
+    this.setData({
+      present: app.globalData.present
+    })
+    if (app.globalData.present && app.globalData.present=='2'){
+      this.setData({
+        imgUrls: [{
+          src: app.images.product1_banner_1,
+          link: 'miniApp'
+        },
+        {
+          src: app.images.product1_banner_2,
+          link: ''
+        }
+        ] 
+      })
+    } else {
+      this.setData({
+        imgUrls: [{
+          src: app.images.product1_banner_3,
+          link: ''
+        },
+        {
+          src: app.images.product1_banner_2,
+          link: ''
+        }]
+      })
+    }
   },
 
   /**
@@ -54,7 +67,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+    this.setData({ isAuth: app.globalData.isAuth })
   },
 
   /**

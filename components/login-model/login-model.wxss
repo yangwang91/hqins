@@ -150,12 +150,12 @@ page{
   padding-top:40rpx;
 }
 .login-tit{
-  color:#9e7034;
-  font-size:34rpx;
+  color:#333;
+  font-size:30rpx;
 }
 .login-desc{
-  color:#c68939;
-  font-size:30rpx;
+  color:#666;
+  font-size:26rpx;
   padding-top:20rpx;
 }
 .login-desc text{
@@ -164,9 +164,32 @@ page{
 .login-desc text:last-child{
   padding:0;
 }
+.login-desc-bot{
+  color:#666;
+  font-size:26rpx;
+  padding-top:20rpx;
+}
+.login-desc-bot text{
+  position: relative;
+  padding-left: 50rpx;
+}
+.login-desc-bot text::before{
+  position: absolute;
+  content: "!";
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  background: #e0c096;
+  text-align: center;
+  font-size: 26rpx;
+  left: 0;
+  top:5rpx;
+  color:#4c4643;
+  line-height: 30rpx;
+}
 .login-but-con{
   text-align: center;
-  padding:215rpx 0 30rpx 0;
+  padding:80rpx 0 80rpx 0;
 }
 .login-button{
   background: #e0c096;
@@ -181,4 +204,80 @@ page{
 .login-button::after{
   content: "";
   border:none;
+}
+.login-desc-gn{
+  font-size:28rpx;
+  padding:0rpx 0 30rpx;
+  color:#666;
+  line-height: 1.8;
+  text-align: center;
+}
+.login-desc-gn-tit{
+  color: #030303;
+  padding-bottom: 10rpx;
+}
+.created_tit_desc{
+  position: fixed;
+  height: 100%;
+  z-index: 1000;
+  width: 100%;
+  top:0;
+  left: 0;
+  animation: fade_in 0.3s;
+}
+.created_tit_mask{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.created__tit_desc_con{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 550rpx;
+  border-radius: 12rpx;
+  background: #fffdfb;
+  padding:30rpx 0 15rpx;
+  transform: translate(-50%,-50%);
+}
+.created_auth_tit{
+  color:#000;
+  font-size:30rpx;
+  text-align: center;
+  
+}
+.created_auth_desc{
+  color:#666;
+  font-size:28rpx;
+  padding:30rpx 30rpx 10rpx 30rpx;
+}
+.created_auth_but_con{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.created_auth_but_con view{
+  width: 50%;
+  text-align: center
+}
+.created_auth_but_con view text{
+  font-size:28rpx;
+  color:#000;
+}
+.created_auth_but_con view button{
+  background: none;
+  font-size:28rpx;
+  color: #D3A468;
+}
+.created_auth_but_con view button::after{
+  content: "";
+  border:none;
+}
+@keyframes fade_in{
+  0%{
+    opacity: 0.1;
+  }
+  100%{
+    opacity: 1;
+  }
 }

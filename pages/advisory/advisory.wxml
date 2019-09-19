@@ -1,5 +1,5 @@
 <!--pages/advisory/advisory.wxml-->
-<view class="container">
+<view class="container" wx:if="{{isAuth}}">
   <view class="advisory-wrap">
     <view class="advisory-title">申请进度</view>
     <view class="advisory-step-wrap">
@@ -80,4 +80,8 @@
   <tabbar tabbar="{{tabbar}}"></tabbar>
 
 
+</view>
+<view class="container" wx:if="{{!isAuth}}">
+  <login-model></login-model>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
 </view>

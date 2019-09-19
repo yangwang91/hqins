@@ -2,6 +2,10 @@
 page {
   background: #f7f7f7;
 }
+.container_auth{
+  background: #fff;
+  min-height: 100vh;
+}
 .product-banner-wrap {
   position: relative;
 }

@@ -1,5 +1,5 @@
   <!--pages/calculate/calculate.wxml-->
-<view class="container">
+<view class="container" wx:if="{{isAuth}}">
   <view class="calculate-wrap">
     <view class="calculate-image">
       <image src="{{calculating_img1}}"></image>
@@ -9,4 +9,8 @@
     </view>
   </view>
 <tabbar tabbar="{{tabbar}}"></tabbar>
+</view>
+<view class="container" wx:if="{{!isAuth}}">
+  <login-model></login-model>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
 </view>

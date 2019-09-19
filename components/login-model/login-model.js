@@ -6,7 +6,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    isAuthPage:{
+      type: Boolean,
+      value: false
+    }
   },
 
   /**
@@ -17,15 +20,18 @@ Component({
     auth2: app.images.auth2,
     userInfo: null,
     hidden: true,
-    authFailureHidden:true,
-    session_key:'',
-    encryptedData:'',
-    iv:''
+    titDescHidden:true,
+    present: ''
   },
 
   attached() {
     this.getUserInfoAuth()
-    // this.login()
+    if(this.properties.isAuthPage){
+      this.login()
+    }
+    if(app.globalData.present){
+      this.setData({present:app.globalData.present})
+    }
   },
 
   /**
@@ -49,8 +55,6 @@ Component({
         })
       }
     },
-
-
     getuserinfo(e) {
       if(e.detail.userInfo) {
         this.setData({
@@ -81,7 +85,7 @@ Component({
           // })
           // var data = {
           //   encryptedData: res.encryptedData,
-          //   iv: res.iv,
+          //   iv: res.iv, 
           //   session_key: this.data.session_key,
           //   token: wx.getStorageSync('token')
           // }
@@ -103,24 +107,72 @@ Component({
             complete: (res) => { },
           })
           gio('setVisitor', res.userInfo)
-          this.login()
+          app.globalData.isAuth = true;
+          var pages = getCurrentPages();
+          var currentPage = pages[pages.length - 1]; //获取当前页面的对象
+          var url = currentPage.route;
+          var pageName = url.split('/').pop()
+          console.log(url,'url');
+          if ((url.indexOf('cooperation') != -1)) {
+            wx.redirectTo({
+              url: pageName
+            })
+          } else {
+            wx.reLaunch({
+              url: pageName,
+              success: function (res) {
+                wx.hideTabBar({
+                  fail: function () {
+                    setTimeout(function () {
+                      wx.hideTabBar()
+                    }, 500)
+                  }
+                })
+                wx.hideLoading()
+              },
+              fail: function (res) { },
+              complete: function (res) { },
+            })
+          }
         }
       })
     },
 
     getUserInfoAuth() {
       // 获取用户信息
+      // wx.getSetting({
+      //   success: res => {
+      //     // console.log('uinfo', res)
+      //     if (!res.authSetting['scope.userInfo']) {
+      //       this.setData({
+      //         hidden: false
+      //       })
+      //     } else {
+      //       if (!app.globalData.isAuth){
+      //         this.fnGetUserInfo()
+      //       }
+      //       // 
+      //     }
+      //   }
+      // })
+      // 获取用户信息
       wx.getSetting({
         success: res => {
-          // console.log('uinfo', res)
           if (!res.authSetting['scope.userInfo']) {
-            this.setData({
-              hidden: false
-            })
+            app.globalData.isAuth = false;
+            this.setData({ isAuth: false });
+            if(!this.properties.isAuthPage){
+              this.setData({
+                hidden: false
+              })
+            }
           } else {
-            this.fnGetUserInfo()
+            // this.fnGetUserInfo()
+            app.globalData.isAuth = true;
+            this.setData({ isAuth: true });
             // 
           }
+          console.log(app.globalData.isAuth, 'app.globalData.isAuth')
         }
       })
     },
@@ -153,13 +205,45 @@ Component({
 
     // 获取openID
     getOpenId(token, code) {
+      // app.API.getOpenId({
+      //   token: token,
+      //   code: code
+      // }).then(res => {
+      //   console.log(res,'---------getOpenId----------')
+      //   const info = res.result[0]
+      //   this.setData({session_key:res.session_key})
+      //   var openid = res.openid;
+      //   var unionid = res.unionid;
+      //   gio('identify', openid, unionid)
+      //   // this.getUserInfoAuth()
+      //   wx.setStorage({
+      //     key: 'userInfo',
+      //     data: {
+      //       openid: res.openid,
+      //       info: info
+      //     },
+      //     success: (res) => {
+      //       if (info && info.present){
+      //         this.intoApp(info.present)
+      //       }
+      //     },
+      //     fail: (res) => {},
+      //     complete: (res) => {},
+      //   })
+      //   this.bindSub(res.openid)
+      // })
       app.API.getOpenId({
         token: token,
         code: code
       }).then(res => {
-        console.log(res,'---------getOpenId----------')
+        console.log(res, '---------getOpenId----------')
         const info = res.result[0]
-        this.setData({session_key:res.session_key})
+        this.setData({
+          present: info.present
+        });
+        app.globalData.present = info.present;
+        console.log('app.globalData.present', app.globalData.present)
+        app.editTabbar();
         var openid = res.openid;
         var unionid = res.unionid;
         gio('identify', openid, unionid)
@@ -171,19 +255,19 @@ Component({
             info: info
           },
           success: (res) => {
-            if (info && info.present){
+            if (info && info.present) {
               this.intoApp(info.present)
             }
           },
-          fail: (res) => {},
-          complete: (res) => {},
+          fail: (res) => { },
+          complete: (res) => { },
         })
         this.bindSub(res.openid)
       })
     },
 
     // 进入
-    intoApp(present) {
+    intoApp() {
       wx.reLaunch({
         url: '../index/index',
         success: function (res) {
@@ -199,7 +283,14 @@ Component({
         fail: function (res) { },
         complete: function (res) { },
       })
+    },
+    hideDes: function () {
+      this.setData({
+        titDescHidden: true
+      })
+    },
+    showAuth() {
+      this.setData({ titDescHidden: false })
     }
-  },
-  
+  }
 })

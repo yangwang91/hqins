@@ -1,5 +1,5 @@
 <!--pages/product/product.wxml-->
-<view class="container">
+ <view class="container" wx:if="{{isAuth}}">
 
   <view class="product-banner-wrap">
     <swiper class="product-banner" autoplay="{{true}}" bindchange="bannerChange">
@@ -55,4 +55,8 @@
  <tabbar tabbar="{{tabbar}}"></tabbar>
  <cooperation-meeting wx:if="{{present === '2'}}"></cooperation-meeting>
 
+</view>
+<view class="container container_auth" wx:if="{{!isAuth}}">
+  <login-model></login-model>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
 </view>

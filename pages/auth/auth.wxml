@@ -1,3 +1,3 @@
-<!--pages/auth/auth.wxml-->
+ <!--pages/auth/auth.wxml-->
 
-<login-model></login-model>
+<login-model isAuthPage="{{isAuthPage}}"></login-model>

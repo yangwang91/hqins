@@ -8,7 +8,8 @@ Page({
    */
   data: {
     tabbar: {},
-    calculating_img1: app.images.calculating_img1
+    calculating_img1: app.images.calculating_img1,
+    isAuth: false
   },
 
   /**
@@ -29,7 +30,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({ isAuth: app.globalData.isAuth })
   },
 
   /**

@@ -11,6 +11,7 @@ Page({
     isGetCode: false,
     businessHidden:true,
     formCanSubmit:true, // 防止多次点击重复提交
+    isAuth: false,
     fdXscj:'',
     postData: {
       name: '',
@@ -66,7 +67,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({ isAuth: app.globalData.isAuth})
   },
 
   /**

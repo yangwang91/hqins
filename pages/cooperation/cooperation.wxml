@@ -1,5 +1,5 @@
 <!--pages/cooperation/cooperation.wxml-->
-<view class="cooperation-wrap">
+<view class="cooperation-wrap" wx:if="{{isAuth}}">
   <view class="cooperation-info">请留下您的联系方式，我们将第一时间安排专属人员跟您联系，进一步了解合作意向与解释合伙规则。</view>
   <view class="cooperation-form">
     <view class="cooperation-form_title">基本信息</view>
@@ -50,3 +50,4 @@
     </view>
   </view>
 </view>
+<login-model wx:if="{{!isAuth}}"></login-model>

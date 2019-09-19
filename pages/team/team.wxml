@@ -1,5 +1,5 @@
 <!--pages/team/team.wxml-->
-<view class="container">
+<view class="container" wx:if="{{isAuth}}">
 
   <view class="team-header">
     <view class="team-user-wrap">
@@ -187,3 +187,7 @@
 
 
 </view>
+<view class="container container_auth" wx:if="{{!isAuth}}">
+  <login-model></login-model>
+  <tabbar tabbar="{{tabbar}}"></tabbar>
+</view> 

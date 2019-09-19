@@ -1,6 +1,9 @@
 <view class="container">
-  <block wx:if="{{present === '1'}}">
+  <block wx:if="{{present === '1' && isAuth}}">
     <index2></index2>
+  </block>
+  <block wx:if="{{present === '1' && !isAuth}}">
+    <login-model></login-model>
   </block>
   <block wx:if="{{present === '2'}}">
     <index1></index1>

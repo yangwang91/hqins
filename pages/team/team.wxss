@@ -3,7 +3,10 @@
 page {
   background: #f7f7f7;
 }
-
+.container_auth{
+  background: #fff;
+  min-height: 100vh;
+}
 .team-header {
   width: 100%;
   height: 370rpx;

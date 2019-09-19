@@ -20,7 +20,8 @@
       postImg: '',
       soulList: ['不求与人攀比，但求超越自己', '只有不断的学习，才能看到遥远的未来', '亲兄弟，明算账，拒绝大锅饭','人在一起叫聚会，心在一起叫团队'],
       soulStr1:'',
-      soulStr2:''
+      soulStr2:'',
+      isAuth: false
     },
 
     /**
@@ -45,6 +46,7 @@
      * 生命周期函数--监听页面显示
      */
     onShow: function() {
+      this.setData({ isAuth: app.globalData.isAuth })
       app.editTabbar()
       this.randomList()
       this.getProposeList()

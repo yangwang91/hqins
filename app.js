@@ -9,11 +9,8 @@ var gio = require("./utils/gio-minp/index.js").default
 
 App({
   onLaunch: function (options) {
-
-    this.checkUser()
-
+    // this.checkUser() // 去掉授权
     console.log(options)
- 
     wx.hideTabBar({
       fail: function () {
         setTimeout(function () {
@@ -21,14 +18,11 @@ App({
         }, 500)
       }
     })
-    
     console.log('scene', decodeURIComponent(options.query.scene))
-
     const subordinateid = decodeURIComponent(options.query.scene)
     if(subordinateid) {
       this.globalData.subordinateid = subordinateid
     }
-
     wx.getSystemInfo({
       success: (res) => {
         console.log(res)
@@ -38,7 +32,6 @@ App({
       complete: (res) => {},
     })
   },
-
   checkUser: function() {
     if (!wx.getStorageSync('userInfo')) {
       wx.reLaunch({
@@ -46,10 +39,36 @@ App({
       })
     }
   },
+  getUserInfoAuth() {
+    var promise2 = new Promise((resolve, reject) => {
+      // 获取用户信息
+      wx.getSetting({
+        success: res => {
+          if (!res.authSetting['scope.userInfo']) {
 
-
+          } else {
+            this.fnGetUserInfo()
+          }
+        }
+      })
+    })
+  },
+  fnGetUserInfo: function () {
+    wx.getUserInfo({
+      success: (res) => {
+        console.log(res, '----------getUserInfo---------------')
+        wx.setStorage({
+          key: 'wechatInfo',
+          data: res.userInfo,
+          success: (res) => { },
+          fail: (res) => { },
+          complete: (res) => { },
+        })
+        gio('setVisitor', res.userInfo)
+      }
+    })
+  },
   editTabbar: function() {
-    
     wx.hideTabBar({
       fail: function () {
         setTimeout(function () {
@@ -59,7 +78,8 @@ App({
       aniamtion: false
     })
     console.log('---userInfo---', wx.getStorageSync('userInfo'))
-    const present = wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2'
+    const present = this.globalData.present ? this.globalData.present : '2';
+    // const present = wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2';
     // const present = '1'
     let tabbar = present === '1' ? this.globalData.tabBar1 : this.globalData.tabBar2;
     let currentPages = getCurrentPages();
@@ -71,6 +91,7 @@ App({
       (tabbar.list[i].pagePath == pagePath) && (tabbar.list[i].selected = true);
     }
     console.log(tabbar)
+    tabbar.present = present;
     _this.setData({
       tabbar: tabbar
     });
@@ -80,6 +101,8 @@ App({
   images: images,
   globalData: {
     userInfo: null,
+    isAuth:false,
+    present:'',
     sysInfo: {},
     subordinateid: '',
     tabBar1: {

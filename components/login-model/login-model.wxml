@@ -12,12 +12,39 @@
     </view>
   </view>
   <view class="login-but-con">
-    <button open-type="getUserInfo" class="login-button" bindgetuserinfo="getuserinfo">
-      开启鲲雁iBoss之旅
+    <button class="login-button" bindtap="showAuth">
+      登录开通更多功能
     </button>
   </view>
+  <view class="login-desc-gn">
+    <view  class="login-tit">主要功能介绍</view>
+    <view class="login-desc-bot" wx:if="{{present=='2'}}">
+      <view><text>全产品信息展示</text></view>
+      <view><text>多场景经营测算</text></view>
+      <view><text>便捷的加入申请</text></view>
+    </view>
+    <view class="login-desc-bot" wx:if="{{present=='1'}}">
+      <view><text>经营明细及分析</text></view>
+      <view><text>全产品信息展示</text></view>
+      <view><text>团队详情及分享</text></view>
+    </view>
+  </view>
+  <view class="created_tit_desc" hidden="{{titDescHidden}}">
+    <view class="created_tit_mask" bindtap="hideDes"></view>
+    <view class="created__tit_desc_con">
+      <view class="created_auth_tit">微信授权</view>
+      <view class="created_auth_desc">为提供更好的服务，需申请您的公开信息，是否允许？</view>
+      <view class="created_auth_but_con">
+        <view><text bindtap="hideDes">拒绝</text></view>
+        <view>
+          <button open-type="getUserInfo" bindgetuserinfo="getuserinfo">
+            允许
+          </button>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
-
 
 <!-- <view class="login-model" catchtouchstart="">
   <!-- <view class="login-model-mask"></view> -->

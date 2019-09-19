@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "合作洽谈",
-  "usingComponents": {}
+  "usingComponents": {
+    "login-model": "../../components/login-model/login-model"
+  }
 }

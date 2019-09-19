@@ -3,6 +3,7 @@
   "usingComponents": {
     "tabbar": "../../components/tabbar/tabbar",
     "complaint-card": "../../components/complaint-card/complaint-card",
-    "poster": "../../components/poster/poster"
+    "poster": "../../components/poster/poster",
+    "login-model": "../../components/login-model/login-model"
   }
 }

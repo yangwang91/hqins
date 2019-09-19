@@ -14,7 +14,8 @@ Page({
     totalpage: 1,
     page: 1,
     isChecked: false,
-    zrMiddleStatus: {}
+    zrMiddleStatus: {},
+    isAuth: false
   },
 
   /**
@@ -37,6 +38,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    this.setData({ isAuth: app.globalData.isAuth })
     this.getZrStatus()
     this.getZrMiddleStatus()
   },

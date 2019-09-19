@@ -5,7 +5,8 @@ export default {
   projectId: 'b695ac70d54f32e1',
   appId: 'wxa00d898adf69ca4a',   //生产           //如果不填会自动获取
   // appId: 'wx6abc66c3de1b1549', // 测试
-  version: '0.0.3',
+  // version: '0.0.3',
+  version: '1.0.0',
   debug: true,           //是否开启调试模式，可以看到采集的数据。默认 false
   forceLogin: true,      //是否强制要求用户登陆微信获取 openid。默认 true
   followShare: true,     //是否详细跟踪分享数据，开启后可使用分享分析功能。默认false

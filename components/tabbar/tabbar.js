@@ -27,11 +27,11 @@ Component({
    */
   data: {
     // isIphoneX: (sysInfo.screenHeight - sysInfo.windowHeight) > 72 ? true : false,
-    isIphoneX:false,
-    present: wx.getStorageSync('userInfo') ? wx.getStorageSync('userInfo').info.present : '2'
+    isIphoneX:false
   },
   attached() {
     this.isIphoneX()
+    // this.setData({present:app.globalData.present})
   },
   /**
    * 组件的方法列表
