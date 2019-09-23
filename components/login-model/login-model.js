@@ -38,11 +38,12 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    bindSub: function() {
+    bindSub: function(opendId) {
       const subId = app.globalData.subordinateid
       const myInfo = this.data.userInfo
       if (subId && subId !== 'undefined') {
         app.API.scanAddScande({
+          wxid: opendId,
           fdMainWxid: subId,
           fdNickname: myInfo.nickName,
           fdHeadLink: myInfo.avatarUrl,
