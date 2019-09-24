@@ -38,18 +38,19 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    bindSub: function(opendId) {
+    bindSub: function() {
       const subId = app.globalData.subordinateid
       const myInfo = this.data.userInfo
+      console.log(subId, '------------------scanAddScande subId----------------------')
+      console.log(myInfo, '------------------scanAddScande myInfo----------------------')
       if (subId && subId !== 'undefined') {
         app.API.scanAddScande({
-          wxid: opendId,
           fdMainWxid: subId,
           fdNickname: myInfo.nickName,
           fdHeadLink: myInfo.avatarUrl,
           fdSex: myInfo.gender
         }).then(res => {
-          console.log(res)
+          console.log(res,'------------------scanAddScande----------------------')
           if(res.code == 200){
             app.globalData.subordinateid = ''
           }
@@ -100,6 +101,10 @@ Component({
           // }).catch(err => {
 
           // })
+          this.setData({
+            userInfo: res.userInfo
+          })
+          this.bindSub()
           wx.setStorage({
             key: 'wechatInfo',
             data: res.userInfo,
@@ -113,7 +118,6 @@ Component({
           var currentPage = pages[pages.length - 1]; //获取当前页面的对象
           var url = currentPage.route;
           var pageName = url.split('/').pop()
-          console.log(url,'url');
           if ((url.indexOf('cooperation') != -1)) {
             wx.redirectTo({
               url: pageName
@@ -168,7 +172,9 @@ Component({
               })
             }
           } else {
-            // this.fnGetUserInfo()
+            if (this.properties.isAuthPage) {
+              this.fnGetUserInfo()
+            }
             app.globalData.isAuth = true;
             this.setData({ isAuth: true });
             // 
@@ -263,7 +269,6 @@ Component({
           fail: (res) => { },
           complete: (res) => { },
         })
-        this.bindSub(res.openid)
       })
     },
 
