@@ -31,6 +31,7 @@ App({
       fail: (res) => {},
       complete: (res) => {},
     })
+    // this.editPageShare() 设置分享，后续会用到
   },
   checkUser: function() {
     if (!wx.getStorageSync('userInfo')) {
@@ -68,6 +69,21 @@ App({
       }
     })
   },
+  // editPageShare:function(){
+  //   wx.onAppRoute(function(res){
+  //     wx.showShareMenu({
+  //       withShareTicket: true
+  //     })
+  //     let pages = getCurrentPages();
+  //     let view = pages[pages.length - 1];
+  //     view.onShareAppMessage = function(){
+  //       return {
+  //         title: '鲲雁iBoss',
+  //         path: '/pages/auth/auth'
+  //       }
+  //     };
+  //   })
+  // },
   editTabbar: function() {
     wx.hideTabBar({
       fail: function () {

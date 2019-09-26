@@ -76,21 +76,33 @@ Component({
         });
 
         chart.tooltip(false);
-        chart.interval().position('ProductName*Number');
+        chart.interval().position('ProductName*Number').color('Number', (Number) => {
+          if (Number < 0) {
+            return '#4ec658';
+          } else {
+            return '#1890ff';
+          }
+        });
         chart.render();
-
         // 绘制柱状图文本
         // const offset = 5;
         const chartCanvas = chart.get('canvas');
         const group = chartCanvas.addGroup();
         const shapes = {};
+        const origin = {
+          ProductName: "零点", 
+          Number: 0
+        }
+        const originPoint = chart.getPosition(origin);
+        const xPosition = originPoint.x;
+        console.log(data,'---------data-----------')
         data.map(obj => {
           const point = chart.getPosition(obj);
           let text;
-          if(point.x<160){
+          if (point.x > xPosition){
             text = group.addShape('text', {
               attrs: {
-                x: point.x,
+                x: xPosition+5,
                 y: point.y - 15,
                 text: obj.Number,
                 textAlign: 'start',
@@ -99,40 +111,31 @@ Component({
               }
             });
           }else{
-            text = group.addShape('text', {
-              attrs: {
-                x: point.x/2,
-                y: point.y - 15,
-                text: obj.Number,
-                textAlign: 'start',
-                textBaseline: 'bottom',
-                fill: '#808080'
-              }
-            });
+            if (point.x == xPosition) {
+              text = group.addShape('text', {
+                attrs: {
+                  x: xPosition,
+                  y: point.y - 15,
+                  text: obj.Number,
+                  textAlign: 'start',
+                  textBaseline: 'bottom',
+                  fill: '#808080'
+                }
+              });
+            } else {
+              text = group.addShape('text', {
+                attrs: {
+                  x: xPosition - 25,
+                  y: point.y - 15,
+                  text: obj.Number,
+                  textAlign: 'start',
+                  textBaseline: 'bottom',
+                  fill: '#808080'
+                }
+              });
+            }
+            
           }
-          // if (point.x < 160) {
-          //   text = group.addShape('text', {
-          //     attrs: {
-          //       x: point.x+5,
-          //       y: point.y+5,
-          //       text: obj.Number,
-          //       textAlign: 'start',
-          //       textBaseline: 'bottom',
-          //       fill: '#808080'
-          //     }
-          //   });
-          // } else {
-          //   text = group.addShape('text', {
-          //     attrs: {
-          //       x: point.x / 2,
-          //       y: point.y+7,
-          //       text: obj.Number,
-          //       textAlign: 'start',
-          //       textBaseline: 'bottom',
-          //       fill: '#fff'
-          //     }
-          //   });
-          // }
           shapes[obj.ProductName] = text; // 缓存该 shape, 便于后续查找
         });
 
