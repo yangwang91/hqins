@@ -76,9 +76,10 @@ Component({
         },
         yAxis: {
           min: 0,
-          format: (val) => { return val.toFixed(0) + '万元' }
+          titleFontSize:0,
+          format: (val) => { return val.toFixed(0) }
         },
-        dataLabel: true,
+        dataLabel: false,
         width: wx.getSystemInfoSync().windowWidth,
         height: 500 / 750 * wx.getSystemInfoSync().windowWidth,
         extra: {

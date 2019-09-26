@@ -11,7 +11,8 @@ Page({
    */
   data: {
     dayScore: [],
-    underwriting: []
+    underwriting: [],
+    chartHeight:500
   },
 
   /**
@@ -53,8 +54,14 @@ Page({
   getDayScore () {
     app.API.getDayScore().then(res => {
       console.log(res,'-------getDayScore--------')
+      const dayScore = res.result || []
+      if (dayScore.length > 0) {
+        this.setData({
+          chartHeight: 100 * dayScore.length
+        })
+      }
       this.setData({
-        dayScore: res.result || []
+        dayScore: dayScore
       })
     })
   },  

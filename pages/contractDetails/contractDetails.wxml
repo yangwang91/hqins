@@ -9,5 +9,8 @@
         <view>签约日期</view>
       </view>
     </view>
+    <view wx:if="{{result.length==0}}" class="contract-no-data">
+      暂无数据
+    </view>
   </view>
 </view>

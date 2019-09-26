@@ -215,7 +215,7 @@
 
   <!--  -->
   <view class="charts-con">
-    <view class="charts-con-title"><text class="main-title">月度标保</text><text bindtap="toDataReport">更多</text> </view>
+    <view class="charts-con-title"><text class="main-title">月度标保(万元)</text><text bindtap="toDataReport">更多</text> </view>
     <pie-chart source="{{monthScore}}"></pie-chart>
   </view>
 
@@ -237,7 +237,7 @@
     </view>
   </view>
   <view class="common_con sales_con">
-    <view class="sales_tit">销售排行(TOP5)</view>
+    <view class="sales_tit">年度销售排行(TOP5)</view>
     <view>
       <view wx:for="{{topSales}}" wx:key="{{index}}" class="sales_ranking">
         <view class="sales_ranking_left">
