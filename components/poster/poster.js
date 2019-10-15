@@ -88,7 +88,7 @@ Component({
 
     getQc: function() {
       app.API.getQc().then(res => {
-        console.log(res)
+        console.log(res,'-----------getQc-------------')
         this.drawPoster(res.url || '')
       })
     },
